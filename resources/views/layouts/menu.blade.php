@@ -14,3 +14,7 @@
     <a href="{{ route('batches.index') }}"><i class="fa fa-edit"></i><span>Batches</span></a>
 </li>
 
+<li class="{{ Request::is('shifts*') ? 'active' : '' }}">
+    <a href="{{ route('shifts.index') }}"><i class="fa fa-edit"></i><span>Shifts</span></a>
+</li>
+

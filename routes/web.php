@@ -32,3 +32,5 @@ Route::resource('classrooms', 'classroomController');
 Route::resource('levels', 'LevelController');
 
 Route::resource('batches', 'BatchController');
+
+Route::resource('shifts', 'ShiftController');
