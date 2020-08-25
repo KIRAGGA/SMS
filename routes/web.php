@@ -34,3 +34,29 @@ Route::resource('levels', 'LevelController');
 Route::resource('batches', 'BatchController');
 
 Route::resource('shifts', 'ShiftController');
+
+Route::resource('courses', 'CourseController');
+
+Route::resource('faculties', 'FacultyController');
+
+Route::resource('times', 'TimeController');
+
+Route::resource('attendances', 'AttendanceController');
+
+Route::resource('academics', 'AcademicController');
+
+Route::resource('days', 'DayController');
+
+Route::resource('classAssignings', 'ClassAssigningController');
+
+Route::resource('classSchedulings', 'ClassSchedulingController');
+
+Route::resource('transactions', 'TransactionController');
+
+Route::resource('admissions', 'AdmissionController');
+
+Route::resource('teachers', 'TeachersController');
+
+Route::resource('roles', 'RoleController');
+
+Route::resource('users', 'UserController');
