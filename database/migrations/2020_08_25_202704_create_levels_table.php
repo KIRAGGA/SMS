@@ -20,7 +20,7 @@ class CreateLevelsTable extends Migration
             $table->longText('level_description');
             $table->softDeletes();
             $table->timestamps();
-            $table->foreign('course_id')->references('level_id')->on('ptable');
+            $table->foreign('course_id')->references('level_id')->on('courses');
         });
     }
 
