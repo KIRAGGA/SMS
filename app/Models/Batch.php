@@ -6,19 +6,17 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Level
+ * Class Batch
  * @package App\Models
- * @version August 25, 2020, 11:01 pm UTC
+ * @version August 25, 2020, 11:03 pm UTC
  *
- * @property string $level
- * @property integer $course_id
- * @property string $level_description
+ * @property string $batch
  */
-class Level extends Model
+class Batch extends Model
 {
     use SoftDeletes;
 
-    public $table = 'levels';
+    public $table = 'batches';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -29,9 +27,7 @@ class Level extends Model
 
 
     public $fillable = [
-        'level',
-        'course_id',
-        'level_description'
+        'batch'
     ];
 
     /**
@@ -40,10 +36,8 @@ class Level extends Model
      * @var array
      */
     protected $casts = [
-        'level_id' => 'integer',
-        'level' => 'string',
-        'course_id' => 'integer',
-        'level_description' => 'string'
+        'batch_id' => 'integer',
+        'batch' => 'string'
     ];
 
     /**
@@ -52,9 +46,7 @@ class Level extends Model
      * @var array
      */
     public static $rules = [
-        'level' => 'required|string|max:255',
-        'course_id' => 'required|integer',
-        'level_description' => 'required|string',
+        'batch' => 'required|string|max:255',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

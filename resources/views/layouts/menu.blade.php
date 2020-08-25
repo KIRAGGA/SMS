@@ -10,3 +10,7 @@
     <a href="{{ route('levels.index') }}"><i class="fa fa-edit"></i><span>Levels</span></a>
 </li>
 
+<li class="{{ Request::is('batches*') ? 'active' : '' }}">
+    <a href="{{ route('batches.index') }}"><i class="fa fa-edit"></i><span>Batches</span></a>
+</li>
+

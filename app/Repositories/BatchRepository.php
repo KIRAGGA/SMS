@@ -2,24 +2,22 @@
 
 namespace App\Repositories;
 
-use App\Models\Level;
+use App\Models\Batch;
 use App\Repositories\BaseRepository;
 
 /**
- * Class LevelRepository
+ * Class BatchRepository
  * @package App\Repositories
- * @version August 25, 2020, 11:01 pm UTC
+ * @version August 25, 2020, 11:03 pm UTC
 */
 
-class LevelRepository extends BaseRepository
+class BatchRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'level',
-        'course_id',
-        'level_description'
+        'batch'
     ];
 
     /**
@@ -37,6 +35,6 @@ class LevelRepository extends BaseRepository
      **/
     public function model()
     {
-        return Level::class;
+        return Batch::class;
     }
 }
