@@ -28,3 +28,5 @@ Route::get('/home', 'HomeController@index')->middleware('verified');
 Route::resource('classes', 'classesController');
 
 Route::resource('classrooms', 'classroomController');
+
+Route::resource('levels', 'LevelController');

@@ -6,3 +6,7 @@
     <a href="{{ route('classrooms.index') }}"><i class="fa fa-edit"></i><span>Classrooms</span></a>
 </li>
 
+<li class="{{ Request::is('levels*') ? 'active' : '' }}">
+    <a href="{{ route('levels.index') }}"><i class="fa fa-edit"></i><span>Levels</span></a>
+</li>
+
