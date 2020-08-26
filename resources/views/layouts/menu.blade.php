@@ -70,7 +70,7 @@
 </li>
 
 <li class="{{ Request::is('admissions*') ? 'active' : '' }}">
-    <a href="{{ route('admissions.index') }}"><i class="fa fa-education-hat"></i><span>Admissions</span></a>
+    <a href="{{ route('admissions.index') }}"><i class="fa fa-user"></i><span>Admissions</span></a>
 </li>
 
 <li class="{{ Request::is('teachers*') ? 'active' : '' }}">
