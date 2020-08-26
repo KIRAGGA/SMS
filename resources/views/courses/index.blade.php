@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Courses</h1>
         <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('courses.create') }}">Add New</a>
+           <a data-toggle="modal" data-target="#add-course-modal" class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px"><i class="fa fa-plus-circle"></i>Add New</a>
         </h1>
     </section>
     <div class="content">
@@ -24,3 +24,14 @@
     </div>
 @endsection
 
+  
+  
+          <p>HERE IS THE COURSE MODAL</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
