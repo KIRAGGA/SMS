@@ -1,3 +1,13 @@
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-dashboard"></i>
+        <span>General</span>
+        <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+    </a>
+    <ul class="treeview-menu">
+
 <li class="{{ Request::is('classes*') ? 'active' : '' }}">
     <a href="{{ route('classes.index') }}"><i class="fa fa-edit"></i><span>Classes</span></a>
 </li>
@@ -70,3 +80,5 @@
     <a href="{{ route('users.index') }}"><i class="fa fa-edit"></i><span>Users</span></a>
 </li>
 
+</ul>
+</li>
