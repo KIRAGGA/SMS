@@ -9,26 +9,27 @@
           </button>
         </div>
         <div class="modal-body">
+
 <!-- Course Name Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('course_name', 'Course Name:') !!}
     {!! Form::text('course_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Course Code Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('course_code', 'Course Code:') !!}
     {!! Form::text('course_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Description Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group">
     {!! Form::label('description', 'Description:') !!}
-    {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+    {!! Form::textarea('description', null, ['class' => 'form-control', 'cols' => 40, 'rows' => 2]) !!}
 </div>
 
 <!-- Status Field -->
-<div class="form-group col-sm-6">
+<div class="form-group">
     {!! Form::label('status', 'Status:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('status', 0) !!}
@@ -36,9 +37,12 @@
     </label>
 </div>
 
-
-<!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('courses.index') }}" class="btn btn-default">Cancel</a>
 </div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  {!! Form::submit('Save Course', ['class' => 'btn btn-success']) !!}
+</div>
+</div>
+</div>
+</div>
+
