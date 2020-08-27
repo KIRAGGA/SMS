@@ -59,7 +59,7 @@ input:read-only{
                     <!-- Created at Field -->
                     <div class="form-group">
                         {!! Form::label('created_at', 'Created At:') !!}
-                        <input type="text" name="created_at" id="created_at" readonly>
+                        <input type="text" name="created_at" id="#created_at" readonly>
                     </div>
 
                     <!-- Updated On Field -->
