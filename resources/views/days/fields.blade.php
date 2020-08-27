@@ -11,8 +11,8 @@
                 <div class="modal-body">
 
                     <!-- Name Field -->
-                    <div class="input-group col-md-12">
-                        <span class="input-group-addon">Days</span>
+                    <div class="form-group col-md-12">
+                        {!! Form::label('name', 'Name:') !!}
                         {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Enter Day Here', 'maxlength' => 255,'maxlength' => 255]) !!}
                     </div>
                 </div>
@@ -20,7 +20,7 @@
 <!-- Submit Field -->
 <div class="modal-footer">
     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
+    {!! Form::submit('Create day', ['class' => 'btn btn-success']) !!}
 </div>
 </div>
 </div>
