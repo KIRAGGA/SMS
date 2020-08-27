@@ -12,20 +12,20 @@
 
 <!-- Class Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('class_name', 'Class Name:') !!}
+    <span class="input-group-addon">Class Name</span>
     {!! Form::text('class_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Class Code Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('class_code', 'Class Code:') !!}
+    <span class="input-group-addon">Class Code</span>
     {!! Form::text('class_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('classes.index') }}" class="btn btn-default">Cancel</a>
+<div class="modal-footer">
+    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+    {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
 </div>
 </div>
 </div>

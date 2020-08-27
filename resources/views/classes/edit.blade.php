@@ -13,15 +13,23 @@
                <div class="row">
                    {!! Form::model($classes, ['route' => ['classes.update', $classes->id], 'method' => 'patch']) !!}
 
-                       <!-- Class Field -->
-                        <div class="form-group col-md-10">
-                            {!! Form::text('Class_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                       
+                        <!-- Class Name Field -->
+                        <div class="form-group col-md-6">
+                            <span class="input-group-addon">Class Name</span>
+                            {!! Form::text('class_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
                         </div>
-                                </div>
+
+                        <!-- Class Code Field -->
+                        <div class="form-group col-md-6">
+                            <span class="input-group-addon">Class Code</span>
+                            {!! Form::text('class_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                        </div>
+
                         <!-- Submit Field -->
                         <div class="modal-footer">
-                            {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
-                            {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            {!! Form::submit('Create Class', ['class' => 'btn btn-info']) !!}
                         </div>
 
                    {!! Form::close() !!}

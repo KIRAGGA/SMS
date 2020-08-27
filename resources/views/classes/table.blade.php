@@ -20,7 +20,7 @@
                 <td>{!! $classes->class_name !!}</td>
             <td>{!! $classes->class_code !!}</td>
                 <td>
-                    {!! Form::open(['route' => ['classes.destroy', $classes->id], 'method' => 'delete']) !!}
+                    {{-- {!! Form::open(['route' => ['classes.destroy', $classes->id], 'method' => 'delete']) !!} --}}
                     <div class='btn-group'>
                         <a data-toggle="modal" data-target="#class-view-modal" data-class_id="{{$classes->class_id}}"
                             data-class_name="{{$classes->class_name}}" data-class_code="{{$classes->class_code}}" 
