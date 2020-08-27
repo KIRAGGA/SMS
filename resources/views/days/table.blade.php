@@ -9,7 +9,7 @@
         <tbody>
         @foreach($days as $day)
             <tr>
-            <td>{{$day->name}}</td>
+            <td>{!!$day->name!!}</td>
                 <td>
                     {!! Form::open(['route' => ['days.destroy', $day->day_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
