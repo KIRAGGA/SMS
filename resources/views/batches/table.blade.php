@@ -59,7 +59,7 @@ input:read-only{
                     <!-- Created at Field -->
                     <div class="form-group">
                         {!! Form::label('created_at', 'Created At:') !!}
-                        <input type="text" name="created_at" id="#created_at" readonly>
+                        <input type="text" name="created_at" id="created_at" readonly>
                     </div>
 
                     <!-- Updated On Field -->
@@ -92,7 +92,7 @@ input:read-only{
         var modal = (this)
 
         modal.find('.modal-title').text('VIEW BATCH INFORMATION');
-        modal.find('.modal-body #year').val(level);
+        modal.find('.modal-body #year').val(year);
         modal.find('.modal-body #created_at').val(created_at);
         modal.find('.modal-body #updated_at').val(updated_at);
         modal.find('.modal-body #batch_id').val(batch_id);

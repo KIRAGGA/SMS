@@ -13,7 +13,16 @@
                <div class="row">
                    {!! Form::model($classes, ['route' => ['classes.update', $classes->id], 'method' => 'patch']) !!}
 
-                        @include('classes.fields')
+                       <!-- Class Field -->
+                        <div class="form-group col-md-10">
+                            {!! Form::text('Class_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                        </div>
+                                </div>
+                        <!-- Submit Field -->
+                        <div class="modal-footer">
+                            {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
+                            {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+                        </div>
 
                    {!! Form::close() !!}
                </div>
