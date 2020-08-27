@@ -49,7 +49,7 @@ input:read-only{
             </div>
                 <div class="modal-body">
                     <input type="hidden" name="batch_id" id="batch_id">
-
+                    {{-- the hidden id is used to fetch the data --}}
                     <!-- Year Field -->
                     <div class="form-group">
                         {!! Form::label('year', 'Year:') !!}
@@ -91,11 +91,11 @@ input:read-only{
 
         var modal = (this)
 
-        modal.find('modal-title').text('VIEW BATCH INFORMATION');
-        modal.find('modal-body #year').val(level);
-        modal.find('modal-body #created_at').val(reated_at);
-        modal.find('modal-body #updated_at').val(updated_at);
-        modal.find('modal-body #batch_id').val(batch_id);
+        modal.find('.modal-title').text('VIEW BATCH INFORMATION');
+        modal.find('.modal-body #year').val(level);
+        modal.find('.modal-body #created_at').val(created_at);
+        modal.find('.modal-body #updated_at').val(updated_at);
+        modal.find('.modal-body #batch_id').val(batch_id);
         });
 // this is a bootstrap simple code you can read the bootstrap modal.find
     </script>
