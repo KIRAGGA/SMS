@@ -1,4 +1,9 @@
-
+<style>
+    input:read-only{
+        border:none;
+        border-color:transparent;
+    }
+    </style>
 <div class="table-responsive">
     <table class="table" id="classrooms-table">
         <thead>

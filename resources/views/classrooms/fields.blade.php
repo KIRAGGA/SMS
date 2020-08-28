@@ -43,9 +43,10 @@
 
 
 <!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{{ route('classrooms.index') }}" class="btn btn-default">Cancel</a>
+<div class="modal-footer">
+    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+    {!! Form::submit('Create classroom', ['class' => 'btn btn-success']) !!}
+    
 </div>
 </div>
 </div>
