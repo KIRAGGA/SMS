@@ -10,24 +10,24 @@
             </div>
                 <div class="modal-body">
 
-<!-- Class Name Field -->
-<div class="form-group col-sm-6">
-    <span class="input-group-addon">Class Name</span>
-    {!! Form::text('class_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>
+                    <!-- Class Name Field -->
+                    <div class="form-group col-sm-6">
+                        <span class="input-group-addon">Class Name</span>
+                        {!! Form::text('class_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                    </div>
 
-<!-- Class Code Field -->
-<div class="form-group col-sm-6">
-    <span class="input-group-addon">Class Code</span>
-    {!! Form::text('class_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>
+                    <!-- Class Code Field -->
+                    <div class="form-group col-sm-6">
+                        <span class="input-group-addon">Class Code</span>
+                        {!! Form::text('class_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                    </div>
 
-<!-- Submit Field -->
-<div class="modal-footer">
-    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
-</div>
-</div>
-</div>
-</div>
+                    <!-- Submit Field -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
+                    </div>
+            
+        </div>
+    </div>
 </div>
