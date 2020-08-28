@@ -13,18 +13,6 @@
         </div>
         <div class="modal-body">
 
-                      <!-- Classroom Name Field -->
-            <div class="form-group col-sm-6">
-              {!! Form::label('classroom_name', 'Classroom Name:') !!}
-              {!! Form::text('classroom_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-            </div>
-
-            <!-- Classcode Name Field -->
-            <div class="form-group col-sm-6">
-              {!! Form::label('classcode_name', 'Classcode Name:') !!}
-              {!! Form::number('classcode_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-            </div>
-
                     <!-- Academic Year Field -->
             <div class="input-group col-md-12">
                 {!! Form::label('academic_year', 'Academic Year:') !!}

@@ -90,7 +90,7 @@
 
 @section('scripts')
     <script>
-        $('#class-view-modal').on('show.bs.modal', function(event){
+       $('#class-view-modal').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget)
         var class_name = button.data('class_name')
         var class_code = button.data('class_code')

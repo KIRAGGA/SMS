@@ -11,10 +11,19 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($academic, ['route' => ['academics.update', $academic->id], 'method' => 'patch']) !!}
+                   {!! Form::model($academic, ['route' => ['academics.update', $academic->academic_id], 'method' => 'patch']) !!}
 
-                        @include('academics.fields')
+                                 <!-- Academic Year Field -->
+                        <div class="input-group col-md-12">
+                            {!! Form::label('academic_year', 'Academic Year:') !!}
+                            {!! Form::text('academic_year', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                        </div>
 
+                        <!-- Submit Field -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    {!! Form::submit('Update Academics', ['class' => 'btn btn-success']) !!}
+        
                    {!! Form::close() !!}
                </div>
            </div>
