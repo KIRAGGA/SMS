@@ -54,5 +54,9 @@ class Role extends Model
         'updated_at' => 'nullable'
     ];
 
+    public function user()
+    {
+        return $this->belongsTo('App\Modals');
+    }
     
 }

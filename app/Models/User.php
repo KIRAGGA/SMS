@@ -71,5 +71,9 @@ class User extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+    public function role()
+    {
+        return $this->belongsTo('App\Models\Role'); //role of each user assigning.
+    }
+
 }

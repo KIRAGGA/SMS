@@ -11,7 +11,7 @@
             <tr>
                 <td>{{ $role->name }}</td>
                 <td>
-                    {{-- {!! Form::open(['route' => ['roles.destroy', $role->id], 'method' => 'delete']) !!} --}}
+                    {!! Form::open(['route' => ['roles.destroy', $role->role_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a href="{{ route('roles.show', [$role->role_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('roles.edit', [$role->role_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>

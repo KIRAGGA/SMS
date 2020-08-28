@@ -10,18 +10,16 @@
             </div>
                 <div class="modal-body">        
     
-        <!-- Name Field -->
-        <div class="form-group">
-            {!! Form::label('name', 'Name:') !!}
-            {!! Form::text('name', null, ['class' => 'form-control']) !!}
-        </div>
-
-        <div class="modal-footer">
-            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-            {!! Form::submit('Create Role', ['class' => 'btn btn-success'])!!}
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        {!! Form::label('name', 'Name:') !!}
+                        {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                    </div>
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        {!! Form::submit('Create Role', ['class' => 'btn btn-success'])!!}
+                    </div>
         </div>
     </div>
-    
-        </div>
-</div>
 </div>
