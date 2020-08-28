@@ -87,15 +87,11 @@
 <li class="{{ Request::is('attendances*') ? 'active' : '' }}">
     <a href="{{ route('attendances.index') }}"><i class="fa fa-calendar"></i><span>Attendances</span></a>
 </li>
-@endif
 
 <li class="{{ Request::is('roles*') ? 'active' : '' }}">
     <a href="{{ route('roles.index') }}"><i class="fa fa-edit"></i><span>Roles</span></a>
 </li>
 
-
-
-@if(Auth::user()->role_id < 2 )
 <li class="{{ Request::is('transactions*') ? 'active' : '' }}">
     <a href="{{ route('transactions.index') }}"><i class="fa fa-money"></i><span>Transactions</span></a>
 </li>
