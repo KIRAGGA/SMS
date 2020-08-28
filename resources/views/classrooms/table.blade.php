@@ -21,7 +21,8 @@
                     {!! Form::open(['route' => ['classrooms.destroy', $classroom->classroom_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a data-toggle="modal" data-target="#classroom-view-modal" data-classroom_name="{{$classroom->classroom_name}}" data-classcode_name="{{$classroom->classcode_name}}"
-                            data-classroom_description="{{$classroom->classroom_description}}" data-classroom_status="{{$classroom->classroom_status}}" data-created_at="{{$day->created_at}}" data-updated_at="{{$day->updated_at}}" data-day_id="{{$day->day_id}}"
+                            data-classroom_description="{{$classroom->classroom_description}}" data-classroom_status="{{$classroom->classroom_status}}" data-created_at="{{$classroom->created_at}}" data-updated_at="{{$classroom->updated_at}}" 
+                            data-classroom_id="{{$classroom->classroom_id}}"
                              class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('classrooms.edit', [$classroom->classroom_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
@@ -36,7 +37,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade left" id="day-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade left" id="classroom-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -97,7 +98,7 @@
 
 @section('scripts')
     <script>
-        $('#day-view-modal').on('show.bs.modal', function(event){
+        $('#classroom-view-modal').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget)
         var classcode_name = button.data('classroom_name')
         var classcode_name = button.data('classcode_name')
@@ -105,7 +106,7 @@
         var classroom_status = button.data('classroom_status')
         var created_at = button.data('created_at')
         var updated_at = button.data('updated_at')
-        var day_id = button.data('classroom_id')
+        var classroom_id = button.data('classroom_id')
 
         var modal = (this)
 
