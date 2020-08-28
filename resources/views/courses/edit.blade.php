@@ -41,7 +41,7 @@
                             </div>
                             </div>
                             <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <a href="{{ route('courses.index') }}" class="btn btn-default">Cancel</a>
                             {!! Form::submit('Update Course', ['class' => 'btn btn-success']) !!}
                             </div>
                             </div>

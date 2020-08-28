@@ -21,7 +21,7 @@
 
                         <!-- Submit Field -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <a href="{{ route('academics.index') }}" class="btn btn-default">Cancel</a>
                     {!! Form::submit('Update Academics', ['class' => 'btn btn-success']) !!}
         
                    {!! Form::close() !!}

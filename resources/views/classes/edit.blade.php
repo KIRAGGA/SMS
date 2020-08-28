@@ -28,7 +28,7 @@
 
                         <!-- Submit Field -->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                            <a href="{{ route('classes.index') }}" class="btn btn-default">Cancel</a>
                             {!! Form::submit('Create Class', ['class' => 'btn btn-info']) !!}
                         </div>
 

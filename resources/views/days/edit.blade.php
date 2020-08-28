@@ -18,6 +18,7 @@
                         {!! Form::text('name', null, ['form-control', 'placeholder' => 'Enter Day Here', 'maxlength' => 255,'maxlength' => 255]) !!}
                     </div>
                     <div class="modal-footer">
+                        <a href="{{ route('day.index') }}" class="btn btn-default">Cancel</a>
                         {!! Form::submit('Update Days', ['class' => 'btn btn-info'])!!}
                     </div>
 

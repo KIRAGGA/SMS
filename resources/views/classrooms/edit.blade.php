@@ -40,6 +40,7 @@
                 </div>
                 
                 <div class="modal-footer">
+                    <a href="{{ route('classrooms.index') }}" class="btn btn-default">Cancel</a>
                     {!! Form::submit('Update Classroom', ['class' => 'btn btn-info'])!!}
                 </div>
 
