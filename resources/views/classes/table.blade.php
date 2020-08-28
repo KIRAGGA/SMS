@@ -17,10 +17,10 @@
         <tbody>
         @foreach($classes as $classes)
             <tr>
-                <td>{!! $classes->class_name !!}</td>
-            <td>{!! $classes->class_code !!}</td>
+                <td>{{ $classes->class_name }}</td>
+            <td>{{ $classes->class_code }}</td>
                 <td>
-                    {{-- {!! Form::open(['route' => ['classes.destroy', $classes->id], 'method' => 'delete']) !!} --}}
+                    {!! Form::open(['route' => ['classes.destroy', $classes->class_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a data-toggle="modal" data-target="#class-view-modal" 
                             data-class_name="{{$classes->class_name}}" data-class_code="{{$classes->class_code}}" data-created_at="{{$classes->created_at}}" 
@@ -41,11 +41,11 @@
 
 
 <!-- Modal -->
-<div class="modal fade left" id="class-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="class-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-leanpub" aria-hidden="true"></i></h5>
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-leanpub" aria-hidden="true">viewing</i></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -75,15 +75,14 @@
                     <div class="form-group">
                         {!! Form::label('updated_at', 'Updated At:') !!}
                         <input type="text" name="updated_at" id="Updated_at" readonly>
-
+                    </div>
                 </div>
-<!-- Submit Field -->
-<div class="modal-footer">
-    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {{-- {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!} --}}
-    {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
-</div>
-        </div>
+            <!-- Submit Field -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                {{-- {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!} --}}
+                {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+            </div>
       </div>
     </div>
 </div>
@@ -94,7 +93,8 @@
         $('#class-view-modal').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget)
         var class_name = button.data('class_name')
-        var class = button.data('class_code')
+        var class_code = button.data('class_code')
+        var created_at = button.data('created_at')
         var created_at = button.data('created_at')
         var class_id = button.data('class_id')
 

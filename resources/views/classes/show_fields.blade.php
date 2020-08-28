@@ -10,14 +10,14 @@
     <p>{{ $classes->class_code }}</p>
 </div>
 
-<!-- Classroom Description Field -->
+<!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('class_description', 'Classroom Description:') !!}
-    <p>{{ $classroom->classroom_description }}</p>
+    {!! Form::label('created_at', 'Created At:') !!}
+    <p>{{ $classes->created_at }}</p>
 </div>
 
-<!-- Classroom Status Field -->
+<!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('classroom_status', 'Classroom Status:') !!}
-    <p>{{ $classroom->classroom_status }}</p>
+    {!! Form::label('updated_at', 'Updated At:') !!}
+    <p>{{ $classes->updated_at }}</p>
 </div>

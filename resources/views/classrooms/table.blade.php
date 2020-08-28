@@ -25,7 +25,8 @@
                 <td>
                     {!! Form::open(['route' => ['classrooms.destroy', $classroom->classroom_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a data-toggle="modal" data-target="#classroom-view-modal" data-classroom_name="{{$classroom->classroom_name}}" data-classcode_name="{{$classroom->classcode_name}}"
+                        <a data-toggle="modal" data-target="#classroom-view-modal" 
+                        data-classroom_name="{{$classroom->classroom_name}}" data-classcode_name="{{$classroom->classcode_name}}"
                             data-classroom_description="{{$classroom->classroom_description}}" data-classroom_status="{{$classroom->classroom_status}}" data-created_at="{{$classroom->created_at}}" data-updated_at="{{$classroom->updated_at}}" 
                             data-classroom_id="{{$classroom->classroom_id}}"
                              class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
@@ -42,11 +43,11 @@
 
 
 <!-- Modal -->
-<div class="modal fade left" id="classroom-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="classroom-view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-id-badge" aria-hidden="true"></i></h5>
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-id-badge" aria-hidden="true">iewing  the class</i></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -90,14 +91,13 @@
                         <input type="text" name="updated_at" id="Updated_at" readonly>
                     </div>
                 </div>
-<!-- Submit Field -->
-<div class="modal-footer">
-    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {{-- {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!} --}}
-    {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
-</div>
+                <!-- Submit Field -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    {{-- {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!} --}}
+                    {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+                </div>
         </div>
-      </div>
     </div>
 </div>
 
@@ -116,7 +116,7 @@
         var modal = (this)
 
         modal.find('.modal-title').text('VIEW CLASSROOM INFORMATION');
-        modal.find('.modal-body #classroom_name').val(class_name);
+        modal.find('.modal-body #classroom_name').string(class_name);
         modal.find('.modal-body #classcode_name').val(classcode_name);
         modal.find('.modal-body #classroom_description').val(classroom_description);
         modal.find('.modal-body #classroom_status').val(classroom_status);
