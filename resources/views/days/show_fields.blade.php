@@ -6,7 +6,7 @@
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Updated At:') !!}
+    {!! Form::label('created_at', 'Created At:') !!}
     <p>{{ $day->created_at }}</p>
 </div>
 

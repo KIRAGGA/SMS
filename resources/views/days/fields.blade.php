@@ -17,13 +17,13 @@
                     </div>
                 </div>
 
-<!-- Submit Field -->
-<div class="modal-footer">
-    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {!! Form::submit('Create day', ['class' => 'btn btn-success']) !!}
-</div>
-</div>
-</div>
+            <!-- Submit Field -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                {!! Form::submit('Create day', ['class' => 'btn btn-success']) !!}
+            </div>
+        </div>
+    </div>
 </div>
 
 

@@ -22,14 +22,13 @@
                 <td>
                     {{-- {!! Form::open(['route' => ['classes.destroy', $classes->id], 'method' => 'delete']) !!} --}}
                     <div class='btn-group'>
-                        <a data-toggle="modal" data-target="#class-view-modal" data-class_id="{{$classes->class_id}}"
-                            data-class_name="{{$classes->class_name}}" data-class_code="{{$classes->class_code}}" 
-                            data-created_at="{{$classes->created_at}}" data-updated_at="{{$classes->updated_at}}"
-                            class='btn btn-default btn-xs'>
-                            <i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a data-toggle="modal" data-target="#class-view-modal" 
+                            data-class_name="{{$classes->class_name}}" data-class_code="{{$classes->class_code}}" data-created_at="{{$classes->created_at}}" 
+                            data-updated_at="{{$classes->updated_at}}" data-class_id="{{$classes->class_id}}"
+                            class='btn btn-default btn-xs'> <i class="glyphicon glyphicon-eye-open"></i></a>
 
                         {{-- <a href="{{ route('classes.show', [$classes->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a> --}}
-                        <a href="{{ route('classes.edit', [$classes->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="{{ route('classes.edit', [$classes->classes_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                         {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
                     {!! Form::close() !!}
