@@ -42,13 +42,13 @@ class ClassSchedulingController extends AppBaseController
         $course = Course::all();
         $day = Day::all();
         $level = Level::all();
-        // $semseter = Semester::all();
-        // $shift = Shift::all();
+        $semseter = Semester::all();
+        $shift = Shift::all();
         $time = Time::all();
 
         $classSchedulings = $this->classSchedulingRepository->all();
 
-        return view('class_schedulings.index', compact('batch', 'class', 'course', 'day', 'level', 'shift', 'time'))
+        return view('class_schedulings.index', compact('batch', 'class', 'course', 'day', 'level', 'semester', 'shift', 'time'))
             ->with('classSchedulings', $classSchedulings);
     }
 

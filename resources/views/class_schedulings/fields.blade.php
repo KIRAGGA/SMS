@@ -38,9 +38,9 @@
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             <option value="">Select Level</option>
-                            @foreach ($levl as $lev)
+                            {{-- @foreach ($level as $lev)
                                 <option value="{{$lev->level_id}}">{{$lev->level}}</option>
-                            @endforeach
+                            @endforeach --}}
                         </select>
                     </div>
 
@@ -48,9 +48,9 @@
                     <div class="form-group col-sm-4">
                         <select name="shift_id" id="shift_id" class="form-control">
                             <option value="">Select Shift</option>
-                            @foreach ($shift as $shi)
-                                <option value="{{$shi->shift_id}}">{{$shi->shift}}</option>
-                            @endforeach<option value=""></option>
+                            {{-- @foreach ($shift as $shi)
+                                <option value="{{$shi->shift_id}}">{{$shi->shift_name}}</option>
+                            @endforeach<option value=""></option> --}}
                         </select>
                     </div>
 
@@ -58,9 +58,9 @@
                     <div class="form-group col-sm-4">
                         <select name="classroom_id" id="classroom_id" class="form-control">
                             <option value="">Select Classroom</option>
-                            @foreach ($classroom as $room)
+                            {{-- @foreach ($classroom as $room)
                                 <option value="{{$room->classroom_id}}">{{$room->classroom_name}}</option>
-                            @endforeach
+                            @endforeach --}}
                         </select>
                     </div>
 
@@ -77,9 +77,9 @@
                     <div class="form-group col-sm-4">
                         <select name="day_id" id="days_id" class="form-control">
                             <option value="">Select Day</option>
-                            @foreach ($day as $days)
+                            {{-- @foreach ($day as $days)
                                 <option value="{{$days->day_id}}">{{$day->name}}</option>
-                            @endforeach
+                            @endforeach --}}
                         </select>
 
                     </div>
@@ -88,7 +88,9 @@
                     <div class="form-group col-sm-4">
                         <select name="time_id" id="time_id" class="form-control">
                             <option value="">Select Time</option>
-                            <option value=""></option>
+                            @foreach ($duration as $tim)
+                                <option value="{{$tim->time_id}}">{{$tim->time}}</option>
+                            @endforeach
                         </select>
 
                     </div>
@@ -97,7 +99,9 @@
                     <div class="form-group col-sm-4">
                         <select name="semester_id" id="semester_id" class="form-control">
                             <option value="">Select Semester</option>
-                            <option value=""></option>
+                            {{-- @foreach ($semester as $sem)
+                                <option value="{{$sem->semester_id}}">{{$sem->semester_name}}</option>
+                            @endforeach --}}
                         </select>
 
                     </div>
