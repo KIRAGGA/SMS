@@ -37,6 +37,24 @@ class ClassSchedulingController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $batch = Batch::all();
+        $class = Classes::all();
+        $course = Course::all();
+        $day = Day::all();
+        $level = Level::all();
+        // $semseter = Semester::all();
+        // $shift = Shift::all();
+        $time = Time::all();
+
+        dd($batch); die;
+        dd($class); die;
+        dd($course); die;
+        dd($day); die;
+        dd($level); die;
+        // dd($semseter); die;
+        // dd($shift); die;
+        dd($time); die;
+
         $classSchedulings = $this->classSchedulingRepository->all();
 
         return view('class_schedulings.index')
