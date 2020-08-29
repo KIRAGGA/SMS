@@ -37,7 +37,7 @@
                 <!-- Submit Field -->
                 <div class="modal-footer">
                     <a href="{{ route('levels.index') }}" class="btn btn-default">Cancel</a>
-                    {!! Form::submit('Create classroom', ['class' => 'btn btn-success']) !!}
+                    {!! Form::submit('Create level', ['class' => 'btn btn-success']) !!}
                 </div>
         </div>
     </div>
