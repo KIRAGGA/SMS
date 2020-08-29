@@ -99,7 +99,7 @@
                         <select name="semester_id" id="semester_id" class="form-control">
                             <option value="">Select Semester</option>
                             {{-- @foreach ($semester as $sem)
-                                <option value="{{$sem->semester_id}}">{{$sem->semester_name}}</option>
+                                <option value="{{$sem->semester_id}}">{{$sem->semester_name}}__{{$sem->semester_code}}</option>
                             @endforeach --}}
                         </select>
                     </div>
