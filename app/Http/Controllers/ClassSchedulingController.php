@@ -50,13 +50,21 @@ class ClassSchedulingController extends AppBaseController
         $classSchedulings = $this->classSchedulingRepository->all();
 
 $classschedule = DB::table('class_schedule')->select(
-    'courses.*'
+    'courses.*',
+    'levels.*',
+    'days.*',
+    'batches.*',
+    'semesters.*',
+    'classes.*'
         )
-        ->join('courses', 'courses.id', '=', 'class_schedule.course_id')
-        ->join('batches', 'batches.id', '=', 'class_schedule.batches_id')
-        ->join('classes', 'classes.id', '=', 'class_schedule.class_id')
-        ->join('batches', 'courses.id', '=', 'class_schedule.course_id')
+        ->join('courses', 'courses.course_id', '=', 'class_schedule.course_id')
+        ->join('batches', 'batches.batch_id', '=', 'class_schedule.batches_id')
+        ->join('classes', 'classes.class_id', '=', 'class_schedule.class_id')
+        ->join('days', 'days.day_id', '=', 'class_schedule.day_id')
+        ->join('levels', 'levels.levelsid', '=', 'class_schedule.level_id')
+        // ->join('semesters', 'semesters.semester_id', '=', 'class_schedule.semester_id')
         ->get();
+dd($classschedule); die;
 
         return view('class_schedulings.index', compact('batch', 'class', 'course', 'day', 'level', 'shift', 'time', 'classroom'))
             ->with('classSchedulings', $classSchedulings);
