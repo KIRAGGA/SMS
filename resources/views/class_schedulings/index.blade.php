@@ -11,13 +11,17 @@
         <div class="clearfix"></div>
 
         @include('flash::message')
-        {{-- @include('adminlte-templates::common.errors') --}}
+        @include('adminlte-templates::common.errors')
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
                     @include('class_schedulings.table')
 
-                    @include('class_schedulings.fields')
+                    {!! Form::open(['route' => 'classSchedulings.store']) !!}
+
+                        @include('class_schedulings.fields')
+
+                    {!! Form::close() !!}
             </div>
         </div>
         <div class="text-center">

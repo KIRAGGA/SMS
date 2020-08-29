@@ -106,19 +106,34 @@
 
                     <!-- Start Time Field -->
                     <div class="form-group col-sm-6">
-                        <select name="start_id" id="start_id" class="form-control">
-                            <option value="">Select Start Date</option>
-                            <option value=""></option>
-                        </select>
+                        <label>Start Date</label>
+                        <input type="text" class="form-control" name="start_date" id="start_date">
                     </div>
+                        {{-- script for start date --}}
+                        
+                        @section('scripts')
+                            <script>
+                                $('#start_date').datetimepicker({
+                                    format: 'YYYY-MM-DD',
+                                    useCurrent: false
+                                })
+                            </script>
+                        @endsection
 
                             <!-- End Time Field -->
                     <div class="form-group col-sm-6">
-                        <select name="end_id" id="end_id" class="form-control">
-                            <option value="">Select End Date</option>
-                            <option value=""></option>
-                        </select>
+                        <label>End Date</label>
+                        <input type="text" class="form-control" name="end_date" id="end_date">
                     </div>
+                     {{-- Script for end date --}}
+                        @section('scripts')
+                            <script>
+                                $('#start_date').datetimepicker({
+                                    format: 'YYYY-MM-DD',
+                                    useCurrent: false
+                                })
+                            </script>
+                        @endsection
 
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">
@@ -138,26 +153,9 @@
                 </div>
             </div>
 
-            {{-- script for start date --}}
-            @section('scripts')
-                <script type="text/javasctipt">
-                $('#start_date').datetimepicker({
-                    format: 'YYYY-MM-DD HH:mm:ss',
-                    useCurrent: false
-                })
-                </script>
-            @endsection
+           
 
-            {{-- Script for end date --}}
-            @section('scripts')
-                <script type="text/javasctipt">
-                $('#end_date').datetimepicker({
-                    format: 'YYYY-MM-DD',
-                    useCurrent: false
-                })
-                </script>
-            @endsection
-
+           
             
         </div>
     </div>
