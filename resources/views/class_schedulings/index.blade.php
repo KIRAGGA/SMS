@@ -4,7 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Class Schedulings</h1>
         <h1 class="pull-right">
-            <a data-target="#classschedule-show" data-toggle="modal" class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px"><i class="fa fa-plus"></i>Generate New Class Schedule</a>
+            <a data-target="#classschedule-show" data-toggle="modal" class="btn btn-success pull-right" style="margin-top: -10px;margin-bottom: 5px"><i class="fa fa-plus-circle"></i>Generate New Class Schedule</a>
         </h1>
     </section>
     <div class="content">

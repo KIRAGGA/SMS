@@ -130,6 +130,21 @@
                         {{-- {!! Form::label('end_time', 'End Time:') !!}
                         {!! Form::text('end_time', null, ['class' => 'form-control']) !!} --}}
                     </div>
+                        <!-- Status Field -->
+                    <div class="form-group col-sm-6">
+                        {!! Form::label('status', 'Status:') !!}
+                        <label class="checkbox-inline">
+                            {!! Form::hidden('status', 0) !!}
+                            {!! Form::checkbox('status', '1', null) !!} 1
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- Submit Field -->
+                        <div class="form-group col-sm-12">
+                            {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
+                            <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -153,22 +168,7 @@
                 </script>
             @endsection
 
-                <!-- Status Field -->
-                <div class="form-group col-sm-6">
-                    {!! Form::label('status', 'Status:') !!}
-                    <label class="checkbox-inline">
-                        {!! Form::hidden('status', 0) !!}
-                        {!! Form::checkbox('status', '1', null) !!} 1
-                    </label>
-                </div>
-        
-            <div class="modal-footer">
-                <!-- Submit Field -->
-                <div class="form-group col-sm-12">
-                    {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
-                    <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
