@@ -98,7 +98,6 @@
                     {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
                 </div>
         </div>
-      
     </div>
 </div>
 

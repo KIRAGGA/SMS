@@ -83,7 +83,7 @@
                 {{-- {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!} --}}
                 {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
             </div>
-      </div>
+        </div>
     </div>
 </div>
 
@@ -95,7 +95,7 @@
         var class_name = button.data('class_name')
         var class_code = button.data('class_code')
         var created_at = button.data('created_at')
-        var created_at = button.data('created_at')
+        var updated_at = button.data('updated_at')
         var class_id = button.data('class_id')
 
         var modal = (this)

@@ -49,6 +49,15 @@ class ClassSchedulingController extends AppBaseController
 
         $classSchedulings = $this->classSchedulingRepository->all();
 
+$classschedule = DB::table('class_schedule')->select(
+    'courses.*'
+        )
+        ->join('courses', 'courses.id', '=', 'class_schedule.course_id')
+        ->join('batches', 'batches.id', '=', 'class_schedule.batches_id')
+        ->join('classes', 'classes.id', '=', 'class_schedule.class_id')
+        ->join('batches', 'courses.id', '=', 'class_schedule.course_id')
+        ->get();
+
         return view('class_schedulings.index', compact('batch', 'class', 'course', 'day', 'level', 'shift', 'time', 'classroom'))
             ->with('classSchedulings', $classSchedulings);
     }
