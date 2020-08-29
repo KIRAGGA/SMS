@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Add New Classroom</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Add New Level</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -28,13 +28,7 @@
                         {!! Form::textarea('level_description', null, ['class' => 'form-control']) !!}
                     </div>
                 </div>
-                    
-                <!-- Submit Field -->
-                    {{-- <div class="form-group col-sm-12">
-                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                        <a href="{{ route('levels.index') }}" class="btn btn-default">Cancel</a>
-                    </div> --}}
-                <!-- Submit Field -->
+        
                 <div class="modal-footer">
                     <a href="{{ route('levels.index') }}" class="btn btn-default">Cancel</a>
                     {!! Form::submit('Create level', ['class' => 'btn btn-success']) !!}
