@@ -12,7 +12,6 @@
            <div class="box-body">
                <div class="row">
                    {!! Form::model($classes, ['route' => ['classes.update', $classes->class_id], 'method' => 'patch']) !!}
-
                        
                         <!-- Class Name Field -->
                         <div class="form-group col-md-6">

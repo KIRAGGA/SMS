@@ -21,13 +21,13 @@
                         <span class="input-group-addon">Class Code</span>
                         {!! Form::text('class_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
                     </div>
-
+                </div>
                     <!-- Submit Field -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                         {!! Form::submit('Create Class', ['class' => 'btn btn-success']) !!}
                     </div>
-            
+                
         </div>
     </div>
 </div>
