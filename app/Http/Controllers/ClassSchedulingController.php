@@ -9,15 +9,15 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
-use App\modals\Batch;
-use App\modals\Classes;
-use App\modals\Classroom;
-use App\modals\Course;
-use App\modals\Day;
-use App\modals\Level;
-use App\modals\Semester;
-use App\modals\Shift;
-use App\modals\Time;
+use App\models\Batch;
+use App\models\Classes;
+use App\models\Classroom;
+use App\models\Course;
+use App\models\Day;
+use App\models\Level;
+use App\models\Semester;
+use App\models\Shift;
+use App\models\Time;
 class ClassSchedulingController extends AppBaseController
 {
     /** @var  ClassSchedulingRepository */
