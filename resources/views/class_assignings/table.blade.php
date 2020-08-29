@@ -15,11 +15,11 @@
         <tbody>
         @foreach($classAssignings as $classAssigning)
             <tr>
-                <td>{{ $classAssigning->course_id }}</td>
-            <td>{{ $classAssigning->level_id }}</td>
-            <td>{{ $classAssigning->shift_id }}</td>
-            <td>{{ $classAssigning->classroom_id }}</td>
-            <td>{{ $classAssigning->batch_id }}</td>
+                <td>{{ $classAssigning->course_name }}</td>
+            <td>{{ $classAssigning->level_name }}</td>
+            <td>{{ $classAssigning->shift }}</td>
+            <td>{{ $classAssigning->classroom_name }}</td>
+            <td>{{ $classAssigning->year }}</td>
             <td>{{ $classAssigning->day_id }}</td>
             <td>{{ $classAssigning->time_id }}</td>
                 <td>
