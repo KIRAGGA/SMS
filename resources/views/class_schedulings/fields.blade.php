@@ -22,7 +22,7 @@
                     </div>
 
                     <!-- Class Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="class_id" id="class_id" class="form-control">
                             <option value="">Select Class</option>
                             <option value=""></option>
@@ -32,7 +32,7 @@
                     </div>
 
                     <!-- Level Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             <option value="">Select Level</option>
                             <option value=""></option>
@@ -42,7 +42,7 @@
                     </div>
 
                     <!-- Shift Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="shift_id" id="shift_id" class="form-control">
                             <option value="">Select Shift</option>
                             <option value=""></option>
@@ -52,7 +52,7 @@
                     </div>
 
                     <!-- Classroom Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="classroom_id" id="classroom_id" class="form-control">
                             <option value="">Select Classroom</option>
                             <option value=""></option>
@@ -62,7 +62,7 @@
                     </div>
 
                     <!-- Batch Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="batch_id" id="batch_id" class="form-control">
                             <option value="">Select Batch</option>
                             <option value=""></option>
@@ -72,7 +72,7 @@
                     </div>
 
                     <!-- Day Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="day_id" id="days_id" class="form-control">
                             <option value="">Select Day</option>
                             <option value=""></option>
@@ -82,7 +82,7 @@
                     </div>
 
                     <!-- Time Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="time_id" id="time_id" class="form-control">
                             <option value="">Select Time</option>
                             <option value=""></option>
@@ -92,7 +92,7 @@
                     </div>
 
                     <!-- Teacher Id Field -->
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <select name="semester_id" id="semester_id" class="form-control">
                             <option value="">Select Semester</option>
                             <option value=""></option>
@@ -120,52 +120,55 @@
                         {{-- {!! Form::label('start_time', 'Start Time:') !!}
                         {!! Form::text('start_time', null, ['class' => 'form-control']) !!} --}}
                     </div>
+
+                            <!-- End Time Field -->
+                    <div class="form-group col-sm-6">
+                        <select name="end_id" id="end_id" class="form-control">
+                            <option value="">Select End Date</option>
+                            <option value=""></option>
+                        </select>
+                        {{-- {!! Form::label('end_time', 'End Time:') !!}
+                        {!! Form::text('end_time', null, ['class' => 'form-control']) !!} --}}
+                    </div>
                 </div>
             </div>
 
-@section('scripts')
-    <script type="text/javasctipt">
-    $('#start_date').datetimepicker({
-        format: 'YYYY-MM-DD HH:mm:ss',
-        useCurrent: false
-    })
-    </script>
-@endsection
+            {{-- script for start date --}}
+            @section('scripts')
+                <script type="text/javasctipt">
+                $('#start_date').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm:ss',
+                    useCurrent: false
+                })
+                </script>
+            @endsection
 
-<!-- End Time Field -->
-<div class="form-group col-sm-6">
-    <select name="end_id" id="end_id" class="form-control">
-        <option value="">Select End Date</option>
-        <option value=""></option>
-    </select>
-    {{-- {!! Form::label('end_time', 'End Time:') !!}
-    {!! Form::text('end_time', null, ['class' => 'form-control']) !!} --}}
-</div>
+            {{-- Script for end date --}}
+            @section('scripts')
+                <script type="text/javasctipt">
+                $('#end_date').datetimepicker({
+                    format: 'YYYY-MM-DD',
+                    useCurrent: false
+                })
+                </script>
+            @endsection
 
-@section('scripts')
-    <script type="text/javasctipt">
-    $('#end_date').datetimepicker({
-        format: 'YYYY-MM-DD',
-        useCurrent: false
-    })
-    </script>
-@endsection
-
-<!-- Status Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('status', 'Status:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', 0) !!}
-        {!! Form::checkbox('status', '1', null) !!} 1
-    </label>
-</div>
-</div>
+                <!-- Status Field -->
+                <div class="form-group col-sm-6">
+                    {!! Form::label('status', 'Status:') !!}
+                    <label class="checkbox-inline">
+                        {!! Form::hidden('status', 0) !!}
+                        {!! Form::checkbox('status', '1', null) !!} 1
+                    </label>
+                </div>
+        
+            <div class="modal-footer">
+                <!-- Submit Field -->
+                <div class="form-group col-sm-12">
+                    {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
+                    <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
+                </div>
+            </div>
         </div>
-
-        <div class="modal-footer">
-<!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
-    <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
-</div>
+    </div>
 </div>
