@@ -23,7 +23,7 @@ class Time extends Model
 
 
     protected $dates = ['deleted_at'];
-
+    protected $primaryKey = 'time_id';
 
 
     public $fillable = [
