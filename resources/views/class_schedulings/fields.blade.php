@@ -8,6 +8,7 @@
                 </button>
                 <h4 class="modal-title"></h4>
             </div>
+
             <div class="panel-body" style="border-bottom: 1px solid #ccc; ">
                 <div class="form-group">
                     <div class="row"></div>
@@ -48,9 +49,9 @@
                     <div class="form-group col-sm-4">
                         <select name="shift_id" id="shift_id" class="form-control">
                             <option value="">Select Shift</option>
-                            {{-- @foreach ($shift as $shi)
+                            @foreach ($shift as $shi)
                                 <option value="{{$shi->shift_id}}">{{$shi->shift_name}}</option>
-                            @endforeach<option value=""></option> --}}
+                            @endforeach
                         </select>
                     </div>
 
@@ -58,9 +59,9 @@
                     <div class="form-group col-sm-4">
                         <select name="classroom_id" id="classroom_id" class="form-control">
                             <option value="">Select Classroom</option>
-                            {{-- @foreach ($classroom as $room)
-                                <option value="{{$room->classroom_id}}">{{$room->classroom_name}}</option>
-                            @endforeach --}}
+                            @foreach ($classroom as $room)
+                        <option value="{{$room->classroom_id}}">{{$room->classroom_name}}__{{$room->classroom_code}}</option>
+                            @endforeach
                         </select>
                     </div>
 
@@ -72,27 +73,25 @@
                                 <option value="{{$bat->batch_id}}">{{$bat->year}}</option>
                             @endforeach
                         </select>
-
+                    </div>
                     <!-- Day Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="day_id" id="days_id" class="form-control">
                             <option value="">Select Day</option>
-                            {{-- @foreach ($day as $days)
-                                <option value="{{$days->day_id}}">{{$day->name}}</option>
-                            @endforeach --}}
+                            @foreach ($day as $d)
+                                <option value="{{$d->day_id}}">{{$d->name}}</option>
+                            @endforeach
                         </select>
-
                     </div>
 
                     <!-- Time Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="time_id" id="time_id" class="form-control">
                             <option value="">Select Time</option>
-                            @foreach ($duration as $tim)
-                                <option value="{{$tim->time_id}}">{{$tim->time}}</option>
+                            @foreach ($time as $ti)
+                                <option value="{{$ti->time_id}}">{{$ti->time}}</option>
                             @endforeach
                         </select>
-
                     </div>
 
                     <!-- Teacher Id Field -->
@@ -103,7 +102,6 @@
                                 <option value="{{$sem->semester_id}}">{{$sem->semester_name}}</option>
                             @endforeach --}}
                         </select>
-
                     </div>
 
                     <!-- Start Time Field -->
