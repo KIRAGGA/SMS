@@ -20,7 +20,7 @@ class classesRepository extends BaseRepository
         'class_name',
         'class_code'
     ];
-
+    protected $primaryKey = 'class_id';
     /**
      * Return searchable fields
      *

@@ -43,12 +43,11 @@
         </div> --}}
 
 
-        <!-- Submit Field -->
-      <div class="modal-footer">
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-          {!! Form::submit('Create classroom', ['class' => 'btn btn-success']) !!}
-          
+            <!-- Submit Field -->
+          <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+              {!! Form::submit('Create classroom', ['class' => 'btn btn-success']) !!}
+          </div>
       </div>
     </div>
-  </div>
 </div>
