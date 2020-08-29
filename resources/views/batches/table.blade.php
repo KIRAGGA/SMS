@@ -66,16 +66,15 @@ input:read-only{
                     <div class="form-group">
                         {!! Form::label('updated_at', 'Updated At:') !!}
                         <input type="text" name="updated_at" id="Updated_at" readonly>
-
+                    </div>
                 </div>
-<!-- Submit Field -->
-<div class="modal-footer">
-    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!}
-    {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
-</div>
+                    <!-- Submit Field -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!}
+                        {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+                    </div>
         </div>
-      </div>
     </div>
 </div>
 
