@@ -9,7 +9,7 @@
         <th>Batch </th>
         <th>Day </th>
         <th>Time </th>
-        <th>Teacher </th>
+        {{-- <th>Teacher </th> --}}
         <th>Classroom</th>
         <th>Shifts</th>
         <th>Semester</th>
@@ -25,11 +25,12 @@
                 <td>{{ $classScheduling->course_id }}</td>
             <td>{{ $classScheduling->level }}</td>
             <td>{{ $classScheduling->shift_name }}</td>
+            <td>{{ $classScheduling->class_code }}</td>
             <td>{{ $classScheduling->classroom_name }}</td>
             <td>{{ $classScheduling->year }}</td>
             <td>{{ $classScheduling->name }}</td>
             <td>{{ $classScheduling->time }}</td>
-            <td>{{ $classScheduling->teacher_id }}</td>
+            {{-- <td>{{ $classScheduling->teacher_id }}</td> --}}
             <td>{{ $classScheduling->semester_code }}</td>
             <td>{{ $classScheduling->start_time }}</td>
             <td>{{ $classScheduling->end_time }}</td>
