@@ -15,7 +15,10 @@
                     <div class="form-group col-sm-4">
                         <select name="course_id" id="course_id" class="form-control">
                             <option value="">Select Course</option>
-                            <option value=""></option>
+                            {{-- adding a foreach loop to select the data from the database --}}
+                            @foreach ($course as $cou)
+                                <option value="{{$cou->course_id}}">{{$cou->course_name}}</option>
+                            @endforeach
                         </select>
                         {{-- {!! Form::label('course_id', 'Course Id:') !!}
                         {!! Form::number('course_id', null, ['class' => 'form-control']) !!} --}}
@@ -25,60 +28,60 @@
                     <div class="form-group col-sm-4">
                         <select name="class_id" id="class_id" class="form-control">
                             <option value="">Select Class</option>
-                            <option value=""></option>
+                            @foreach ($class as $clas)
+                                <option value="{{$clas->class_id}}">{{$clas->class_name}}</option>
+                            @endforeach
                         </select>
-                        {{-- {!! Form::label('shift_id', 'Shift Id:') !!}
-                        {!! Form::number('shift_id', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                     <!-- Level Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             <option value="">Select Level</option>
-                            <option value=""></option>
+                            @foreach ($levl as $lev)
+                                <option value="{{$lev->level_id}}">{{$lev->level}}</option>
+                            @endforeach
                         </select>
-                        {{-- {!! Form::label('level_id', 'Level Id:') !!}
-                        {!! Form::number('level_id', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                     <!-- Shift Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="shift_id" id="shift_id" class="form-control">
                             <option value="">Select Shift</option>
-                            <option value=""></option>
+                            @foreach ($shift as $shi)
+                                <option value="{{$shi->shift_id}}">{{$shi->shift}}</option>
+                            @endforeach<option value=""></option>
                         </select>
-                        {{-- {!! Form::label('shift_id', 'Shift Id:') !!}
-                        {!! Form::number('shift_id', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                     <!-- Classroom Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="classroom_id" id="classroom_id" class="form-control">
                             <option value="">Select Classroom</option>
-                            <option value=""></option>
+                            @foreach ($classroom as $room)
+                                <option value="{{$room->classroom_id}}">{{$room->classroom_name}}</option>
+                            @endforeach
                         </select>
-                        {{-- {!! Form::label('classroom_id', 'Classroom Id:') !!}
-                        {!! Form::number('classroom_id', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                     <!-- Batch Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="batch_id" id="batch_id" class="form-control">
                             <option value="">Select Batch</option>
-                            <option value=""></option>
+                            @foreach ($batch as $bat)
+                                <option value="{{$bat->batch_id}}">{{$bat->year}}</option>
+                            @endforeach
                         </select>
-                        {{-- {!! Form::label('batch_id', 'Batch Id:') !!}
-                        {!! Form::number('batch_id', null, ['class' => 'form-control']) !!} --}}
-                    </div>
 
                     <!-- Day Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="day_id" id="days_id" class="form-control">
                             <option value="">Select Day</option>
-                            <option value=""></option>
+                            @foreach ($day as $days)
+                                <option value="{{$days->day_id}}">{{$day->name}}</option>
+                            @endforeach
                         </select>
-                        {{-- {!! Form::label('day_id', 'Day Id:') !!}
-                        {!! Form::number('day_id', null, ['class' => 'form-control']) !!} --}}
+
                     </div>
 
                     <!-- Time Id Field -->
@@ -87,8 +90,7 @@
                             <option value="">Select Time</option>
                             <option value=""></option>
                         </select>
-                        {{-- {!! Form::label('time_id', 'Time Id:') !!}
-                        {!! Form::number('time_id', null, ['class' => 'form-control']) !!} --}}
+
                     </div>
 
                     <!-- Teacher Id Field -->
@@ -97,19 +99,8 @@
                             <option value="">Select Semester</option>
                             <option value=""></option>
                         </select>
-                        {{-- {!! Form::label('teacher_id', 'Teacher Id:') !!}
-                        {!! Form::number('teacher_id', null, ['class' => 'form-control']) !!} --}}
+
                     </div>
-
-                    <!-- Semester Id Field -->
-                    {{-- <div class="form-group col-sm-6">
-                        <select name="semester_id" id="semester_id" class="form-control">
-                            <option value="">Select Teacher</option>
-                            <option value=""></option>
-                        </select>
-                        {{-- {!! Form::label('teacher_id', 'Teacher Id:') !!}
-                        {!! Form::number('teacher_id', null, ['class' => 'form-control']) !!} --}}
-
 
                     <!-- Start Time Field -->
                     <div class="form-group col-sm-6">
@@ -117,8 +108,6 @@
                             <option value="">Select Start Date</option>
                             <option value=""></option>
                         </select>
-                        {{-- {!! Form::label('start_time', 'Start Time:') !!}
-                        {!! Form::text('start_time', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                             <!-- End Time Field -->
@@ -127,9 +116,8 @@
                             <option value="">Select End Date</option>
                             <option value=""></option>
                         </select>
-                        {{-- {!! Form::label('end_time', 'End Time:') !!}
-                        {!! Form::text('end_time', null, ['class' => 'form-control']) !!} --}}
                     </div>
+
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">
                         {!! Form::label('status', 'Status:') !!}
