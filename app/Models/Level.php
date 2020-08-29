@@ -33,7 +33,7 @@ class Level extends Model
         'course_id',
         'level_description'
     ];
-
+    protected $primaryKey = 'level_id';
     /**
      * The attributes that should be casted to native types.
      *
