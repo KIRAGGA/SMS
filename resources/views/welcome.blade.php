@@ -99,7 +99,7 @@
         </style> --}}
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        {{-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -113,7 +113,7 @@
                     @endauth
                 </div>
             @endif
-              </div>
+              </div> --}}
             {{-- Start of the  --}}
             <!--START SCROLL TOP BUTTON -->
      <a class="scrollToTop" href="#">
@@ -153,14 +153,12 @@
                           @if (Route::has('login'))
                               <div class="top-right links">
                                   @auth
-                                      <a href="{{ url('/home') }}">Home</a>
+                                      <a href="{{ url('/home') }}" class="btn btn-success">Dashboard</a>
                                   @else
-                                  <button type="button" class="btn btn-success" href="{{ route('login') }}">Login</button>
-                                      {{-- <a href="{{ route('login') }}">Login</a> --}}
+                                          <a href="{{ route('login') }}" class="btn btn-success">Login</a>
               
                                       @if (Route::has('register'))
-                                      <button type="button" class="btn btn-success" href="{{ route('register') }}">Login</button>
-                                          {{-- <a href="{{ route('register') }}">Register</a> --}}
+                                          <a href="{{ route('register') }}" class="btn btn-default">Register</a>
                                       @endif
                                   @endauth
                               </div>
