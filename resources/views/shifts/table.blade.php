@@ -9,7 +9,7 @@
         <tbody>
         @foreach($shifts as $shift)
             <tr>
-                <td>{{ $shift->shift }}</td>
+                <td>{{ $shift->shift_name }}</td>
                 <td>
                     {!! Form::open(['route' => ['shifts.destroy', $shift->shift_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

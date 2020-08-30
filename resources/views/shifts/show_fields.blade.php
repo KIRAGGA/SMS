@@ -1,7 +1,7 @@
 <!-- Shift Field -->
 <div class="form-group">
-    {!! Form::label('shift', 'Shift:') !!}
-    <p>{{ $shift->shift }}</p>
+    {!! Form::label('shift_name', 'Shift:') !!}
+    <p>{{ $shift->shift_name }}</p>
 </div>
 <!-- Created At Field -->
 <div class="form-group">
