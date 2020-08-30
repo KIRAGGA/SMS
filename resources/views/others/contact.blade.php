@@ -111,7 +111,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-            <li><a href="index.html">Home</a></li>            
+            <li><a href="/">Home</a></li>            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -119,7 +119,7 @@
                 <li><a href="course-detail.html">Course Detail</a></li>                
               </ul>
             </li>           
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="/gallery">Gallery</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -127,7 +127,7 @@
                 <li><a href="blog-single.html">Blog Single</a></li>                
               </ul>
             </li>            
-            <li class="active"><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="/contact">Contact</a></li>
             <li><a href="404.html">404 Page</a></li>               
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
           </ul>                   

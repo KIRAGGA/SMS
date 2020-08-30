@@ -134,7 +134,7 @@
                 <li><a href="blog-single.html">Blog Single</a></li>                
               </ul>
             </li>            
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
             <li><a href="404.html">404 Page</a></li>               
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
           </ul>                    
