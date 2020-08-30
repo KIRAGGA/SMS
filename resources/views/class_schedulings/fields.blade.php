@@ -96,11 +96,11 @@
 
                     <!-- Teacher Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="semester_id" id="semester_id" class="form-control">
-                            <option value="">Select Semester</option>
-                            {{-- @foreach ($semester as $sem)
-                                <option value="{{$sem->semester_id}}">{{$sem->semester_name}}__{{$sem->semester_code}}</option>
-                            @endforeach --}}
+                        <select name="teacher_id" id="teacher_id" class="form-control">
+                            <option value="">Select teacher</option>
+                            @foreach ($teacher as $teach)
+                                <option value="{{$teach->teacher_id}}">{{$teach->teacher_name}}__{{$teach->teacher_code}}</option>
+                            @endforeach
                         </select>
                     </div>
 

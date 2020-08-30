@@ -15,10 +15,10 @@ use App\models\Classroom;
 use App\models\Course;
 use App\models\Day;
 use App\models\Level;
-use App\models\Semester;
+use App\models\Teacher;
 use App\models\Shift;
 use App\models\Time;
-use App\Http\Controllers\DB;
+use Illuminate\Support\Facades\DB;
 class ClassSchedulingController extends AppBaseController
 {
     /** @var  ClassSchedulingRepository */
@@ -43,36 +43,36 @@ class ClassSchedulingController extends AppBaseController
         $course = Course::all();
         $day = Day::all();
         $level = Level::all();
-        // $semester = Semester::all();
+        $teacher = teacher::all();
         $shift = Shift::all();
         $time = Time::all();
         $classroom = Classroom::all();
 
         $classSchedulings = $this->classSchedulingRepository->all();
 
-$classschedule = DB::table('class_schedule')->select(
-    'courses.*',
-    'levels.*',
-    'days.*',
-    'batches.*',
-    'semesters.*',
-    'classes.*',
-    'shifts.*',
-    'times.*',
-    'classrooms.*'
-        )
-        ->join('courses', 'courses.course_id', '=', 'class_schedule.course_id')
-        ->join('batches', 'batches.batch_id', '=', 'class_schedule.batches_id')
-        ->join('classes', 'classes.class_id', '=', 'class_schedule.class_id')
-        ->join('days', 'days.day_id', '=', 'class_schedule.day_id')
-        ->join('levels', 'levels.levels_id', '=', 'class_schedule.level_id')
-        // ->join('semesters', 'semesters.semester_id', '=', 'class_schedule.semester_id')
-        ->join('shifts', 'shifts.shift_id', '=', 'class_schedule.shift_id')
-        ->join('times', 'times.time_id', '=', 'class_schedule.time_id')
-        ->join('classrooms', 'classrooms.classroom_id', '=', 'class_schedule.classroom_id')
+// $classschedule = DB::table('class_schedule')->select(
+//     'courses.*',
+//     'levels.*',
+//     'days.*',
+//     'batches.*',
+//     'semesters.*',
+//     'classes.*',
+//     'shifts.*',
+//     'times.*',
+//     'classrooms.*'
+//         )
+//         ->join('courses', 'courses.course_id', '=', 'class_schedule.course_id')
+//         ->join('batches', 'batches.batch_id', '=', 'class_schedule.batches_id')
+//         ->join('classes', 'classes.class_id', '=', 'class_schedule.class_id')
+//         ->join('days', 'days.day_id', '=', 'class_schedule.day_id')
+//         ->join('levels', 'levels.levels_id', '=', 'class_schedule.level_id')
+//         // ->join('semesters', 'semesters.semester_id', '=', 'class_schedule.semester_id')
+//         ->join('shifts', 'shifts.shift_id', '=', 'class_schedule.shift_id')
+//         ->join('times', 'times.time_id', '=', 'class_schedule.time_id')
+//         ->join('classrooms', 'classrooms.classroom_id', '=', 'class_schedule.classroom_id')
         
-        ->get();
-dd($classschedule); die;
+//         ->get();
+// dd($classschedule); die;
 
         return view('class_schedulings.index', compact('classschedule','batch', 'class', 'course', 'day', 'level', 'shift', 'time', 'classroom'))
             ->with('classSchedulings', $classSchedulings);

@@ -25,20 +25,20 @@
                 <td>{{ $classScheduling->course_id }}</td>
             <td>{{ $classScheduling->level }}</td>
             <td>{{ $classScheduling->shift_name }}</td>
-            <td>{{ $classScheduling->class_code }}</td>
+            {{-- <td>{{ $classScheduling->class_code }}</td> --}}
             <td>{{ $classScheduling->classroom_name }}</td>
             <td>{{ $classScheduling->year }}</td>
             <td>{{ $classScheduling->name }}</td>
             <td>{{ $classScheduling->time }}</td>
-            {{-- <td>{{ $classScheduling->teacher_id }}</td> --}}
-            <td>{{ $classScheduling->semester_code }}</td>
+            <td>{{ $classScheduling->teacher_id }}</td>
+            {{-- <td>{{ $classScheduling->semester_code }}</td> --}}
             <td>{{ $classScheduling->start_time }}</td>
             <td>{{ $classScheduling->end_time }}</td>
-            <td>@if{{ $classScheduling->status ==1 }}
-                <div class="color: green">Active</div>
+            <td>{{ $classScheduling->status }}
+                {{-- <div class="color: green">Active</div>
                 @else
                 <div class="color: red">In Active</div>
-                @endif
+                @endif --}}
             </td>
                 <td>
                     {{-- {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!} --}}
