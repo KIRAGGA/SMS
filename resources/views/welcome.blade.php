@@ -79,6 +79,7 @@
                 </div>
             @endif
 
+            {{-- Start of the  --}}
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -94,7 +95,7 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-            </div>
+            </div><!-- this is the end of the site-->
         </div>
     </body>
 </html>
