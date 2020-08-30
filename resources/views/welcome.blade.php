@@ -38,7 +38,7 @@
     <!-- Main style sheet -->
     <link href={{ URL::asset("assets/css/style.css")}} rel="stylesheet">
     {{-- <link href="assets/css/style.css" rel="stylesheet">     --}}
-    
+
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
@@ -194,7 +194,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-              <li class="active"><a href="index.html">Home</a></li>            
+              <li class="active"><a href="/">Home</a></li>            
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -202,7 +202,7 @@
                   <li><a href="course-detail.html">Course Detail</a></li>                
                 </ul>
               </li>           
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="/gallery">Gallery</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
                 <ul class="dropdown-menu" role="menu">

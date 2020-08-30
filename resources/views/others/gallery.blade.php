@@ -118,7 +118,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-            <li><a href="index.html">Home</a></li>            
+            <li><a href="/">Home</a></li>            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -126,7 +126,7 @@
                 <li><a href="course-detail.html">Course Detail</a></li>                
               </ul>
             </li>           
-            <li class="active"><a href="gallery.html">Gallery</a></li>
+            <li class="active"><a href="/gallery">Gallery</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -452,23 +452,24 @@
 
 
 
-  
+        
   <!-- jQuery library -->
-  <script src="assets/js/jquery.min.js"></script>  
+  <script src={{ URL::asset("assets/js/jquery.min.js")}}></script>  
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="assets/js/bootstrap.js"></script>   
+  <script src={{ URL::asset("assets/js/bootstrap.js")}}></script>   
   <!-- Slick slider -->
-  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <script type="text/javascript" src={{ URL::asset("assets/js/slick.js")}}></script>
   <!-- Counter -->
-  <script type="text/javascript" src="assets/js/waypoints.js"></script>
-  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>  
+  <script type="text/javascript" src={{ URL::asset("assets/js/waypoints.js")}}></script>
+  <script type="text/javascript" src={{ URL::asset("assets/js/jquery.counterup.js")}}></script>  
   <!-- Mixit slider -->
-  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+  <script type="text/javascript" src={{ URL::asset("assets/js/jquery.mixitup.js")}}></script>
   <!-- Add fancyBox -->        
-  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
-
+  <script type="text/javascript" src={{ URL::asset("assets/js/jquery.fancybox.pack.js")}}></script>
+  
+  
   <!-- Custom js -->
-  <script src="assets/js/custom.js"></script> 
+  <script src={{ URL::asset("assets/js/custom.js")}}></script> 
 
   </body>
 </html>
