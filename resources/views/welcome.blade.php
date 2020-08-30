@@ -113,10 +113,10 @@
                     @endauth
                 </div>
             @endif
-
+              </div>
             {{-- Start of the  --}}
             <!--START SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#">
+     <a class="scrollToTop" href="#">
         <i class="fa fa-angle-up"></i>      
       </a>
     <!-- END SCROLL TOP BUTTON -->
@@ -149,6 +149,23 @@
                         <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
                         <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                         <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                        <li>
+                          @if (Route::has('login'))
+                              <div class="top-right links">
+                                  @auth
+                                      <a href="{{ url('/home') }}">Home</a>
+                                  @else
+                                  <button type="button" class="btn btn-success" href="{{ route('login') }}">Login</button>
+                                      {{-- <a href="{{ route('login') }}">Login</a> --}}
+              
+                                      @if (Route::has('register'))
+                                      <button type="button" class="btn btn-success" href="{{ route('register') }}">Login</button>
+                                          {{-- <a href="{{ route('register') }}">Register</a> --}}
+                                      @endif
+                                  @endauth
+                              </div>
+                          @endif
+                            </li>
                       </ul>
                     </nav>
                   </div>
@@ -921,7 +938,7 @@
     <!-- End footer -->
   <!-- this is the end of the site-->
 
-        </div>
+        {{-- </div> --}}
 
         
   <!-- jQuery library -->
