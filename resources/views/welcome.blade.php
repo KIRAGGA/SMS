@@ -9,8 +9,25 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+            <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
         <!-- Styles -->
-        <style>
+        {{-- <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -61,9 +78,9 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
+        </style> --}}
     </head>
-    <body>
+    <body class="host_version">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -172,7 +189,7 @@
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="container-fluid">
                   <a class="navbar-brand" href="index.html">
-                      <img src="images/logo.png" alt="" />
+                      <img src="{{URL::asset('/storage/images/logo.png')}}" alt="" />
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="icon-bar"></span>
@@ -316,14 +333,14 @@
                   
                   <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                       <div class="post-media wow fadeIn">
-                          <img src="images/about_02.jpg" alt="" class="img-fluid img-rounded">
+                          <img src="{{URL::asset('/storage/images/about_02.jpg')}}" alt="" class="img-fluid img-rounded">
                       </div><!-- end media -->
                   </div><!-- end col -->
               </div>
               <div class="row align-items-center">
                   <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                       <div class="post-media wow fadeIn">
-                          <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                          <img src="{{URL::asset('/storage/images/about_03.pg')}}" alt="" class="img-fluid img-rounded">
                       </div><!-- end media -->
                   </div><!-- end col -->
                   
@@ -605,7 +622,7 @@
                       <div class="testi-carousel owl-carousel owl-theme">
                           <div class="testimonial clearfix">
                               <div class="testi-meta">
-                                  <img src="images/testi_01.png" alt="" class="img-fluid">
+                                  <img src="{{URL::asset('/storage/images/testi_01.png')}}" alt="" class="img-fluid">
                                   <h4>James Fernando </h4>
                               </div>
                               <div class="desc">
