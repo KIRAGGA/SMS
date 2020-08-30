@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade left" id="class-shift-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade left" id="shift-add-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-notify modal-ms modal-right modal-success" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -16,9 +16,10 @@
                     </div>
                 </div>
                     <!-- Submit Field -->
-                    <div class="form-group col-sm-12">
-                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                    <div class="modal-footer">
+                        
                         <a href="{{ route('shifts.index') }}" class="btn btn-default">Cancel</a>
+                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
                     </div>
             </div>
         </div>

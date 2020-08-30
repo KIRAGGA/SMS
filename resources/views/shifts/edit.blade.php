@@ -11,9 +11,20 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($shift, ['route' => ['shifts.update', $shift->id], 'method' => 'patch']) !!}
+                   {!! Form::model($shift, ['route' => ['shifts.update', $shift->shift_id], 'method' => 'patch']) !!}
 
-                        @include('shifts.fields')
+                        <!-- Shift Field -->
+                    <div class="form-group col-sm-6">
+                        {!! Form::label('shift', 'Shift:') !!}
+                        {!! Form::text('shift', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                    </div>
+                </div>
+                    <!-- Submit Field -->
+                    <div class="modal-footer">
+                        
+                        <a href="{{ route('shifts.index') }}" class="btn btn-default">Cancel</a>
+                        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                    </div>
 
                    {!! Form::close() !!}
                </div>
