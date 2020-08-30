@@ -211,9 +211,10 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="mu-contact-right">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6249.345033302234!2d-80.02791918555701!3d40.45935344513505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8834f411a7b748bd%3A0xaec8197db3de9a9e!2sCalifornia-Kirkbride%2C+Pittsburgh%2C+PA%2C+USA!3m2!1d40.4600435!2d-80.0213538!5e0!3m2!1sen!2sbd!4v1464270878470" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+                {{-- <div class="mu-contact-right">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d6249.345033302234!2d-80.02791918555701!3d40.45935344513505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8834f411a7b748bd%3A0xaec8197db3de9a9e!2sCalifornia-Kirkbride%2C+Pittsburgh%2C+PA%2C+USA!3m2!1d40.4600435!2d-80.0213538!5e0!3m2!1sen!2sbd!4v1464270878470" width="100%" height="410%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div> --}}
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="645" height="410" id="gmap_canvas" src="https://maps.google.com/maps?q=kenya%20institute%20of%20foreign%20languages%20and%20professional%20studies&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/nordvpn-coupon/">nordvpn 2 year deal</a></div><style>.mapouter{position:relative;text-align:right;height:410px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:410px;width:645px;}</style></div>
               </div>
             </div>
           </div>
