@@ -168,9 +168,9 @@
           </figure>
         </div>
         <div class="mu-slider-content">
-          <h4>Welcome To Varsity</h4>
+          <h4>Welcome To KILAPS Nairobi</h4>
           <span></span>
-          <h2>We Will Help You To Learn</h2>
+          <h2>We Will Help You Learn</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.</p>
           <a href="#" class="mu-read-more-btn">Read More</a>
         </div>
@@ -184,9 +184,9 @@
           </figure>
         </div>
         <div class="mu-slider-content">
-          <h4>Premiumu Quality Free Template</h4>
+          <h4>Welcome to KIFLAPS Kibera Branch</h4>
           <span></span>
-          <h2>Best Education Template Ever</h2>
+          <h2>We give You The Best Education Ever</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.</p>
           <a href="#" class="mu-read-more-btn">Read More</a>
         </div>
@@ -200,7 +200,7 @@
           </figure>
         </div>
         <div class="mu-slider-content">
-          <h4>Exclusivly For Education</h4>
+          <h4>Welcoe to KIFLAPS Mombasa Branch</h4>
           <span></span>
           <h2>Education For Everyone</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.</p>
@@ -258,15 +258,20 @@
                       <h2>About Us</h2>              
                     </div>
                     <!-- End Title -->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum pariatur fuga eveniet soluta aspernatur rem, nam voluptatibus voluptate voluptates sapiente, inventore. Voluptatem, maiores esse molestiae.</p>
+                    <p>KIFLAPS was founded in the year 2007. With over an experience of 13 years in teaching Foreign Languages and Professional Studies.
+                     We have subsequently converted inexperienced student into proficient and well versed individuals ready to fit into the global professional stage. </p>
+
+                     <p>KIFLAPS allows you to study practical and professional courses which are relevant to the 21st Century.
+                       We have embraced globalization by teaching foreign Languages. We have also utilised technology to reach out to students across the globe.
+                     </p>
                     <ul>
-                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                      <li>Saepe a minima quod iste libero rerum dicta!</li>
-                      <li>Voluptas obcaecati, iste porro fugit soluta consequuntur. Veritatis?</li>
-                      <li>Ipsam deserunt numquam ad error rem unde, omnis.</li>
-                      <li>Repellat assumenda adipisci pariatur ipsam eos similique, explicabo.</li>
+                      <li><b>Our Motto :</b> Knowledge is Light</li>
+                      <li><b>Our Vision :</b> To provide high qualty academic and vocational training to students with ambition in acquiring professional skills.</li>
+                      
+                      <li><b>Mission :</b> Provide our students with Knowledge, skills and competence in foreign kanguages exposing them to a word fukk of opportunities.</li>
+                      <li><b>Core Values :</b> Integrity, Respect, Innovation, Open-minded</li>
                     </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quaerat harum facilis excepturi et? Mollitia!</p>
+                    
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -295,7 +300,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-3">
                   <div class="mu-abtus-counter-single">
                     <span class="fa fa-book"></span>
-                    <h4 class="counter">568</h4>
+                    <h4 class="counter">41</h4>
                     <p>Subjects</p>
                   </div>
                 </div>
@@ -304,7 +309,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-3">
                   <div class="mu-abtus-counter-single">
                     <span class="fa fa-users"></span>
-                    <h4 class="counter">3500</h4>
+                    <h4 class="counter">510</h4>
                     <p>Students</p>
                   </div>
                 </div>
@@ -313,7 +318,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-3">
                   <div class="mu-abtus-counter-single">
                     <span class="fa fa-flask"></span>
-                    <h4 class="counter">65</h4>
+                    <h4 class="counter">4</h4>
                     <p>Modern Lab</p>
                   </div>
                 </div>
@@ -322,7 +327,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-3">
                   <div class="mu-abtus-counter-single no-border">
                     <span class="fa fa-user-secret"></span>
-                    <h4 class="counter">250</h4>
+                    <h4 class="counter">21</h4>
                     <p>Teachers</p>
                   </div>
                 </div>
@@ -343,8 +348,8 @@
             <div class="mu-features-area">
               <!-- Start Title -->
               <div class="mu-title">
-                <h2>Our Features</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsa ea maxime mollitia, vitae voluptates, quod at, saepe reprehenderit totam aliquam architecto fugiat sunt animi!</p>
+                <h2>Our Features And Online classes</h2>
+                <p>We provide a range of services through the e-learning platform which enables our students to attend classes in any geographical location.</p>
               </div>
               <!-- End Title -->
               <!-- Start features content -->
@@ -417,7 +422,7 @@
               <!-- Start Title -->
               <div class="mu-title">
                 <h2>Latest Courses</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsa ea maxime mollitia, vitae voluptates, quod at, saepe reprehenderit totam aliquam architecto fugiat sunt animi!</p>
+                <p>We have a variety of courses ranging from Languages to Professional course. After the study be assured to receive your professional certificate and Diploma.</p>
               </div>
               <!-- End Title -->
               <!-- Start latest course content -->
@@ -427,7 +432,7 @@
                     <figure class="mu-latest-course-img">
                       <a href="#"><img src="assets/img/courses/1.jpg" alt="img"></a>
                       <figcaption class="mu-latest-course-imgcaption">
-                        <a href="#">Drawing</a>
+                        <a href="#">Japanese</a>
                         <span><i class="fa fa-clock-o"></i>90Days</span>
                       </figcaption>
                     </figure>
