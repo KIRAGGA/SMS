@@ -25,6 +25,10 @@ Route::get('/contact', function () {
     return view('others.contact');
 });
 
+Route::get('/blog-archive', function () {
+    return view('others.blog-archive');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
