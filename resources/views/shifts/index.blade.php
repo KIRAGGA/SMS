@@ -4,8 +4,7 @@
     <section class="content-header">
         <h1 class="pull-left">Shifts</h1>
         <h1 class="pull-right">
-            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" 
-            data-toggle="modal" data-target="#shift-add-modal"><i class="fa fa-plus-circle">Add New Shift</i></a>
+            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" data-toggle="modal" data-target="#shift-add-modal"><i class="fa fa-plus-circle">Add New Shift</i></a>
         </h1>
     </section>
     <div class="content">
