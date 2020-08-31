@@ -39,21 +39,21 @@
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             <option value="">Select Level</option>
-                            {{-- @foreach ($level as $lev)
+                            @foreach ($level as $lev)
                                 <option value="{{$lev->level_id}}">{{$lev->level}}</option>
-                            @endforeach --}}
+                            @endforeach
                         </select>
                     </div>
 
                     <!-- Shift Id Field -->
-                    <div class="form-group col-sm-4">
+                    {{-- <div class="form-group col-sm-4">
                         <select name="shift_id" id="shift_id" class="form-control">
                             <option value="">Select Shift</option>
                             @foreach ($shift as $shi)
                                 <option value="{{$shi->shift_id}}">{{$shi->shift_name}}</option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> --}}
 
                     <!-- Classroom Id Field -->
                     <div class="form-group col-sm-4">
@@ -98,8 +98,8 @@
                     {{-- <div class="form-group col-sm-4">
                         <select name="teacher_id" id="teacher_id" class="form-control">
                             <option value="">Select teacher</option>
-                            @foreach ($teacher as $teach)
-                                <option value="{{$teach->teacher_id}}">{{$teach->teacher_name}}__{{$teach->teacher_code}}</option>
+                            @foreach ($teachers as $teach)
+                                <option value="{{$teach->teacher_id}}">{{$teach->teacher_name}}</option>
                             @endforeach
                         </select>
                     </div> --}}
@@ -113,7 +113,7 @@
                         
                         @section('scripts')
                             <script>
-                                $('#start_date').datetimepicker({
+                                $('#start_date').datepicker({
                                     format: 'YYYY-MM-DD',
                                     useCurrent: false
                                 })
@@ -128,7 +128,7 @@
                      {{-- Script for end date --}}
                         @section('scripts')
                             <script>
-                                $('#start_date').datetimepicker({
+                                $('#start_date').datepicker({
                                     format: 'YYYY-MM-DD',
                                     useCurrent: false
                                 })

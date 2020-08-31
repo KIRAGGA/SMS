@@ -29,7 +29,7 @@ class ClassAssigning extends Model
 
 
     protected $dates = ['deleted_at'];
-
+    protected $primaryKey = 'class_assign_id';
 
 
     public $fillable = [

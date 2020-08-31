@@ -66,7 +66,7 @@
                   <div class="mu-header-top-right">
                     <nav>
                       <ul class="mu-top-social-nav">
-                        <li><a href="#"><span class="fa fa-facebook" target="_blank"></span></a></li>
+                        <li><a href=""><span class="fa fa-facebook" target="_blank"></span></a></li>
                         <li><a href="#"><span class="fa fa-twitter" target="_blank"></span></a></li>
                         <li><a href="#"><span class="fa fa-instagram" target="_blank"></span></a></li>
                         <li><a href="#"><span class="fa fa-linkedin"target="_blank"></span></a></li>
@@ -111,9 +111,9 @@
             </button>
             <!-- LOGO -->              
             <!-- TEXT BASED LOGO -->
-            <a class="navbar-brand" href="/"><i class="fa fa-university"></i><span>Varsity</span></a>
+            <a class="navbar-brand" href="/"><i class="fa fa-university"></i><span>KIFLAPS</span></a>
             <!-- IMG BASED LOGO  -->
-            <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
+             {{-- <a class="navbar-brand" href="index.html"><img src="{{ URL::asset("assets/storage/images/kiflaps_logo.jpeg")}}" alt="logo"></a> --}}
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">

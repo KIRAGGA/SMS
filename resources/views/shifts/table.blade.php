@@ -85,7 +85,7 @@
     <script>
         $('#shift-view-modal').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget)
-        var year = button.data('shift_name')
+        var shift_name = button.data('shift_name')
         var created_at = button.data('created_at')
         var updated_at = button.data('updated_at')
         var batch_id = button.data('shift_id')
@@ -96,7 +96,7 @@
         modal.find('.modal-body #shift_name').val(shift_name);
         modal.find('.modal-body #created_at').val(created_at);
         modal.find('.modal-body #updated_at').val(updated_at);
-        modal.find('.modal-body #batch_id').val(batch_id);
+        modal.find('.modal-body #shift_id').val(shift_id);
         });
 // this is a bootstrap simple code you can read the bootstrap modal.find
     </script>

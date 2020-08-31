@@ -15,7 +15,7 @@ use App\models\Classroom;
 use App\models\Course;
 use App\models\Day;
 use App\models\Level;
-use App\models\Teacher;
+use App\models\Teachers;
 use App\models\Shift;
 use App\models\Time;
 use Illuminate\Support\Facades\DB;
@@ -43,8 +43,8 @@ class ClassSchedulingController extends AppBaseController
         $course = Course::all();
         $day = Day::all();
         $level = Level::all();
-        // $teacher = Teacher::all();
-        $shift = Shift::all();
+        $teacher = Teachers::all();
+        // $shift = Shift::all();
         $time = Time::all();
         $classroom = Classroom::all();
 

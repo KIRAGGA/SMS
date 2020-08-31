@@ -10,11 +10,11 @@
     <p>{{ $classScheduling->level_id }}</p>
 </div>
 
-<!-- Shift Id Field -->
+{{-- <!-- Shift Id Field -->
 <div class="form-group">
     {!! Form::label('shift_id', 'Shift Id:') !!}
     <p>{{ $classScheduling->shift_id }}</p>
-</div>
+</div> --}}
 
 <!-- Classroom Id Field -->
 <div class="form-group">

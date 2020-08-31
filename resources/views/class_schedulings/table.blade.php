@@ -4,15 +4,15 @@
             <tr>
                 <th>Course</th>
         <th>Level</th>
-        <th>Shift</th>
+        {{-- <th>Shift</th> --}}
         <th>Classroom</th>
         <th>Batch </th>
         <th>Day </th>
         <th>Time </th>
         {{-- <th>Teacher </th> --}}
         <th>Classroom</th>
-        <th>Shifts</th>
-        <th>Semester</th>
+        {{-- <th>Shifts</th> --}}
+        {{-- <th>Semester</th> --}}
         <th>Start Time</th>
         <th>End Time</th>
         <th>Status</th>
@@ -24,7 +24,7 @@
             <tr>
                 <td>{{ $classScheduling->course_id }}</td>
             <td>{{ $classScheduling->level_id }}</td>
-            <td>{{ $classScheduling->shift_name }}</td>
+            {{-- <td>{{ $classScheduling->shift_name }}</td> --}}
             {{-- <td>{{ $classScheduling->class_code }}</td> --}}
             <td>{{ $classScheduling->classroom_name }}</td>
             <td>{{ $classScheduling->year }}</td>
