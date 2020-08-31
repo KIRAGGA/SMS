@@ -21,7 +21,6 @@ Route::get('/gallery', function () {
     return view('others.gallery');
 });
 
-
 Route::get('/blog-archive', function () {
     return view('others.blog-archive');
 });
@@ -38,8 +37,8 @@ Route::get('/course', function () {
     return view('others.course');
 });
 
-Route::get('/course-details', function () {
-    return view('others.course-details');
+Route::get('/course-detail', function () {
+    return view('others.course-detail');
 });
 Auth::routes();
 

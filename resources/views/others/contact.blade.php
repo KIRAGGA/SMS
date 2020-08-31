@@ -10,87 +10,93 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         
-    <!-- Favicon -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/img/favicon.ico') }}" type="image/x-icon" >
+        <!-- Favicon -->
+        <link rel="stylesheet" href="{{ URL::asset('assets/img/favicon.ico') }}" type="image/x-icon" >
 
-    <!-- Font awesome -->
-    <link href={{ URL::asset("assets/css/font-awesome.css")}} rel="stylesheet">
+        <!-- Font awesome -->
+        <link href={{ URL::asset("assets/css/font-awesome.css")}} rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href={{ URL::asset("assets/css/bootstrap.css")}} rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href={{ URL::asset("assets/css/bootstrap.css")}} rel="stylesheet">
+        
+        <!-- Slick slider -->
+        <link href={{ URL::asset("assets/css/slick.css")}} rel="stylesheet" type="text/css">
 
-    <!-- Slick slider -->
-    <link href={{ URL::asset("assets/css/slick.css")}} rel="stylesheet" type="text/css">
-   
-    <!-- Fancybox slider -->
-    <link href={{ URL::asset("assets/css/jquery.fancybox.css")}} rel="stylesheet" media="screen">
+        <!-- Fancybox slider -->
+        <link href={{ URL::asset("assets/css/jquery.fancybox.css")}} rel="stylesheet" media="screen">
 
-    <!-- Theme color -->
-    <link id="switcher" href={{ URL::asset("assets/css/theme-color/default-theme.css")}} rel="stylesheet">
-
-    <!-- Main style sheet -->
-    <link href={{ URL::asset("assets/css/style.css")}} rel="stylesheet">
-   
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-  </head>
-  <body>
+        <!-- Theme color -->
+        <link id="switcher" href={{ URL::asset("assets/css/theme-color/default-theme.css")}} rel="stylesheet">
+        
+        <!-- Main style sheet -->
+        <link href={{ URL::asset("assets/css/style.css")}} rel="stylesheet">
+        
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        
+            <!--START SCROLL TOP BUTTON -->
+     <a class="scrollToTop" href="#">
+        <i class="fa fa-angle-up"></i>      
+      </a>
+    <!-- END SCROLL TOP BUTTON -->
   
-  <!--START SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#">
-      <i class="fa fa-angle-up"></i>      
-    </a>
-  <!-- END SCROLL TOP BUTTON -->
-
-  <!-- Start header  -->
-  <header id="mu-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <div class="mu-header-area">
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <div class="mu-header-top-left">
-                  <div class="mu-top-email">
-                    <i class="fa fa-envelope"></i>
-                    <span>info@markups.io</span>
-                  </div>
-                  <div class="mu-top-phone">
-                    <i class="fa fa-phone"></i>
-                    <span>(568) 986 652</span>
+    <!-- Start header  -->
+    <header id="mu-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="mu-header-area">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <div class="mu-header-top-left">
+                    <div class="mu-top-email">
+                      <a><i class="fa fa-envelope"></i>
+                      <span target="_blank">kiflapstudies@gmail.com</span></a>
+                    </div>
+                    <div class="mu-top-phone">
+                      <i class="fa fa-phone"></i>
+                      <span>(+254) 710 462 0352</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <div class="mu-header-top-right">
-                  <nav>
-                    <ul class="mu-top-social-nav">
-                      <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                      <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                      <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                      <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                      <li><a href="#"><span class="fa fa-youtube"></span></a></li>
-                    </ul>
-                  </nav>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <div class="mu-header-top-right">
+                    <nav>
+                      <ul class="mu-top-social-nav">
+                        <li><a href="#"><span class="fa fa-facebook" target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter" target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-instagram" target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-linkedin"target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-youtube" target="_blank"></span></a></li>
+                        <li>
+                          @if (Route::has('login'))
+                              <div class="top-right links">
+                                  @auth
+                                      <a href="{{ url('/home') }}" class="btn btn-success">Dashboard</a>
+                                  @else
+                                          <a href="{{ route('login') }}" class="btn btn-success">Login</a>
+              
+                                      @if (Route::has('register'))
+                                          <a href="{{ route('register') }}" class="btn btn-default">Register</a>
+                                      @endif
+                                  @endauth
+                              </div>
+                          @endif
+                            </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- End header  -->
+    </header>
+    <!-- End header  -->
   <!-- Start menu -->
   <section id="mu-menu">
     <nav class="navbar navbar-default" role="navigation">  
@@ -179,7 +185,26 @@
           <!-- start title -->
           <div class="mu-title">
             <h2>Get in Touch</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ut laboriosam corporis doloribus, officia, accusamus illo nam tempore totam alias!</p>
+            <p>Fill in the enquiry form and we will get straight back to you.</p>
+            <p style="font-size: 12px;text-align: left"><i class="fa fa-map-marker" style="font-size:36px"></i>ADDRESS</p>
+            <p style="font-size: 15px;text-align: left">General Waruinge Street,<br />
+                P.O Box 30178 -00100, GPO,<br />
+                Nairobi,<br />
+                Kenya .</p>
+                                    <div class="wh-theme-icon " style="position:absolute;">
+                                <i class="icon-Clock-New" ></i>
+                            </div>
+                        
+                        <p style="font-size: 12px;text-align: left">WORKING HOURS</p><p style="font-size: 15px;text-align: left" >Week Days: 07:00-19:00<br />
+                Saturday: 09:00-15:00<br />
+                Sunday: Closed<br />
+                </p>
+                                    <div class="wh-theme-icon " style="position:absolute;">
+                                <i class="icon-phone-handset" ></i>
+                            </div>
+                        
+                        <p style="font-size: 12px;text-align: left" class="vc_custom_heading vc_custom_1458730962590">PHONE</p><p style="font-size: 15px;color: #ff7264;text-align: left" class="vc_custom_heading vc_custom_1581689108969">+254 700 000 0000<br />
+                00000000 000</p>
           </div>
           <!-- end title -->
           <!-- start contact content -->
@@ -289,7 +314,7 @@
     <div class="mu-footer-bottom">
       <div class="container">
         <div class="mu-footer-bottom-area">
-          <p>&copy; All Right Reserved. Designed by <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
+          <p>&copy; All Right Reserved. Designed by <a href="#" rel="nofollow">MarkUps.io</a></p>
         </div>
       </div>
     </div>

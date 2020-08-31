@@ -184,7 +184,7 @@
          <div class="mu-gallery-area">
           <!-- start title -->
           <div class="mu-title">
-            <h2>Some Moments</h2>
+            <h2>Some of our Moments</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ut laboriosam corporis doloribus, officia, accusamus illo nam tempore totam alias!</p>
           </div>
           <!-- end title -->
@@ -194,10 +194,10 @@
             <div class="mu-gallery-top">              
               <ul>
                 <li class="filter active" data-filter="all">All</li>
-                <li class="filter" data-filter=".lab">Lab</li>
+                <li class="filter" data-filter=".lab">studens</li>
                 <li class="filter" data-filter=".classroom">Class Room</li>
                 <li class="filter" data-filter=".library">Library</li>
-                <li class="filter" data-filter=".cafe">Cafe</li>
+                <li class="filter" data-filter=".cafe">Staff</li>
                 <li class="filter" data-filter=".others">Others</li>
               </ul>
             </div>
@@ -213,8 +213,8 @@
                       </div>
                       <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
-                          <h4>Image Title</h4>
-                          <p>Web Design</p>
+                          <h4>Image </h4>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/1.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -232,7 +232,7 @@
                        <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Animation</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/2.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -250,7 +250,7 @@
                       <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Math</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/3.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -268,7 +268,7 @@
                        <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>English</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/4.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -286,7 +286,7 @@
                       <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Graphics</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/5.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -304,7 +304,7 @@
                        <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Health</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/6.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -322,7 +322,7 @@
                       <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Sports</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/7.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -340,7 +340,7 @@
                        <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Health</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/8.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -358,7 +358,7 @@
                       <div class="mu-single-gallery-info">
                         <div class="mu-single-gallery-info-inner">
                           <h4>Image Title</h4>
-                          <p>Sports</p>
+                          <p>description</p>
                           <a href="assets/img/gallery/big/9.jpg" data-fancybox-group="gallery" class="fancybox"><span class="fa fa-eye"></span></a>
                           <a href="#" class="aa-link"><span class="fa fa-link"></span></a>
                         </div>
@@ -424,10 +424,10 @@
               <div class="mu-footer-widget">
                 <h4>Contact</h4>
                 <address>
-                  <p>P.O. Box 320, Ross, California 9495, USA</p>
-                  <p>Phone: (415) 453-1568 </p>
-                  <p>Website: www.markups.io</p>
-                  <p>Email: info@markups.io</p>
+                  <p>P.O. Box 1776-00100, GPO Narobi-Kenya</p>
+                  <p>Phone: (+254) 710 462 0352 </p>
+                  <p>Website: www.kiflaps.ac.ke</p>
+                  <p>Email: kiflapstudies@gmail.com</p>
                 </address>
               </div>
             </div>
@@ -440,7 +440,7 @@
     <div class="mu-footer-bottom">
       <div class="container">
         <div class="mu-footer-bottom-area">
-          <p>&copy; All Right Reserved. Designed by <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
+          <p>&copy; All Right Reserved. Designed by <a href="#" rel="nofollow">Reagan</a></p>
         </div>
       </div>
     </div>
