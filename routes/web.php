@@ -29,6 +29,10 @@ Route::get('/blog-archive', function () {
     return view('others.blog-archive');
 });
 
+Route::get('/blog-single', function () {
+    return view('others.blog-single');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
