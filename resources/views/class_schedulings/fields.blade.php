@@ -95,14 +95,14 @@
                     </div>
 
                     <!-- Teacher Id Field -->
-                    <div class="form-group col-sm-4">
+                    {{-- <div class="form-group col-sm-4">
                         <select name="teacher_id" id="teacher_id" class="form-control">
                             <option value="">Select teacher</option>
                             @foreach ($teacher as $teach)
                                 <option value="{{$teach->teacher_id}}">{{$teach->teacher_name}}__{{$teach->teacher_code}}</option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> --}}
 
                     <!-- Start Time Field -->
                     <div class="form-group col-sm-6">

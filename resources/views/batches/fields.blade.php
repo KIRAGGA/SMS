@@ -9,21 +9,18 @@
                 </button>
             </div>
                 <div class="modal-body">     
-
-
-<!-- Batch Field -->
-<div class="input-group col-md-12">
-    <span class="input-group-addon">Batch Year</span>
-    {!! Form::text('year', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>
+                    <!-- Batch Field -->
+                    <div class="input-group col-md-12">
+                        <span class="input-group-addon">Batch Year</span>
+                        {!! Form::text('year', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                    </div>
+                </div>
+                    <!-- Submit Field -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!}
+                        {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+                    </div>
         </div>
-<!-- Submit Field -->
-<div class="modal-footer">
-    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-    {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!}
-    {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
-</div>
-        </div>
-      </div>
     </div>
 </div>

@@ -23,7 +23,7 @@
         @foreach($classSchedulings as $classScheduling)
             <tr>
                 <td>{{ $classScheduling->course_id }}</td>
-            <td>{{ $classScheduling->level }}</td>
+            <td>{{ $classScheduling->level_id }}</td>
             <td>{{ $classScheduling->shift_name }}</td>
             {{-- <td>{{ $classScheduling->class_code }}</td> --}}
             <td>{{ $classScheduling->classroom_name }}</td>
