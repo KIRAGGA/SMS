@@ -10,110 +10,33 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         
-    <!-- Favicon -->
-    {{-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> --}}
+        <!-- Favicon -->
+        <link rel="stylesheet" href="{{ URL::asset('assets/img/favicon.ico') }}" type="image/x-icon" >
 
-    <link rel="stylesheet" href="{{ URL::asset('assets/img/favicon.ico') }}" type="image/x-icon" >
+        <!-- Font awesome -->
+        <link href={{ URL::asset("assets/css/font-awesome.css")}} rel="stylesheet">
 
-    <!-- Font awesome -->
-    <link href={{ URL::asset("assets/css/font-awesome.css")}} rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href={{ URL::asset("assets/css/bootstrap.css")}} rel="stylesheet">
+        
+        <!-- Slick slider -->
+        <link href={{ URL::asset("assets/css/slick.css")}} rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap -->
-    <link href={{ URL::asset("assets/css/bootstrap.css")}} rel="stylesheet">
-    {{-- <link href="assets/css/bootstrap.css" rel="stylesheet">    --}}
+        <!-- Fancybox slider -->
+        <link href={{ URL::asset("assets/css/jquery.fancybox.css")}} rel="stylesheet" media="screen">
 
-    <!-- Slick slider -->
-    <link href={{ URL::asset("assets/css/slick.css")}} rel="stylesheet" type="text/css">
-    {{-- <link rel="stylesheet" type="text/css" href="assets/css/slick.css">           --}}
-
-    <!-- Fancybox slider -->
-    <link href={{ URL::asset("assets/css/jquery.fancybox.css")}} rel="stylesheet" media="screen">
-    {{-- <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
-     --}}
-
-    <!-- Theme color -->
-    <link id="switcher" href={{ URL::asset("assets/css/theme-color/default-theme.css")}} rel="stylesheet">
-    {{-- <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">   --}}
-
-    <!-- Main style sheet -->
-    <link href={{ URL::asset("assets/css/style.css")}} rel="stylesheet">
-    {{-- <link href="assets/css/style.css" rel="stylesheet">     --}}
-
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
-
-        <!-- Styles -->
-        {{-- <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style> --}}
+        <!-- Theme color -->
+        <link id="switcher" href={{ URL::asset("assets/css/theme-color/default-theme.css")}} rel="stylesheet">
+        
+        <!-- Main style sheet -->
+        <link href={{ URL::asset("assets/css/style.css")}} rel="stylesheet">
+        
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        {{-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-              </div> --}}
-            {{-- Start of the  --}}
+        
             <!--START SCROLL TOP BUTTON -->
      <a class="scrollToTop" href="#">
         <i class="fa fa-angle-up"></i>      
@@ -130,12 +53,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                   <div class="mu-header-top-left">
                     <div class="mu-top-email">
-                      <i class="fa fa-envelope"></i>
-                      <span>info@markups.io</span>
+                      <a><i class="fa fa-envelope"></i>
+                      <span target="_blank">kiflapstudies@gmail.com</span></a>
                     </div>
                     <div class="mu-top-phone">
                       <i class="fa fa-phone"></i>
-                      <span>(568) 986 652</span>
+                      <span>(+254) 710 462 0352</span>
                     </div>
                   </div>
                 </div>
@@ -143,11 +66,11 @@
                   <div class="mu-header-top-right">
                     <nav>
                       <ul class="mu-top-social-nav">
-                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                        <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                        <li><a href="#"><span class="fa fa-facebook" target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter" target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-instagram" target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-linkedin"target="_blank"></span></a></li>
+                        <li><a href="#"><span class="fa fa-youtube" target="_blank"></span></a></li>
                         <li>
                           @if (Route::has('login'))
                               <div class="top-right links">
@@ -865,77 +788,78 @@
     <!-- End from blog -->
   
     <!-- Start footer -->
-    <footer id="mu-footer">
-      <!-- start footer top -->
-      <div class="mu-footer-top">
-        <div class="container">
-          <div class="mu-footer-top-area">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="mu-footer-widget">
-                  <h4>Information</h4>
-                  <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">Course</a></li>
-                    <li><a href="">Event</a></li>
-                    <li><a href="">Sitemap</a></li>
-                    <li><a href="">Term Of Use</a></li>
-                  </ul>
-                </div>
+  <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Information</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="">Features</a></li>
+                  <li><a href="">Course</a></li>
+                  <li><a href="">Event</a></li>
+                  <li><a href="">Sitemap</a></li>
+                  <li><a href="">Term Of Use</a></li>
+                </ul>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="mu-footer-widget">
-                  <h4>Student Help</h4>
-                  <ul>
-                    <li><a href="">Get Started</a></li>
-                    <li><a href="#">My Questions</a></li>
-                    <li><a href="">Download Files</a></li>
-                    <li><a href="">Latest Course</a></li>
-                    <li><a href="">Academic News</a></li>                  
-                  </ul>
-                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Student Help</h4>
+                <ul>
+                  <li><a href="">Get Started</a></li>
+                  <li><a href="#">My Questions</a></li>
+                  <li><a href="">Download Files</a></li>
+                  <li><a href="">Latest Course</a></li>
+                  <li><a href="">Academic News</a></li>                  
+                </ul>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="mu-footer-widget">
-                  <h4>News letter</h4>
-                  <p>Get latest update, news & academic offers</p>
-                  <form class="mu-subscribe-form">
-                    <input type="email" placeholder="Type your Email">
-                    <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
-                  </form>               
-                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>News letter</h4>
+                <p>Get latest update, news & academic offers</p>
+                <form class="mu-subscribe-form">
+                  <input type="email" placeholder="Type your Email">
+                  <button class="mu-subscribe-btn" type="submit">Subscribe!</button>
+                </form>               
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="mu-footer-widget">
-                  <h4>Contact</h4>
-                  <address>
-                    <p>P.O. Box 320, Ross, California 9495, USA</p>
-                    <p>Phone: (415) 453-1568 </p>
-                    <p>Website: www.markups.io</p>
-                    <p>Email: info@markups.io</p>
-                  </address>
-                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>Contact</h4>
+                <address>
+                  <p>P.O. Box 1776-00100, GPO Narobi-Kenya</p>
+                  <p>Phone: (+254) 710 462 0352 </p>
+                  <p>Website: www.kiflaps.ac.ke</p>
+                  <p>Email: kiflapstudies@gmail.com</p>
+                </address>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- end footer top -->
-      <!-- start footer bottom -->
-      <div class="mu-footer-bottom">
-        <div class="container">
-          <div class="mu-footer-bottom-area">
-            <p>&copy; All Right Reserved. Designed by <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
-          </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; All Right Reserved. Designed by <a href="#" rel="nofollow">Reagan</a></p>
         </div>
       </div>
-      <!-- end footer bottom -->
-    </footer>
-    <!-- End footer -->
-  <!-- this is the end of the site-->
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  <!-- End footer -->
 
-        {{-- </div> --}}
+
+
+
 
         
   <!-- jQuery library -->
@@ -956,5 +880,5 @@
   <!-- Custom js -->
   <script src={{ URL::asset("assets/js/custom.js")}}></script> 
 
-    </body>
+  </body>
 </html>
