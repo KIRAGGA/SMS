@@ -105,7 +105,7 @@
           </button>
           <!-- LOGO -->              
           <!-- TEXT BASED LOGO -->
-          <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Varsity</span></a>
+          <a class="navbar-brand" href="/"><i class="fa fa-university"></i><span>Varsity</span></a>
           <!-- IMG BASED LOGO  -->
           <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
         </div>
@@ -128,7 +128,7 @@
               </ul>
             </li>            
             <li class="active"><a href="/contact">Contact</a></li>
-            <li><a href="404.html">404 Page</a></li>               
+                    
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
           </ul>                   
         </div><!--/.nav-collapse -->        
@@ -150,7 +150,7 @@
             </button>
             <!-- LOGO -->              
             <!-- TEXT BASED LOGO -->
-            <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Varsity</span></a>
+            <a class="navbar-brand" href="/"><i class="fa fa-university"></i><span>Varsity</span></a>
             <!-- IMG BASED LOGO  -->
             <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
           </div>
@@ -160,8 +160,8 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="course.html">Course Archive</a></li>                
-                  <li><a href="course-detail.html">Course Detail</a></li>                
+                  <li><a href="/course">Course Archive</a></li>                
+                  <li><a href="/course-detail">Course Detail</a></li>                
                 </ul>
               </li>           
               <li><a href="/gallery">Gallery</a></li>
@@ -173,7 +173,7 @@
                 </ul>
               </li>            
               <li><a href="/contact">Contact</a></li>
-              <li><a href="404.html">404 Page</a></li>               
+                        
               <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
             </ul>                     
           </div><!--/.nav-collapse -->        

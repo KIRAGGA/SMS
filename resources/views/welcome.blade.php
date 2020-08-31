@@ -188,7 +188,7 @@
             </button>
             <!-- LOGO -->              
             <!-- TEXT BASED LOGO -->
-            <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Varsity</span></a>
+            <a class="navbar-brand" href="/"><i class="fa fa-university"></i><span>Varsity</span></a>
             <!-- IMG BASED LOGO  -->
             <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
           </div>
@@ -211,7 +211,7 @@
                 </ul>
               </li>            
               <li><a href="/contact">Contact</a></li>
-              <li><a href="404.html">404 Page</a></li>               
+              
               <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
             </ul>                     
           </div><!--/.nav-collapse -->        
