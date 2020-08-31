@@ -116,7 +116,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/course">Course Archive</a></li>                
-                <li><a href="course-detail.html">Course Detail</a></li>                
+                <li><a href="/course-detail">Course Detail</a></li>                
               </ul>
             </li>           
             <li><a href="/gallery">Gallery</a></li>

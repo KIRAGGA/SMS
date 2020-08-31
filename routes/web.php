@@ -21,9 +21,6 @@ Route::get('/gallery', function () {
     return view('others.gallery');
 });
 
-Route::get('/contact', function () {
-    return view('others.contact');
-});
 
 Route::get('/blog-archive', function () {
     return view('others.blog-archive');
@@ -33,6 +30,17 @@ Route::get('/blog-single', function () {
     return view('others.blog-single');
 });
 
+Route::get('/contact', function () {
+    return view('others.contact');
+});
+
+Route::get('/course', function () {
+    return view('others.course');
+});
+
+Route::get('/course-details', function () {
+    return view('others.course-details');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
