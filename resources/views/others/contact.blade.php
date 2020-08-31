@@ -123,8 +123,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="blog-archive.html">Blog Archive</a></li>                
-                <li><a href="blog-single.html">Blog Single</a></li>                
+                <li><a href="/blog-archive">Blog Archive</a></li>                
+                <li><a href="/blog-single">Blog Single</a></li>                
               </ul>
             </li>            
             <li class="active"><a href="/contact">Contact</a></li>
