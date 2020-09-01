@@ -184,28 +184,32 @@
          <div class="mu-contact-area">
           <!-- start title -->
           <div class="mu-title">
-            <h2>Get in Touch</h2>
+            {{-- <div class="raw">
+              <div class="col-md-4">
+                <p style="font-size: 12px;text-align: left"><i class="fa fa-address" style="font-size:36px"></i>ADDRESS</p>
+                <p style="font-size: 15px;text-align: left">Kenda house, Moi Avenue
+                    P.O Box sss -00100, GPO,
+                    Nairobi, Kenya</p>
+              </div>
+              <div class="col-md-4">
+                <p><b>WORKING HOURS</b></p>
+                <p>Week Days: 07:00-19:00EAT
+                  Saturday: 08:00-1:00EAT<br />
+                  Sunday & Holidays: Closed<br />
+                  </p>
+              </div>
+              <div class="col-md-4">
+                <p style="font-size: 12px;text-align: left"><i class="fa fa-map-marker" style="font-size:36px"></i>ADDRESS</p>
+                <p style="font-size: 15px;text-align: left">Moi Avenue,<br />
+                    P.O Box sss -00100, GPO,<br />
+                    Nairobi,<br />
+                    Kenya</p>
+              </div>
+            </div>      --}}
+            <h2>Get in Touch With Us</h2>
             <p>Fill in the enquiry form and we will get straight back to you.</p>
-            <p style="font-size: 12px;text-align: left"><i class="fa fa-map-marker" style="font-size:36px"></i>ADDRESS</p>
-            <p style="font-size: 15px;text-align: left">General Waruinge Street,<br />
-                P.O Box 30178 -00100, GPO,<br />
-                Nairobi,<br />
-                Kenya .</p>
-                                    <div class="wh-theme-icon " style="position:absolute;">
-                                <i class="icon-Clock-New" ></i>
-                            </div>
-                        
-                        <p style="font-size: 12px;text-align: left">WORKING HOURS</p><p style="font-size: 15px;text-align: left" >Week Days: 07:00-19:00<br />
-                Saturday: 09:00-15:00<br />
-                Sunday: Closed<br />
-                </p>
-                                    <div class="wh-theme-icon " style="position:absolute;">
-                                <i class="icon-phone-handset" ></i>
-                            </div>
-                        
-                        <p style="font-size: 12px;text-align: left" class="vc_custom_heading vc_custom_1458730962590">PHONE</p><p style="font-size: 15px;color: #ff7264;text-align: left" class="vc_custom_heading vc_custom_1581689108969">+254 700 000 0000<br />
-                00000000 000</p>
           </div>
+          
           <!-- end title -->
           <!-- start contact content -->
           <div class="mu-contact-content">           
