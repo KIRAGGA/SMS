@@ -111,14 +111,15 @@
                     </div>
                         {{-- script for start date --}}
                         
-                        @section('scripts')
-                            <script>
-                                $('#start_date').datepicker({
-                                    format: 'YYYY-MM-DD',
-                                    useCurrent: false
-                                })
-                            </script>
-                        @endsection
+                    @push('scripts')
+                        <script type="text/javascript">
+                            $('#start_date').datetimepicker({
+                                format: 'YYYY-MM-DD HH:mm:ss',
+                                useCurrent: true,
+                                sideBySide: true
+                            })
+                        </script>
+                    @endpush
 
                             <!-- End Time Field -->
                     <div class="form-group col-sm-6">
@@ -126,14 +127,15 @@
                         <input type="text" class="form-control" name="end_date" id="end_date">
                     </div>
                      {{-- Script for end date --}}
-                        @section('scripts')
-                            <script>
-                                $('#start_date').datepicker({
-                                    format: 'YYYY-MM-DD',
-                                    useCurrent: false
-                                })
-                            </script>
-                        @endsection
+                     @push('scripts')
+                     <script type="text/javascript">
+                         $('#end_date').datetimepicker({
+                             format: 'YYYY-MM-DD HH:mm:ss',
+                             useCurrent: true,
+                             sideBySide: true
+                         })
+                     </script>
+                 @endpush
 
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">
