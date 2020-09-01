@@ -9,7 +9,7 @@
                 <h4 class="modal-title"></h4>
             </div>
 
-            <div class="panel-body" style="border-bottom: 1px solid #ccc; ">
+            <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">
                     <div class="row"></div>
                     <!-- Course Id Field -->
@@ -128,14 +128,14 @@
                     </div>
                      {{-- Script for end date --}}
                      @push('scripts')
-                     <script type="text/javascript">
-                         $('#end_date').datetimepicker({
-                             format: 'YYYY-MM-DD HH:mm:ss',
-                             useCurrent: true,
-                             sideBySide: true
-                         })
-                     </script>
-                 @endpush
+                        <script type="text/javascript">
+                            $('#end_date').datetimepicker({
+                                format: 'YYYY-MM-DD HH:mm:ss',
+                                useCurrent: true,
+                                sideBySide: true
+                            })
+                        </script>
+                    @endpush
 
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">

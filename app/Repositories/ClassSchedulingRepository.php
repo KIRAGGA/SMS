@@ -19,14 +19,14 @@ class ClassSchedulingRepository extends BaseRepository
     protected $fieldSearchable = [
         'course_id',
         'level_id',
-        'shift_id',
+        // 'shift_id',
         'classroom_id',
         'batch_id',
         'day_id',
-        'time_id',
+        // 'time_id',
         'teacher_id',
-        'start_time',
-        'end_time',
+        // 'start_time',
+        // 'end_time',
         'status'
     ];
     protected $primaryKey = 'schedule_id';

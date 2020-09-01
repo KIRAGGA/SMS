@@ -19,7 +19,7 @@ class TimeRepository extends BaseRepository
     protected $fieldSearchable = [
         'time'
     ];
-
+    protected $primaryKey = 'time_id';
     /**
      * Return searchable fields
      *
