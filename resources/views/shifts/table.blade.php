@@ -20,11 +20,7 @@
                 <td>
                     {!! Form::open(['route' => ['shifts.destroy', $shift->shift_id], 'method' => 'delete']) !!}
                         <div class='btn-group'>
-                            <a data-toggle="modal" data-target="#shift-view-modal" data-shift_id="{{$shift->shift_id}}"
-                                data-shift="{{$shift->shift_name}}" data-created_at="{{$shift->created_at}}"
-                                data-updated_at="{{$shift->updated_at}}"
-                                class='btn btn-default btn-xs'>
-                                <i class="glyphicon glyphicon-eye-open"></i></a>
+                            <a href="{{ route('shifts.show', [$shift->class_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                             <a href="{{ route('shifts.edit', [$shift->shift_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                             {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                         </div>

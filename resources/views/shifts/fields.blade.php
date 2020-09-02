@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-notify modal-ms modal-right modal-success" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="shift-add-modal">Add New Shift</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-id-badge" aria-hidden="true">Add New shift</i></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -17,9 +17,8 @@
                 </div>
                     <!-- Submit Field -->
                     <div class="modal-footer">
-                        
-                        <a href="{{ route('shifts.index') }}" class="btn btn-default" data-dismiss="modal">Cancel</a>
-                        {!! Form::submit('Create Shift', ['class' => 'btn btn-success']) !!}
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        {!! Form::submit('Create shift', ['class' => 'btn btn-success']) !!}
                     </div>
             </div>
         </div>

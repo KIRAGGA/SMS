@@ -880,8 +880,7 @@
   <script type="text/javascript" src={{ URL::asset("assets/js/jquery.mixitup.js")}}></script>
   <!-- Add fancyBox -->        
   <script type="text/javascript" src={{ URL::asset("assets/js/jquery.fancybox.pack.js")}}></script>
-  
-  
+
   <!-- Custom js -->
   <script src={{ URL::asset("assets/js/custom.js")}}></script> 
 
