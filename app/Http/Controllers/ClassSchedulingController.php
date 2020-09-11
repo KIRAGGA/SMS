@@ -74,7 +74,7 @@ class ClassSchedulingController extends AppBaseController
 //         ->get();
 // dd($classschedule); die;
 
-        return view('class_schedulings.index', compact('classschedule','batch', 'class', 'course', 'day', 'level', 'shift', 'time', 'classroom'))
+        return view('class_schedulings.index', compact('classschedule','batch', 'class', 'course', 'day', 'level', 'teacher', 'shift', 'time', 'classroom'))
             ->with('classSchedulings', $classSchedulings);
     }
 

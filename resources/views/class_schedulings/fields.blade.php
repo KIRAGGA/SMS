@@ -13,6 +13,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">
                     <div class="row"></div>
+
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="course_id" id="course_id" class="form-control">
@@ -22,8 +23,6 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <option value="{{$cou->course_id}}">{{$cou->course_name}}</option>
                             @endforeach
                         </select>
-                        {{-- {!! Form::label('course_id', 'Course Id:') !!}
-                        {!! Form::number('course_id', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                     <!-- Class Id Field -->
@@ -96,15 +95,15 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     </div>
 
                     <!-- Teacher Id Field -->
-                    {{-- <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-4">
                         <select name="teacher_id" id="teacher_id" class="form-control">
-                            <option value="">Select teacher</option>
-                            @foreach ($teachers as $teach)
-                                <option value="{{$teach->teacher_id}}">{{$teach->teacher_name}}</option>
+                            <option value="">Select Teacher</option>
+                            @foreach ($teacher as $teach)
+                                <option value="{{$teach->teacher_id}}">{{$teach->last_name}}</option>
                             @endforeach
                         </select>
-                    </div> --}}
-
+                    </div>
+                    
                     <!-- Start Time Field -->
                     <div class="form-group col-sm-6">
                         <label>Start Date</label>
@@ -115,7 +114,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     @push('scripts')
                         <script type="text/javascript">
                             $('#start_date').datetimepicker({
-                                format: 'YYYY-MM-DD HH:mm:ss',
+                                format: 'YYYY-MM-DD',
                                 useCurrent: true,
                                 sideBySide: true
                             })
@@ -131,7 +130,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                      @push('scripts')
                         <script type="text/javascript">
                             $('#end_date').datetimepicker({
-                                format: 'YYYY-MM-DD HH:mm:ss',
+                                format: 'YYYY-MM-DD',
                                 useCurrent: true,
                                 sideBySide: true
                             })

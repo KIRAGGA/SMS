@@ -25,8 +25,8 @@ class ClassSchedulingRepository extends BaseRepository
         'day_id',
         // 'time_id',
         'teacher_id',
-        // 'start_time',
-        // 'end_time',
+        'start_time',
+        'end_time',
         'status'
     ];
     protected $primaryKey = 'schedule_id';
