@@ -44,7 +44,7 @@ class ClassSchedulingController extends AppBaseController
         $day = Day::all();
         $level = Level::all();
         $teacher = Teachers::all();
-        // $shift = Shift::all();
+        $shift = Shift::all();
         $time = Time::all();
         $classroom = Classroom::all();
 
