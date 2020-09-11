@@ -80,6 +80,14 @@ class ClassSchedulingController extends AppBaseController
             ->with('classSchedulings', $classSchedulings);
     }
 
+// this is the dynamic function level
+    public function DynamicLevel(Request $request){
+        $course_id = $request->get('course_id');
+
+        $level = Level::where('course_id', '=', $course_id)->get();
+
+        return Response::json($levels);
+    }
     /**
      * Show the form for creating a new ClassScheduling.
      *

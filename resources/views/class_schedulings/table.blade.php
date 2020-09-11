@@ -33,11 +33,11 @@
             {{-- <td>{{ $classScheduling->semester_code }}</td> --}}
             <td>{!! $classScheduling->start_time !!}</td>
             <td>{{ $classScheduling->end_time }}</td>
-            <td>{{ $classScheduling->status }}
-                {{-- <div class="color: green">Active</div>
-                @else
-                <div class="color: red">In Active</div>
-                @endif --}}
+            <td>@if( $classScheduling->status == 1)
+                    <div style="color: green">Active</div>
+                    @else
+                    <div style="color: red">In Active</div>
+                @endif
             </td>
                 <td>
                     {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!}
