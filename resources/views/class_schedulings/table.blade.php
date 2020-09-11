@@ -22,16 +22,16 @@
         @foreach($classSchedulings as $classScheduling)
             <tr>
                 <td>{{ $classScheduling->course_id }}</td>
-            <td>{{ $classScheduling->level_id }}</td>
-            <td>{{ $classScheduling->shift_id }}</td>
-            <td>{{ $classScheduling->class_id }}</td>
-            <td>{{ $classScheduling->classroom_id }}</td>
-            <td>{{ $classScheduling->year }}</td>
+            <td>{!! $classScheduling->level_id !!}</td>
+            <td>{!! $classScheduling->shift_id !!}</td>
+            <td>{!! $classScheduling->class_id !!}</td>
+            <td>{!! $classScheduling->classroom_id !!}</td>
+            <td>{!! $classScheduling->batch_id !!}</td>
             <td>{{ $classScheduling->name }}</td>
-            <td>{{ $classScheduling->time_id }}</td>
-            <td>{{ $classScheduling->teacher_id }}</td>
+            <td>{!! $classScheduling->time_id !!}</td>
+            <td>{{ $classScheduling->last_name }}</td>
             {{-- <td>{{ $classScheduling->semester_code }}</td> --}}
-            <td>{{ $classScheduling->start_time }}</td>
+            <td>{!! $classScheduling->start_time !!}</td>
             <td>{{ $classScheduling->end_time }}</td>
             <td>{{ $classScheduling->status }}
                 {{-- <div class="color: green">Active</div>
