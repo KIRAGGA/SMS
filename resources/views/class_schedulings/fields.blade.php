@@ -47,14 +47,14 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     </div>
 
                     <!-- Shift Id Field -->
-                    {{-- <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-4">
                         <select name="shift_id" id="shift_id" class="form-control">
                             <option value="">Select Shift</option>
                             @foreach ($shift as $shi)
                                 <option value="{{$shi->shift_id}}">{{$shi->shift_name}}</option>
                             @endforeach
                         </select>
-                    </div> --}}
+                    </div>
 
                     <!-- Classroom Id Field -->
                     <div class="form-group col-sm-4">
@@ -110,8 +110,8 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <label>Start Date</label>
                         <input type="text" class="form-control" name="start_date" id="start_date">
                     </div>
+
                         {{-- script for start date --}}
-                        
                     @push('scripts')
                         <script type="text/javascript">
                             $('#start_date').datetimepicker({
