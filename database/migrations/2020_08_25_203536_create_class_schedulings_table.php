@@ -23,8 +23,8 @@ class CreateClassSchedulingsTable extends Migration
             $table->integer('day_id');
             $table->integer('time_id');
             $table->integer('teacher_id');
-            $table->time('start_time');
-            $table->time('end_time');
+            $table->date('start_time');
+            $table->date('end_time');
             $table->tinyInteger('status')->default(1);
             $table->softDeletes();
             $table->timestamps();

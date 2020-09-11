@@ -107,13 +107,13 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <!-- Start Time Field -->
                     <div class="form-group col-sm-6">
                         <label>Start Date</label>
-                        <input type="text" class="form-control" name="start_date" id="start_date">
+                        <input type="text" class="form-control" name="start_time" id="start_time">
                     </div>
 
                         {{-- script for start date --}}
                     @push('scripts')
                         <script type="text/javascript">
-                            $('#start_date').datetimepicker({
+                            $('#start_time').datetimepicker({
                                 format: 'YYYY-MM-DD',
                                 useCurrent: true,
                                 sideBySide: true
