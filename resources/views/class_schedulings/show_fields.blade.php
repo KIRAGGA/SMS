@@ -70,3 +70,15 @@
     <p>{{ $classScheduling->status }}</p>
 </div>
 
+<!-- Created at Field -->
+<div class="form-group">
+    {!! Form::label('created_at', 'Created At:') !!}
+    <p>{!! $classScheduling->created_at !!}</p>
+</div>
+
+<!-- Updated On Field -->
+<div class="form-group">
+    {!! Form::label('updated_at', 'Updated At:') !!}
+    <p>{!! $classScheduling->updated_at !!}</p>
+</div>
+
