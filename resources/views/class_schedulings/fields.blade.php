@@ -124,12 +124,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <!-- End Time Field -->
                     <div class="form-group col-sm-6">
                         <label>End Date</label>
-                        <input type="text" class="form-control" name="end_date" id="end_date">
+                        <input type="text" class="form-control" name="end_time" id="end_time">
                     </div>
                      {{-- Script for end date --}}
                      @push('scripts')
                         <script type="text/javascript">
-                            $('#end_date').datetimepicker({
+                            $('#end_time').datetimepicker({
                                 format: 'YYYY-MM-DD',
                                 useCurrent: true,
                                 sideBySide: true
