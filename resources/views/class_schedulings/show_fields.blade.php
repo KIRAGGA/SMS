@@ -16,10 +16,10 @@
     <p>{{ $classScheduling->shift_id }}</p>
 </div>
 
-<!-- Classroom Id Field -->
+<!-- Class Id Field -->
 <div class="form-group">
-    {!! Form::label('classroom_id', 'Classroom Id:') !!}
-    <p>{{ $classScheduling->classroom_id }}</p>
+    {!! Form::label('class_id', 'Class Id:') !!}
+    <p>{{ $classScheduling->class_id }}</p>
 </div>
 
 <!-- Batch Id Field -->
@@ -44,6 +44,12 @@
 <div class="form-group">
     {!! Form::label('teacher_id', 'Teacher Id:') !!}
     <p>{{ $classScheduling->teacher_id }}</p>
+</div>
+
+<!-- Classroom Id Field -->
+<div class="form-group">
+    {!! Form::label('classroom_id', 'Classroom Id:') !!}
+    <p>{{ $classScheduling->classroom_id }}</p>
 </div>
 
 <!-- Start Time Field -->

@@ -5,13 +5,12 @@
                 <th>Course</th>
         <th>Level</th>
         <th>Shift</th>
-        <th>Classroom</th>
+        <th>Class</th>
         <th>Batch </th>
         <th>Day </th>
         <th>Time </th>
         <th>Teacher </th>
         <th>Classroom</th>
-        {{-- <th>Shifts</th> --}}
         {{-- <th>Semester</th> --}}
         <th>Start Time</th>
         <th>End Time</th>
@@ -24,12 +23,12 @@
             <tr>
                 <td>{{ $classScheduling->course_id }}</td>
             <td>{{ $classScheduling->level_id }}</td>
-            <td>{{ $classScheduling->shift_name }}</td>
-            <td>{{ $classScheduling->class_code }}</td>
-            <td>{{ $classScheduling->classroom_name }}</td>
+            <td>{{ $classScheduling->shift_id }}</td>
+            <td>{{ $classScheduling->class_id }}</td>
+            <td>{{ $classScheduling->classroom_id }}</td>
             <td>{{ $classScheduling->year }}</td>
             <td>{{ $classScheduling->name }}</td>
-            <td>{{ $classScheduling->time }}</td>
+            <td>{{ $classScheduling->time_id }}</td>
             <td>{{ $classScheduling->teacher_id }}</td>
             {{-- <td>{{ $classScheduling->semester_code }}</td> --}}
             <td>{{ $classScheduling->start_time }}</td>
@@ -41,7 +40,7 @@
                 @endif --}}
             </td>
                 <td>
-                    {{-- {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!} --}}
+                    {!! Form::open(['route' => ['classSchedulings.destroy', $classScheduling->schedule_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a href="{{ route('classSchedulings.show', [$classScheduling->schedule_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                         <a href="{{ route('classSchedulings.edit', [$classScheduling->schedule_id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>

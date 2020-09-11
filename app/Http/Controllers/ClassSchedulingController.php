@@ -12,7 +12,7 @@ use Response;
 use App\models\Batch;
 use App\models\Classes;
 use App\models\Classroom;
-use App\models\Course;
+use App\Models\Course;
 use App\models\Day;
 use App\models\Level;
 use App\models\Teachers;
