@@ -150,6 +150,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     })
                                 })
                             })
+
+                            // code to fetch data from the database.form-control
+                            $(document).on('click', '#Edit', function(data){
+                                var id = $(this).data('id');
+                                alert(id)
+                            })
                         </script>
                     @endpush
                         
