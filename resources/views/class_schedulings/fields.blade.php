@@ -16,7 +16,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="course_id" id="course_id" class="form-control">
+                        <select name="course_id" id="course_id1" class="form-control">
                             <option value="">Select Course</option>
                             {{-- adding a foreach loop to select the data from the database --}}
                             @foreach ($course as $cou)
@@ -27,7 +27,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <!-- Class Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="class_id" id="class_id" class="form-control">
+                        <select name="class_id" id="class_id1" class="form-control">
                             <option value="">Select Class</option>
                             @foreach ($class as $clas)
                                 <option value="{{$clas->class_id}}">{{$clas->class_name}}</option>
@@ -37,11 +37,11 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <!-- Level Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="level_id" id="level_id" class="form-control">
-                            <option value="">Select Level</option>
-                            {{-- @foreach ($level as $lev)
-                                <option value="{{$lev->level_id}}">{{$lev->level}}</option>
-                            @endforeach --}}
+                        <select name="level_id" id="level_id1" class="form-control">
+                            {{-- <option value="">Select Level</option> --}}
+                            @foreach ($course as $lev)
+                                <option value="{{$lev->level_id}}">Select Level</option>
+                            @endforeach
                         </select>
                     </div>
 
@@ -134,19 +134,22 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             })
 
                         // creating dynamic function for course
-                            $('#course_id').on('change', function(e){
-                            console.log(e);
-                            var course_id = e.target.value;
+                            $('#course_id1').on('change', function(e){
+                            // console.log(e);
+                            // var course_id = e.target.value;
+                            var course_id = $(this).val();
+                            var level = $('#level_id1')
+                                $(level).empty();
+                                $.get("{{ route('dynamicLevel') }}", {course_id:course_id}, function(data){
 
-                                $('#level_id').empty();
-                                $.get('dynamicLevel?course_id='+course_id, function(data){
-                                    console.log(data);
-
-                                $.each(data,function(index, lev){
-                                    $('#level_id').append('<option value"'+lev.level_id+'">'+lev.level+'</option>')
-                                    });
-                                });
-                        });
+                                    $.each(data, function(i,1){
+                                        $(level).append($('<option/>' ,{
+                                            value : 1.level_id,
+                                            text : 1.level
+                                        }))
+                                    })
+                                })
+                            })
                         </script>
                     @endpush
                         
