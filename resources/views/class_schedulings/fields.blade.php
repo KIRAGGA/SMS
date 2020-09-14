@@ -136,7 +136,8 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             })
                         </script>
                     @endpush
-                        <script>
+                        @section('script')
+                            
                         $('#course_id').on('change', function(e){
                             console.log(e);
                             var course_id = e.targert.value;
@@ -150,7 +151,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     });
                                 });
                         });
-                        </script>
+                        @endsection
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">
                         {!! Form::label('status', 'Status:') !!}
