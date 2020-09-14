@@ -7,7 +7,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <button type="button" class="close" data-dismiss="modal" 
                 aria-hidden="true">&times;
                 </button>
-                <h4 class="modal-title"></h4>
+                <h4 class="modal-title">Edit Class Schedule</h4>
             </div>
 
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
@@ -164,7 +164,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-footer">
                         <!-- Submit Field -->
                         <div class="form-group col-sm-12">
-                            {!! Form::submit('Save', ['class' => 'btn btn-success']) !!}
+                            {!! Form::submit('Edit', ['class' => 'btn btn-success btn-sm']) !!}
                             <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
                         </div>
                     </div>
