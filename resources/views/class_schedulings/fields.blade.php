@@ -39,9 +39,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             <option value="">Select Level</option>
-                            {{-- @foreach ($level as $lev)
+                            @foreach ($level as $lev)
                                 <option value="{{$lev->level_id}}">{{$lev->level}}</option>
-                            @endforeach --}}
+                            @endforeach
                         </select>
                     </div>
 
@@ -134,11 +134,8 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 useCurrent: true,
                                 sideBySide: true
                             })
-                        </script>
-                    @endpush
-                        @section('script')
-                            
-                        $('#course_id').on('change', function(e){
+
+                            $('#course_id').on('change', function(e){
                             console.log(e);
                             var course_id = e.targert.value;
 
@@ -151,7 +148,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     });
                                 });
                         });
-                        @endsection
+                        </script>
+                    @endpush
+                        
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">
                         {!! Form::label('status', 'Status:') !!}
