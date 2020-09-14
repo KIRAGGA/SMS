@@ -18,6 +18,7 @@
 
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-6">
+                        {!! Form::label('Course', 'Course:') !!}
                         <select name="course_id" id="course_id" class="form-control">
                             <option value="">Select Course</option>
                             {{-- adding a foreach loop to select the data from the database --}}

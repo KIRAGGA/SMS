@@ -39,9 +39,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             <option value="">Select Level</option>
-                            @foreach ($level as $lev)
+                            {{-- @foreach ($level as $lev)
                                 <option value="{{$lev->level_id}}">{{$lev->level}}</option>
-                            @endforeach
+                            @endforeach --}}
                         </select>
                     </div>
 
@@ -110,34 +110,33 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <input type="text" class="form-control" name="start_time" id="start_time">
                     </div>
 
-                        {{-- script for start date --}}
-                    @push('scripts')
-                        <script type="text/javascript">
-                            $('#start_time').datetimepicker({
-                                format: 'YYYY-MM-DD',
-                                useCurrent: true,
-                                sideBySide: true
-                            })
-                        </script>
-                    @endpush
-
+                    
                             <!-- End Time Field -->
                     <div class="form-group col-sm-6">
                         <label>End Date</label>
                         <input type="text" class="form-control" name="end_time" id="end_time">
                     </div>
+
                      {{-- Script for end date --}}
                      @push('scripts')
                         <script type="text/javascript">
+
+                            $('#start_time').datetimepicker({
+                                format: 'YYYY-MM-DD',
+                                useCurrent: true,
+                                sideBySide: true
+                            })
+
                             $('#end_time').datetimepicker({
                                 format: 'YYYY-MM-DD',
                                 useCurrent: true,
                                 sideBySide: true
                             })
 
+                        // creating dynamic function for course
                             $('#course_id').on('change', function(e){
                             console.log(e);
-                            var course_id = e.targert.value;
+                            var course_id = e.target.value;
 
                                 $('#level_id').empty();
                                 $.get('dynamicLevel?course_id='+course_id, function(data){
