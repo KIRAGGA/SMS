@@ -143,17 +143,21 @@ class ClassSchedulingController extends AppBaseController
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit( Request $request)
     {
-        $classScheduling = $this->classSchedulingRepository->find($id);
+        // $classScheduling = $this->classSchedulingRepository->find($id);
 
-        if (empty($classScheduling)) {
-            Flash::error('Class Scheduling not found');
+        // if (empty($classScheduling)) {
+        //     Flash::error('Class Scheduling not found');
 
-            return redirect(route('classSchedulings.index'));
+        //     return redirect(route('classSchedulings.index'));
+        // }
+
+        // return view('class_schedulings.edit')->with('classScheduling', $classScheduling);
+
+        if($request->ajax()){
+            return response(ClassScheduling::find($request->schedule_id));
         }
-
-        return view('class_schedulings.edit')->with('classScheduling', $classScheduling);
     }
 
     /**

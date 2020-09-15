@@ -16,7 +16,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="course_id" id="course_id1" class="form-control">
+                        <select name="course_id" id="course_id" class="form-control">
                             <option value="">Select Course</option>
                             {{-- adding a foreach loop to select the data from the database --}}
                             @foreach ($course as $cou)
@@ -27,7 +27,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <!-- Class Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="class_id" id="class_id1" class="form-control">
+                        <select name="class_id" id="class_id" class="form-control">
                             <option value="">Select Class</option>
                             @foreach ($class as $clas)
                                 <option value="{{$clas->class_id}}">{{$clas->class_name}}</option>
@@ -37,10 +37,10 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                     <!-- Level Id Field -->
                     <div class="form-group col-sm-4">
-                        <select name="level_id" id="level_id1" class="form-control">
-                            {{-- <option value="">Select Level</option> --}}
-                            @foreach ($course as $lev)
-                                <option value="{{$lev->level_id}}">Select Level</option>
+                        <select name="level_id" id="level_id" class="form-control">
+                            <option value="">Select Level</option>
+                            @foreach ($level as $lev)
+                                <option value="{{$lev->level_id}}">{{$lev->level}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -118,7 +118,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     </div>
 
                      {{-- Script for end date --}}
-                     @push('scripts')
+                     @section('scripts')
                         <script type="text/javascript">
 
                             $('#start_time').datetimepicker({
@@ -134,33 +134,50 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             })
 
                         // creating dynamic function for course
-                            $('#course_id1').on('change', function(e){
+                            // $('#course_id1').on('change', function(e){
                             // console.log(e);
                             // var course_id = e.target.value;
-                            var course_id = $(this).val();
-                            var level = $('#level_id1')
-                                $(level).empty();
-                                $.get("{{ route('dynamicLevel') }}", {course_id:course_id}, function(data){
+                            // var course_id = $(this).val();
+                            // var level = $('#level_id1')
+                            //     $(level).empty();
+                            //     $.get("{{ route('dynamicLevel') }}", {course_id:course_id}, function(data){
 
-                                    $.each(data, function(i,1){
-                                        $(level).append($('<option/>' ,{
-                                            value : 1.level_id,
-                                            text : 1.level
-                                        }))
-                                    })
-                                })
-                            })
+                            //         $.each(data, function(i,1){
+                            //             $(level).append($('<option/>' ,{
+                            //                 value : 1.level_id,
+                            //                 text : 1.level
+                            //             }))
+                            //         })
+                            //     })
+                            // })
 
                             // code to fetch data from the database.form-control
                             $(document).on('click', '#Edit', function(data){
                                 var id = $(this).data('id');
-                                alert(id)
+                                // alert(id)
+
+                                $.get("{{ route('edit')}}", {id:id}, function(data){
+                                    
+                                    $("#course_id").val(data.course_id);
+                                    $("#level_id").val(data.level_id);
+                                    $("#class_id").val(data.class_id);
+                                    $("#shift_id").val(data.shift_id);
+                                    $("#classroom_id").val(data.classroom_id);
+                                    $("#batch_id").val(data.batch_id);
+                                    $("#day_id").val(data.day_id);
+                                    $("#time_id").val(data.time_id);
+                                    $("#teacher_id").val(data.teacher_id);
+                                    $("#start_time").val(data.start_time);
+                                    $("#end_time").val(data.end_time);
+                                    $("#status").val(data.status);
+                                    console.log(data);
+                                })
                             })
                         </script>
-                    @endpush
+                    @endsection
                         
                         <!-- Status Field -->
-                    <div class="form-group col-sm-6">
+                    <div class="form-group col-sm-6" name="status" id="status">
                         {!! Form::label('status', 'Status:') !!}
                         <label class="checkbox-inline">
                             {!! Form::hidden('status', 0) !!}
