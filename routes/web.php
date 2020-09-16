@@ -84,7 +84,9 @@ Route::resource('roles', 'RoleController');
 
 Route::resource('users', 'UserController');
 
-Route::get('/dynammicLevel', ['as' => 'dynamicLevel', 'uses' =>
+Route::get('/dynamicLevel', ['as' => 'dynamicLevel', 'uses' =>
 'ClassSchedulingController@DynamicLevel']);
 
 Route::get('/classSchedulings/edit', ['as' => 'edit', 'uses' => 'ClassSchedulingController@edit']);
+
+Route::post('/classSchedulings/update', ['as' => 'update', 'uses' => 'ClassSchedulingController@update']);

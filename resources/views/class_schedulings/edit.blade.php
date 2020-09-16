@@ -13,7 +13,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">
                     <div class="row"></div>
-<form action="">
+
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="course_id" id="course_id" class="form-control">
@@ -39,7 +39,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             {{-- <option value="">Select Level</option> --}}
-                            @foreach ($level as $lev)
+                            @foreach ($course as $lev)
                                 <option value="{{$lev->level_id}}">Select Level</option>
                             @endforeach
                         </select>
@@ -113,7 +113,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <!-- End Time Field -->
                     <div class="form-group col-sm-6">
                         <label>End Date</label>
-                        <input type="text" class="form-control" name="end_time" id="end_time">
+                        <input type="text" class="form-control" name="end_time" id="end_time" autocomplete="off">
                     </div>
                            <!-- Status Field -->
 
@@ -127,7 +127,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-footer">
                         <!-- Submit Field -->
                         <div class="form-group col-sm-12">
-                            {!! Form::submit('Edit', ['class' => 'btn btn-success btn-sm']) !!}
+                            {!! Form::submit('Update class Schedule', ['class' => 'btn btn-success btn-sm']) !!}
                             <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
                         </div>
                     </div>
@@ -136,7 +136,6 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         </div>
     </div>
 </div>
-</form>
 {{-- Script for end date --}}
 @push('scripts')
 <script type="text/javascript">
@@ -145,20 +144,20 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         format: 'YYYY-MM-DD',
         useCurrent: true,
         sideBySide: true
-    })
+    });
 
     $('#end_time').datetimepicker({
         format: 'YYYY-MM-DD',
         useCurrent: true,
         sideBySide: true
-    })
+    });
 
 // creating dynamic function for course
-    $('#course_id1').on('change', function(e){
+    $('#course_id').on('change', function(e){
     // console.log(e);
     // var course_id = e.target.value;
     var course_id = $(this).val();
-    var level = $('#level_id1')
+    var level = $('#level_id')
         $(level).empty();
         $.get("{{ route('dynamicLevel')}}", {course_id:course_id}, function(data){
 
@@ -190,7 +189,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             $("#end_time").val(data.end_time);
             $("#status").val(data.status);
             console.log(data);
-        })
-    })
+        });
+    });
 </script>
 @endpush

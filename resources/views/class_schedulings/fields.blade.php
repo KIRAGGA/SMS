@@ -101,31 +101,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <input type="text" class="form-control" name="start_date" id="start_date">
                     </div>
 
-                        {{-- script for start date --}}
-                    @push('scripts')
-                        <script type="text/javascript">
-                            $('#start_date').datetimepicker({ 
-                                format: 'YYYY-MM-DD',
-                                useCurrent: true,
-                                sideBySide: true
-                            })
-                        </script>
-                    @endpush
-                            <!-- End Time Field -->
+                           <!-- End Time Field -->
                     <div class="form-group col-sm-6">
                         <label>End Date</label>
                         <input type="text" class="form-control" name="end_time" id="end_time">
                     </div>
-                     {{-- Script for end date --}}
-                     @push('scripts')
-                        <script type="text/javascript">
-                            $('#end_time').datetimepicker({
-                                format: 'YYYY-MM-DD',
-                                useCurrent: true,
-                                sideBySide: true
-                            })
-                        </script>
-                    @endpush
+
                         <!-- Status Field -->
                     <div class="form-group col-sm-6">
                         {!! Form::label('status', 'Status:') !!}
@@ -146,3 +127,19 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         </div>
     </div>
 </div>
+                     {{-- Script for end date --}}
+                     @push('scripts')
+                        <script type="text/javascript">
+                            $('#start_time').datetimepicker({ 
+                                format: 'YYYY-MM-DD',
+                                useCurrent: true,
+                                sideBySide: true
+                            });
+
+                            $('#start_time').datetimepicker({ 
+                                format: 'YYYY-MM-DD',
+                                useCurrent: true,
+                                sideBySide: true
+                            });
+                        </script>
+                    @endpush

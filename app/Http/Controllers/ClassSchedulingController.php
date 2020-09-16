@@ -168,22 +168,48 @@ class ClassSchedulingController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateClassSchedulingRequest $request)
-    {
-        $classScheduling = $this->classSchedulingRepository->find($id);
+    // public function update($id, UpdateClassSchedulingRequest $request)
+    // {
+    //     $classScheduling = $this->classSchedulingRepository->find($id);
 
-        if (empty($classScheduling)) {
-            Flash::error('Class Scheduling not found');
+    //     if (empty($classScheduling)) {
+    //         Flash::error('Class Scheduling not found');
 
-            return redirect(route('classSchedulings.index'));
-        }
+    //         return redirect(route('classSchedulings.index'));
+    //     }
 
-        $classScheduling = $this->classSchedulingRepository->update($request->all(), $id);
+    //     $classScheduling = $this->classSchedulingRepository->update($request->all(), $id);
 
-        Flash::success('Class Scheduling updated successfully.');
+    //     Flash::success('Class Scheduling updated successfully.');
 
-        return redirect(route('classSchedulings.index'));
+    //     return redirect(route('classSchedulings.index'));
+    // }
+
+
+public function update(Request $request){
+
+    $classschedule = array(
+        'course_id'     => $request->course_id,
+        'level_id'      => $request->level_id,
+        'class_id'      => $request->class_id,
+        'shift_id'      => $request->shift_id,
+        'classroom_id'  => $request->classroom_id,
+        'batch_id'      => $request->batch_id,
+        'day_id'        => $request->day_id,
+        'time_id'       => $request->time_id,
+        'teacher_id'    => $request->teacher_id,
+        'start_time'    => $request->start_time,
+        'end_time'      => $request->end_time,
+        'status'        => $request->status
+
+    );
+
+    if(empty($classschedule)){
+        Flash::error('class Schedule Updation Failed');
     }
+    return redirect()->route('classSchedulings.index')->with('success', 'Class Schedule Updated Successfully!');
+}
+
 
     /**
      * Remove the specified ClassScheduling from storage.
