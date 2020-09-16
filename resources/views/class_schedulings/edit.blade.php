@@ -13,7 +13,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">
 
-                    <form action="{{route('classSchedulings.update')}}" method="post">
+                    <form action="{{route('classSchedulings.update', 'schedule_id')}}" method="post">
                         @csrf
                         @method('PUT')
                     <div class="row"></div>
