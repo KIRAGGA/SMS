@@ -96,8 +96,12 @@
 
 <!-- Image Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('image', 'Image:') !!}
-    {!! Form::text('image', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!!Html::image('student_images/profile.jpg', null, ['class'=>'student-image', 'id'=>'showImage'])!!}
+    <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
+    {{-- <td class="image">
+        {!!Html::image('student_images/profile.jpg', null, ['class'=>'student-image', 'id'=>'showImage'])!!}
+        <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
+    </td> --}}
 </div>
 
 <!-- Submit Field -->
