@@ -17,6 +17,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         @csrf
                         @method('PUT')
                     <div class="row"></div>
+                    {{-- this will hide input for the schedule id --}}
             <input type="hidden" name="schedule_id" id="schedule_id">
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
@@ -161,8 +162,6 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 // creating dynamic function for course
     $('#course_id').on('change', function(e){
-    // console.log(e);
-    // var course_id = e.target.value;
     var course_id = $(this).val();
     var level = $('#level_id')
         $(level).empty();
@@ -194,6 +193,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             $("#teacher_id").val(data.teacher_id);
             $("#start_time").val(data.start_time);
             $("#end_time").val(data.end_time);
+            $("#schedule_id").val(data.schedule_id);
             $("#status").val(data.status);
             console.log(data);
         });

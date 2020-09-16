@@ -98,7 +98,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <!-- Start Time Field -->
                     <div class="form-group col-sm-6">
                         <label>Start Date</label>
-                        <input type="text" class="form-control" name="start_date" id="start_date">
+                        <input type="text" class="form-control" name="start_time" id="start_time">
                     </div>
 
                            <!-- End Time Field -->
@@ -141,5 +141,6 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 useCurrent: true,
                                 sideBySide: true
                             });
+                            
                         </script>
                     @endpush

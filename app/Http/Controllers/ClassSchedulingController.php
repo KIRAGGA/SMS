@@ -19,6 +19,7 @@ use App\models\Teachers;
 use App\models\Shift;
 use App\models\Time;
 use Illuminate\Support\Facades\DB;
+use classScheduling;
 class ClassSchedulingController extends AppBaseController
 {
     /** @var  ClassSchedulingRepository */
@@ -203,12 +204,14 @@ public function update(Request $request){
         'status'        => $request->status
 
     );
-    classSchedulings::Find0rFail($request->schedule_id)->update(class_schedulings);
+    // ClassSchedule::Find0rFail($request->schedule_id)->update(classSchedule);
+    $classScheduling = $this->classSchedulingRepository->find($request->schedule_id)->update(classSchedule);
 
     if(empty($classschedule)){
         Flash::error('class Schedule Updation Failed');
     }
-    return redirect()->route('classSchedulings.index')->with('success', 'Class Schedule Updated Successfully!');
+    Flash::success('Class Scheduling updated successfully.');
+    return redirect()->route('classSchedulings.index');
 }
 
 
