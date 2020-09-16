@@ -13,7 +13,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">
                     <div class="row"></div>
-
+<form action="">
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="course_id" id="course_id" class="form-control">
@@ -39,7 +39,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
                             {{-- <option value="">Select Level</option> --}}
-                            @foreach ($course as $lev)
+                            @foreach ($level as $lev)
                                 <option value="{{$lev->level_id}}">Select Level</option>
                             @endforeach
                         </select>
@@ -110,72 +110,13 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <input type="text" class="form-control" name="start_time" id="start_time">
                     </div>
 
-                    
                             <!-- End Time Field -->
                     <div class="form-group col-sm-6">
                         <label>End Date</label>
                         <input type="text" class="form-control" name="end_time" id="end_time">
                     </div>
+                           <!-- Status Field -->
 
-                     {{-- Script for end date --}}
-                     @push('scripts')
-                        <script type="text/javascript">
-
-                            $('#start_time').datetimepicker({
-                                format: 'YYYY-MM-DD',
-                                useCurrent: true,
-                                sideBySide: true
-                            })
-
-                            $('#end_time').datetimepicker({
-                                format: 'YYYY-MM-DD',
-                                useCurrent: true,
-                                sideBySide: true
-                            })
-
-                        // creating dynamic function for course
-                            $('#course_id1').on('change', function(e){
-                            // console.log(e);
-                            // var course_id = e.target.value;
-                            var course_id = $(this).val();
-                            var level = $('#level_id1')
-                                $(level).empty();
-                                $.get("{{ route('dynamicLevel')}}", {course_id:course_id}, function(data){
-
-                                    $.each(data, function(i,1){
-                                        $(level).append($('<option/>' ,{
-                                            value : l.level_id,
-                                            text : l.level
-                                        }))
-                                    })
-                                })
-                            })
-
-                            // code to fetch data from the database.form-control
-                            $(document).on('click', '#Edit', function(data){
-                                var id = $(this).data('schedule_id');
-                                // alert(schedule_id)
-
-                                $.get("{{ route('edit')}}", {id:schedule_id}, function(data){ 
-                                    $("#course_id").val(data.course_id);
-                                    $("#level_id").val(data.level_id);
-                                    $("#course_id").val(data.class_id);
-                                    $("#shift_id").val(data.shift_id);
-                                    $("#classroom_id").val(data.classroom_id);
-                                    $("#batch_id").val(data.batch_id);
-                                    $("#day_id").val(data.day_id);
-                                    $("#time_id").val(data.time_id);
-                                    $("#teacher_id").val(data.teacher_id);
-                                    $("#start_time").val(data.start_time);
-                                    $("#end_time").val(data.end_time);
-                                    $("#status").val(data.status);
-                                    console.log(data);
-                                })
-                            })
-                        </script>
-                    @endpush
-                        
-                        <!-- Status Field -->
                     <div class="form-group col-sm-6" name="status" id="status">
                         {!! Form::label('status', 'Status:') !!}
                         <label class="checkbox-inline">
@@ -195,3 +136,61 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         </div>
     </div>
 </div>
+</form>
+{{-- Script for end date --}}
+@push('scripts')
+<script type="text/javascript">
+
+    $('#start_time').datetimepicker({
+        format: 'YYYY-MM-DD',
+        useCurrent: true,
+        sideBySide: true
+    })
+
+    $('#end_time').datetimepicker({
+        format: 'YYYY-MM-DD',
+        useCurrent: true,
+        sideBySide: true
+    })
+
+// creating dynamic function for course
+    $('#course_id1').on('change', function(e){
+    // console.log(e);
+    // var course_id = e.target.value;
+    var course_id = $(this).val();
+    var level = $('#level_id1')
+        $(level).empty();
+        $.get("{{ route('dynamicLevel')}}", {course_id:course_id}, function(data){
+
+            $.each(data, function(i,1){
+                $(level).append($('<option/>' ,{
+                    value : l.level_id,
+                    text : l.level
+                }))
+            })
+        })
+    })
+
+    // code to fetch data from the database.form-control
+    $(document).on('click', '#Edit', function(data){
+        var id = $(this).data('schedule_id');
+        // alert(schedule_id)
+
+        $.get("{{ route('edit')}}", {id:schedule_id}, function(data){ 
+            $("#course_id").val(data.course_id);
+            $("#level_id").val(data.level_id);
+            $("#course_id").val(data.class_id);
+            $("#shift_id").val(data.shift_id);
+            $("#classroom_id").val(data.classroom_id);
+            $("#batch_id").val(data.batch_id);
+            $("#day_id").val(data.day_id);
+            $("#time_id").val(data.time_id);
+            $("#teacher_id").val(data.teacher_id);
+            $("#start_time").val(data.start_time);
+            $("#end_time").val(data.end_time);
+            $("#status").val(data.status);
+            console.log(data);
+        })
+    })
+</script>
+@endpush
