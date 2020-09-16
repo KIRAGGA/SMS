@@ -12,8 +12,12 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">
-                    <div class="row"></div>
 
+                    <form action="{{route('classSchedulings.update')}}" method="post">
+                        @csrf
+                        @method('PUT')
+                    <div class="row"></div>
+            <input type="hidden" name="schedule_id" id="schedule_id">
                     <!-- Course Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="course_id" id="course_id" class="form-control">
@@ -131,11 +135,14 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <a href="{{ route('classSchedulings.index') }}" class="btn btn-warning">Cancel</a>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 {{-- Script for end date --}}
 @push('scripts')
 <script type="text/javascript">

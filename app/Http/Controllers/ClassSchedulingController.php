@@ -203,6 +203,7 @@ public function update(Request $request){
         'status'        => $request->status
 
     );
+    classSchedulings::Find0rFail($request->schedule_id)->update(class_schedulings);
 
     if(empty($classschedule)){
         Flash::error('class Schedule Updation Failed');
