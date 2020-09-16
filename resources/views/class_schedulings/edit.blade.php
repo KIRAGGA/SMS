@@ -160,6 +160,13 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         sideBySide: true
     });
 
+</script>
+@endpush
+
+@section('script')
+
+    <script type="text/javascript">
+        
 // creating dynamic function for course
     $('#course_id').on('change', function(e){
     var course_id = $(this).val();
@@ -198,5 +205,6 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
             console.log(data);
         });
     });
-</script>
-@endpush
+    </script>
+    
+@endsection
