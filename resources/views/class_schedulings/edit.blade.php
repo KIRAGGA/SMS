@@ -38,9 +38,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <!-- Level Id Field -->
                     <div class="form-group col-sm-4">
                         <select name="level_id" id="level_id" class="form-control">
-                            <option value="">Select Level</option>
-                            @foreach ($level as $lev)
-                                <option value="{{$lev->level_id}}">{{$lev->level}}</option>
+                            {{-- <option value="">Select Level</option> --}}
+                            @foreach ($course as $lev)
+                                <option value="{{$lev->level_id}}">Select Level</option>
                             @endforeach
                         </select>
                     </div>
@@ -118,7 +118,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                     </div>
 
                      {{-- Script for end date --}}
-                     @section('scripts')
+                     @push('scripts')
                         <script type="text/javascript">
 
                             $('#start_time').datetimepicker({
@@ -134,33 +134,32 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                             })
 
                         // creating dynamic function for course
-                            // $('#course_id1').on('change', function(e){
+                            $('#course_id1').on('change', function(e){
                             // console.log(e);
                             // var course_id = e.target.value;
-                            // var course_id = $(this).val();
-                            // var level = $('#level_id1')
-                            //     $(level).empty();
-                            //     $.get("{{ route('dynamicLevel') }}", {course_id:course_id}, function(data){
+                            var course_id = $(this).val();
+                            var level = $('#level_id1')
+                                $(level).empty();
+                                $.get("{{ route('dynamicLevel')}}", {course_id:course_id}, function(data){
 
-                            //         $.each(data, function(i,1){
-                            //             $(level).append($('<option/>' ,{
-                            //                 value : 1.level_id,
-                            //                 text : 1.level
-                            //             }))
-                            //         })
-                            //     })
-                            // })
+                                    $.each(data, function(i,1){
+                                        $(level).append($('<option/>' ,{
+                                            value : l.level_id,
+                                            text : l.level
+                                        }))
+                                    })
+                                })
+                            })
 
                             // code to fetch data from the database.form-control
                             $(document).on('click', '#Edit', function(data){
-                                var id = $(this).data('id');
-                                // alert(id)
+                                var id = $(this).data('schedule_id');
+                                // alert(schedule_id)
 
-                                $.get("{{ route('edit')}}", {id:id}, function(data){
-                                    
+                                $.get("{{ route('edit')}}", {id:schedule_id}, function(data){ 
                                     $("#course_id").val(data.course_id);
                                     $("#level_id").val(data.level_id);
-                                    $("#class_id").val(data.class_id);
+                                    $("#course_id").val(data.class_id);
                                     $("#shift_id").val(data.shift_id);
                                     $("#classroom_id").val(data.classroom_id);
                                     $("#batch_id").val(data.batch_id);
@@ -174,7 +173,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 })
                             })
                         </script>
-                    @endsection
+                    @endpush
                         
                         <!-- Status Field -->
                     <div class="form-group col-sm-6" name="status" id="status">
