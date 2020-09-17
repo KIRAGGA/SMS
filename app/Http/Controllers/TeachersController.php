@@ -9,7 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
-
+use App\models\Teachers;
 class TeachersController extends AppBaseController
 {
     /** @var  TeachersRepository */
@@ -31,7 +31,8 @@ class TeachersController extends AppBaseController
     {
         $teachers = $this->teachersRepository->all();
 
-        return view('teachers.index')
+        $teacher_id = Teacher::max('teacher_id');
+        return view('teachers.index', compact('teacher_id'))
             ->with('teachers', $teachers);
     }
 
@@ -56,7 +57,29 @@ class TeachersController extends AppBaseController
     {
         $input = $request->all();
 
-        $teachers = $this->teachersRepository->create($input);
+        // $teachers = $this->teachersRepository->create($input);
+
+        $image =$request->file(image);
+        $image_name = rand(111,999) . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('teacher_images'), $image_name);
+
+        $teacher = new Teacher;
+        $teacher->first_name = $request->first_name;
+        $teacher->last_name = $request->last_name;
+        $teacher->gender = $request->gender;
+        $teacher->email = $request->email;
+        $teacher->dob = $request->dob;
+        $teacher->phone = $request->phone;
+        $teacher->address = $request->address;
+        $teacher->nationality = $request->nationality;
+        $teacher->passport = $request->passport;
+        $teacher->status = $request->status;
+        $teacher->dateregistered = $request->dateregistered;
+        $teacher->user_id = $request->user_id;
+        $teacher->image = $image_name;
+
+        dd($teacher);
+        $teacher->save();
 
         Flash::success('Teachers saved successfully.');
 
