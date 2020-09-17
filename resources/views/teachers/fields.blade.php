@@ -91,7 +91,7 @@
 <!-- Image Field -->
 <div class="form-group col-sm-6">   
     {!! Form::label('image', 'Teacher Image:') !!}
-    {{-- {!!Html::image('teacher_images/profile.jpg', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!} --}}
+    {!!Html::image('teacher_images/profile.jpg', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!}
     <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
 </div>
 
@@ -110,3 +110,26 @@
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
     <a href="{{ route('teachers.index') }}" class="btn btn-default">Cancel</a>
 </div>
+
+@section('script')
+<script type="text/javascript">
+    $('#browse_file').on('click', function(){
+        $('#image').click();
+    })
+    $('image').on('change', function(e){
+        showFile(this, 'showImage');
+    })
+
+    function showFile(fileInput,img,showName){
+        if(fileInput.file[0]){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $(img).attr('src', e.target.result);
+            }
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+        $(showName).text(fileInput.files[0].name)
+    };
+</script>
+    
+@endsection
