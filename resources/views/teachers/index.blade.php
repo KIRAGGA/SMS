@@ -16,10 +16,6 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('teachers.table')
-            <form action="{{route('teachers.store')}}" method="post" enctype="multipart/form-data">
-                @csrf
-                @include('teachers.fields')
-            </form>
             </div>
         </div>
         <div class="text-center">

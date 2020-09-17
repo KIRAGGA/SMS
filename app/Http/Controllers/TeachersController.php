@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Flash;
 use Response;
 use App\models\Teachers;
+use App\Http\Controllers\Teacher;
 class TeachersController extends AppBaseController
 {
     /** @var  TeachersRepository */
@@ -31,7 +32,7 @@ class TeachersController extends AppBaseController
     {
         $teachers = $this->teachersRepository->all();
 
-        $teacher_id = Teacher::max('teacher_id');
+        $teacher_id = Teachers::max('teacher_id');
         return view('teachers.index', compact('teacher_id'))
             ->with('teachers', $teachers);
     }
@@ -57,7 +58,7 @@ class TeachersController extends AppBaseController
     {
         $input = $request->all();
 
-        // $teachers = $this->teachersRepository->create($input);
+        $teachers = $this->teachersRepository->create($input);
 
         $image =$request->file(image);
         $image_name = rand(111,999) . '.' . $image->getClientOriginalExtension();
