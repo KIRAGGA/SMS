@@ -96,15 +96,34 @@
 </div>
 
 <!-- Status Field -->
-<div class="form-group col-sm-6">
+{{-- <div class="form-group col-sm-6">
     {!! Form::label('status', 'Status:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('status', 0) !!}
         {!! Form::checkbox('status', '1', null) !!}
     </label>
+</div> --}}
+
+<!-- marital status Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('status', 'Single:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('status', 0) !!}
+        {!! Form::radio('status', '1', null) !!}
+    </label>
+    <!-- Status Field -->
+    {!! Form::label('status', 'Married:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('status', 0) !!}
+        {!! Form::radio('status', '0', null) !!}
+    </label>
+
+    {!! Form::label('status', 'Divorced:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('status', 0) !!}
+        {!! Form::radio('status', '0', null) !!}
+    </label>
 </div>
-
-
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
