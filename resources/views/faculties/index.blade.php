@@ -24,8 +24,11 @@
                     {!! Form::close() !!} --}}
 
                     <div class="text-center">
+                        {!! Form::open(['route' => 'faculties.store']) !!}
+
                         @include('faculties.fields')
 
+                    {!! Form::close() !!}
                     </div>
             </div>
         </div>
