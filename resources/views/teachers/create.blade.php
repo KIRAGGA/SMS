@@ -11,15 +11,15 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    <form action="{{route('teachers.store')}}" method="post" enctype="multipart/form-data">
-                        {{ csrf_field() }}
+                    {{-- <form action="{{route('teachers.store')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                         @include('teachers.fields')
-                    </form>
-                    {{-- {!! Form::open(['route' => 'teachers.store']) !!}
+                    </form> --}}
+                    {!! Form::open(['route' => 'teachers.store']) !!}
 
                         @include('teachers.fields')
 
-                    {!! Form::close() !!} --}}
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

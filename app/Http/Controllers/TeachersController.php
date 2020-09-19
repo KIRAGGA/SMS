@@ -9,7 +9,6 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
-use App\Models\Teachers;
 
 class TeachersController extends AppBaseController
 {
@@ -53,40 +52,12 @@ class TeachersController extends AppBaseController
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateTeachersRequest $request)
     {
-        // $input = $request->all();
+        $input = $request->all();
 
-        // $teachers = $this->teachersRepository->create($input);
-        $teacher = new Teacher();
-                
-        $teacher->first_name = $request->input('first_name');
-        $teacher->last_name = $request->input('last_name');
-        $teacher->gender = $request->input('gender');
-        $teacher->email = $request->input('email');
-        $teacher->dob = $request->input('dob');
-        $teacher->phone = $request->input('phone');
-        $teacher->address = $request->input('address');
-        $teacher->nationality = $request->input('nationality');
-        $teacher->passport = $request->input('passport');
-        $teacher->status = $request->input('status');
-        $teacher->dateregistered = $request->input('dateregistered');
-        $teacher->user_id = $request->input('user_id');
-        // $teacher->image = $image_name;
+        $teachers = $this->teachersRepository->create($input);
 
-        if($request->hasfile('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension(); //getting client image by extension
-            // $filename = time() .'.' . $extension;
-            $file->move('uploads/Teachers/');
-            $teacher->image = $filename;
-        }else{
-            return request;
-            $teacher->image = '';
-        }
-
-        // dd($teacher);
-        $teacher->save();
         Flash::success('Teachers saved successfully.');
 
         return redirect(route('teachers.index'));

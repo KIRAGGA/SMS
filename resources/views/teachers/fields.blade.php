@@ -97,7 +97,7 @@
 <div class="form-group col-sm-6">   
     {!! Form::label('image', 'Teacher Image:') !!}
     {{-- {!!Html::image('/storage/images/', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!} --}}
-    <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg" class="custom-file-input">
+    <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
 </div>
 
 <!-- marital status Field -->
