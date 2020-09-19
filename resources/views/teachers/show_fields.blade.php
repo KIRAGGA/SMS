@@ -1,4 +1,14 @@
-  <!-- Content Wrapper. Contains page content -->
+<style>
+    input[:read-only], textarea{
+        background:white !important;
+        border: none;
+    }
+    span{
+        padding-left: 20px;
+    }
+</style>
+
+<!-- Content Wrapper. Contains page content -->
   {{-- <div class="content-wrapper"> --}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -216,6 +226,7 @@
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">
                 <form action="" class="form-horizontal">
+                    <!-- Name Field -->
                     <div class="form-group">
                         <label for="inputName" class="col-sm-3 control-label">Full Name</label>
                     
@@ -223,11 +234,100 @@
                         <input type="email" class="form-control" id="inputName" value="{{ $teachers->first_name }} {{ $teachers->last_name }}" readonly>
                         </div>
                     </div>
+                    <!-- Email Field -->
                     <div class="form-group">
                         <label for="inputEmail" class="col-sm-3 control-label">Email</label>
-                        div class="col-sm-9">
-                        <input type="email" class="form-control" id="inputName" value="{{ $teachers->email }}" readonly>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmail" value="{{ $teachers->email }}" readonly>
+                        </div>
                     </div>
+                    <!-- UserId Field -->
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-3 control-label">UserID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputName" value="{{ $teachers->user_id }}" readonly>
+                        </div>
+                    </div>
+                    <!-- Gender Field -->
+                    <div class="form-group col-sm-12">
+                        <div>
+                            <label for="inputName" class="col-sm-3 control-label">Gender</label>
+                            <div class="col-sm-4">
+                                @if ($teachers->gender == 0)
+                                    <span> Male </span>
+                                @else
+                                    <span> Female </span>
+                                @endif
+                            </div>
+                            <!-- Martial Status Field -->
+                            <label for="inputName" class="col-sm-2 control-label">Status</label>
+                            <div class="col-sm-3">
+                                <p>@if ($teachers->status == 0)
+                                    Single
+                                @else
+                                    Married
+                                @endif
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DOB Field -->
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-3 control-label">Date of Birth</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputName" value="{{$teachers->dob}}" readonly>
+                        </div>
+                    </div>
+                    <!-- Phone number Field -->
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-3 control-label">Phone Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputName" value="+{{ $teachers->phone }}" readonly>
+                        </div>
+                    </div>
+                    <!-- Passport Number/ID Field -->
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-3 control-label">Passport/ID number</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputName" value="{{ $teachers->passport }}" readonly>
+                        </div>
+                    </div>
+                    <!-- Address Field -->
+                    <div class="form-group">
+                        <label for="inputExperience" class="col-sm-3 control-label">Address</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="inputExperience" readonly>{{ $teachers->address }}</textarea>
+                        </div>
+                    </div>
+                    <!-- Nationality Field -->
+                    <div class="form-group">
+                        <label for="inputSkills" class="col-sm-3 control-label">Nationality</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputSkills" value="{{ $teachers->nationality }}" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputSkills" class="col-sm-3 control-label">Date Registered</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputSkills" value="{{date("Y-m-d", strtotime ($teachers->dateregistered)) }}" readonly>
+                        </div>
+                    </div>
+
+
+
+<!-- Created At Field -->
+{{-- <div class="form-group">
+    {!! Form::label('created_at', 'Created At:') !!}
+    <p>{{ $teachers->created_at }}</p>
+</div>
+
+<!-- Updated At Field -->
+<div class="form-group">
+    {!! Form::label('updated_at', 'Updated At:') !!}
+    <p>{{ $teachers->updated_at }}</p>
+</div> --}}
+
                 </form>
               </div>
               <!-- /.tab-pane -->
