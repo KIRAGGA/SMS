@@ -73,7 +73,7 @@ class TeachersController extends AppBaseController
     public function show($id)
     {
         $teachers = $this->teachersRepository->find($id);
-
+            // dd($teachers); die;
         if (empty($teachers)) {
             Flash::error('Teachers not found');
 
