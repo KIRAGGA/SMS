@@ -1,13 +1,25 @@
 <!-- Faculty Id Field -->
-<div class="form-group col-sm-6">
+{{-- <div class="form-group col-sm-6">
     {!! Form::label('faculty_id', 'Faculty Id:') !!}
     {!! Form::number('faculty_id', null, ['class' => 'form-control']) !!}
+</div> --}}
+
+<!-- Faculty Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('faculty_id', 'Faculty Id:') !!}
+    <select name="faculty_id" id="faculty_id" class="form-control">
+        <option value="" >Select Faculty</option>
+        {{-- adding a foreach loop to select the data from the database --}}
+      @foreach ($faculties as $faculty)
+            <option value="{{$faculty->faculty_id}}">{{$faculty->faculty_name}}</option>
+        @endforeach
+    </select>
 </div>
 
 <!-- Department Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('department_name', 'Department Name:') !!}
-    {!! Form::text('department_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('department_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Dept Name Here', 'maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Department Code Field -->

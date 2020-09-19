@@ -22,7 +22,7 @@
                         <select name="course_id" id="course_id" class="form-control">
                             <option value="">Select Course</option>
                             {{-- adding a foreach loop to select the data from the database --}}
-                            @foreach ($course as $cou)
+                            @foreach ($course as $key => $cou)
                                 <option value="{{$cou->course_id}}">{{$cou->course_name}}</option>
                             @endforeach
                         </select>

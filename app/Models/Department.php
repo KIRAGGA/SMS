@@ -37,7 +37,7 @@ class Department extends Model
         'department_description',
         'department_status'
     ];
-
+    protected $primaryKey = 'department_id';
     /**
      * The attributes that should be casted to native types.
      *
