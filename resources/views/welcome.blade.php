@@ -164,7 +164,7 @@
       <div class="mu-slider-single">
         <div class="mu-slider-img">
           <figure>
-            <img src="{{URL::asset('/storage/images/capture.png')}}" alt="img">
+            <img src="{{URL::asset('/storage/images/capture.png')}}" alt="">
           </figure>
         </div>
         <div class="mu-slider-content">
@@ -180,7 +180,7 @@
       <div class="mu-slider-single">
         <div class="mu-slider-img">
           <figure>
-            <img src="{{URL::asset('/storage/images/capture.png')}}" alt="img">
+            <img src="{{URL::asset('/storage/images/capture.png')}}" alt="">
           </figure>
         </div>
         <div class="mu-slider-content">
@@ -196,7 +196,7 @@
       <div class="mu-slider-single">
         <div class="mu-slider-img">
           <figure>
-            <img src="{{URL::asset('/storage/images/capture.png')}}" alt="img">
+            <img src="{{URL::asset('/storage/images/capture.png')}}" alt="">
           </figure>
         </div>
         <div class="mu-slider-content">

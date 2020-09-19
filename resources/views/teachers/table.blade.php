@@ -23,7 +23,12 @@
             <tr>
                 <td>{{ $teachers->first_name }}</td>
             <td>{{ $teachers->last_name }}</td>
-            <td>{{ $teachers->gender }}</td>
+            <td>@if ($teachers->gender == 0)
+                    Male
+                @else
+                    Female
+                @endif
+            </td>
             <td>{{ $teachers->email }}</td>
             <td>{{ $teachers->dob }}</td>
             <td>{{ $teachers->phone }}</td>
@@ -31,12 +36,12 @@
             <td>{{ $teachers->nationality }}</td>
             <td>{{ $teachers->passport }}</td>
             {{-- <td>{{ $teachers->status }}</td> --}}
-            <td>@if ($teachers->status === 1)
+            <td>@if ($teachers->status == 0)
                     Single
-                @elseif ($teachers->status > 1)
-                    Married
+                {{-- @elseif ($teachers->status == 1)
+                    Married --}}
                 @else
-                    Divorced
+                    Married
                 @endif
             </td>
             <td>{{ $teachers->dateregistered }}</td>

@@ -11,12 +11,33 @@
 </div>
 
 <!-- Gender Field -->
-<div class="form-group col-sm-6">
+{{-- <div class="form-group col-sm-6">
     {!! Form::label('gender', 'Gender:') !!}
-    {!! Form::text('gender', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('gender', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
     {{-- <input id="female" type="radio"class="form-control" name="gender" value="Female" {{ (old('sex') == 'female') ? 'checked' : '' }} >Female
     <br>
  <input id="male" type="radio"class="form-control" name="gender" value="Male" {{ (old('sex') == 'male') ? 'checked' : '' }} >Male --}}
+</div>
+
+<!-- marital status Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('gender', 'Male:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('gender', 0) !!}
+        {!! Form::radio('gender', '0', null) !!}
+    </label>
+    <!-- Status Field -->
+    {!! Form::label('gender', 'Female:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('gender', 0) !!}
+        {!! Form::radio('gender', '1', null) !!}
+    </label>
+
+    {{-- {!! Form::label('status', 'Divorced:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('status', 0) !!}
+        {!! Form::radio('status', '2', null) !!}
+    </label> --}}
 </div>
 
 <!-- Email Field -->
@@ -109,20 +130,20 @@
     {!! Form::label('status', 'Single:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('status', 0) !!}
-        {!! Form::radio('status', '1', null) !!}
+        {!! Form::radio('status', '0', null) !!}
     </label>
     <!-- Status Field -->
     {!! Form::label('status', 'Married:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('status', 0) !!}
-        {!! Form::radio('status', '0', null) !!}
+        {!! Form::radio('status', '1', null) !!}
     </label>
 
-    {!! Form::label('status', 'Divorced:') !!}
+    {{-- {!! Form::label('status', 'Divorced:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('status', 0) !!}
-        {!! Form::radio('status', '0', null) !!}
-    </label>
+        {!! Form::radio('status', '2', null) !!}
+    </label> --}}
 </div>
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

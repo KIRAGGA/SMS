@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property string $first_name
  * @property string $last_name
- * @property string $gender
+ * @property boolean $gender
  * @property string $email
  * @property string $dob
  * @property string $phone
@@ -63,7 +63,7 @@ class Teachers extends Model
         'teacher_id' => 'integer',
         'first_name' => 'string',
         'last_name' => 'string',
-        'gender' => 'string',
+        'gender' => 'boolean',
         'email' => 'string',
         'dob' => 'date',
         'phone' => 'string',
@@ -84,7 +84,7 @@ class Teachers extends Model
     public static $rules = [
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
-        'gender' => 'required|string|max:255',
+        'gender' => 'required|boolean',
         'email' => 'required|string|max:255',
         'dob' => 'required',
         'phone' => 'required|string|max:255',
