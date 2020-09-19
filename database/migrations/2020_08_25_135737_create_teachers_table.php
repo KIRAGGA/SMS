@@ -27,7 +27,7 @@ class CreateTeachersTable extends Migration
             $table->tinyInteger('status');
             $table->date('dateregistered');
             $table->string('user_id');
-            $table->string('image')->nullable();
+            $table->mediumText('image')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -12,7 +12,7 @@
             <div class="box-body">
                 <div class="row">
                     <form action="{{route('teachers.store')}}" method="post" enctype="multipart/form-data">
-                        @csrf
+                        {{ csrf_field() }}
                         @include('teachers.fields')
                     </form>
                     {{-- {!! Form::open(['route' => 'teachers.store']) !!}

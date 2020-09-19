@@ -11,15 +11,6 @@
 </div>
 
 <!-- Gender Field -->
-{{-- <div class="form-group col-sm-6">
-    {!! Form::label('gender', 'Gender:') !!}
-    {!! Form::text('gender', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
-    {{-- <input id="female" type="radio"class="form-control" name="gender" value="Female" {{ (old('sex') == 'female') ? 'checked' : '' }} >Female
-    <br>
- <input id="male" type="radio"class="form-control" name="gender" value="Male" {{ (old('sex') == 'male') ? 'checked' : '' }} >Male --}}
-</div>
-
-<!-- marital status Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('gender', 'Male:') !!}
     <label class="checkbox-inline">
@@ -32,12 +23,6 @@
         {!! Form::hidden('gender', 0) !!}
         {!! Form::radio('gender', '1', null) !!}
     </label>
-
-    {{-- {!! Form::label('status', 'Divorced:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', 0) !!}
-        {!! Form::radio('status', '2', null) !!}
-    </label> --}}
 </div>
 
 <!-- Email Field -->
@@ -92,7 +77,6 @@
     {!! Form::text('user_id', null, ['class' => 'form-control', 'placeholder' => 'Enter UserID Here','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
-
 <!-- Dateregistered Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('dateregistered', 'Dateregistered:') !!}
@@ -112,18 +96,9 @@
 <!-- Image Field -->
 <div class="form-group col-sm-6">   
     {!! Form::label('image', 'Teacher Image:') !!}
-    {!!Html::image('/storage/images/', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!}
-    <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
+    {{-- {!!Html::image('/storage/images/', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!} --}}
+    <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg" class="custom-file-input">
 </div>
-
-<!-- Status Field -->
-{{-- <div class="form-group col-sm-6">
-    {!! Form::label('status', 'Status:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', 0) !!}
-        {!! Form::checkbox('status', '1', null) !!}
-    </label>
-</div> --}}
 
 <!-- marital status Field -->
 <div class="form-group col-sm-6">
@@ -138,13 +113,8 @@
         {!! Form::hidden('status', 0) !!}
         {!! Form::radio('status', '1', null) !!}
     </label>
-
-    {{-- {!! Form::label('status', 'Divorced:') !!}
-    <label class="checkbox-inline">
-        {!! Form::hidden('status', 0) !!}
-        {!! Form::radio('status', '2', null) !!}
-    </label> --}}
 </div>
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}

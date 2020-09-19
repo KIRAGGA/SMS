@@ -22,7 +22,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property boolean $status
  * @property string $dateregistered
  * @property string $user_id
- * @property string $image
+ * @property mediumText $image
  */
 class Teachers extends Model
 {
@@ -73,7 +73,7 @@ class Teachers extends Model
         'status' => 'boolean',
         'dateregistered' => 'date',
         'user_id' => 'string',
-        'image' => 'string'
+        'image' => 'mediumText'
     ];
 
     /**
@@ -94,7 +94,7 @@ class Teachers extends Model
         'status' => 'required|boolean',
         'dateregistered' => 'required',
         'user_id' => 'required|string|max:255',
-        'image' => 'nullable|string|max:255',
+        'image' => 'nullable|mediumText|max:255',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
