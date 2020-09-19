@@ -77,7 +77,8 @@ class TeachersController extends AppBaseController
         if($request->hasfile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); //getting client image by extension
-            $file->move('uploads/Teachers/', $filename);
+            // $filename = time() .'.' . $extension;
+            $file->move('uploads/Teachers/');
             $teacher->image = $filename;
         }else{
             return request;
