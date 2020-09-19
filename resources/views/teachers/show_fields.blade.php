@@ -29,7 +29,7 @@
 
               <h3 class="profile-username text-center">{{ $teachers->first_name }} {{ $teachers->last_name }}</h3>
 
-              <p class="text-muted text-center">Software Engineer</p>
+              <p class="text-muted text-center">Teacher</p>
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
@@ -215,7 +215,20 @@
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">
-                
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-3 control-label">Full Name</label>
+                    
+                        <div class="col-sm-9">
+                        <input type="email" class="form-control" id="inputName" value="{{ $teachers->first_name }} {{ $teachers->last_name }}" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+                        div class="col-sm-9">
+                        <input type="email" class="form-control" id="inputName" value="{{ $teachers->email }}" readonly>
+                    </div>
+                </form>
               </div>
               <!-- /.tab-pane -->
 
