@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     input[:read-only], textarea{
         background:white !important;
         border: none;
@@ -6,7 +6,7 @@
     span{
         padding-left: 20px;
     }
-</style>
+</style> --}}
 
 <!-- Content Wrapper. Contains page content -->
   {{-- <div class="content-wrapper"> --}}
