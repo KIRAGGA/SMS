@@ -31,8 +31,9 @@ class DepartmentController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $faculties = Faculty::all();
+        
         $departments = $this->departmentRepository->all();
+        $faculties = Faculty::all();
         $department = Department::join('faculties', 'faculties.faculty_id', '=', 'departments.faculty_id')->get();
 
         // $department = DB::table('departments')->select(
