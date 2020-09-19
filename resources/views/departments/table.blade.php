@@ -17,10 +17,10 @@
             <td>{{ $department->department_name }}</td>
             <td>{{ $department->department_code }}</td>
             <td>{{ $department->department_description }}</td>
-            <td>@if ( $department->department_status ==0 )
-                Active
+            <td>@if( $classScheduling->status == 1)
+                    <div style="color: green">Active</div>
                 @else
-                    InActive
+                    <div style="color: red">In Active</div>
                 @endif
             </td>
                 <td>
