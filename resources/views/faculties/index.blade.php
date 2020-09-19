@@ -17,11 +17,16 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('faculties.table')
-                    {!! Form::open(['route' => 'faculties.store']) !!}
+                    {{-- {!! Form::open(['route' => 'faculties.store']) !!}
 
                         @include('faculties.fields')
 
-                    {!! Form::close() !!}
+                    {!! Form::close() !!} --}}
+
+                    <div class="text-center">
+                        @include('faculties.fields')
+
+                    </div>
             </div>
         </div>
         <div class="text-center">

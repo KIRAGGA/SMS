@@ -7,7 +7,7 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <button type="button" class="close" data-dismiss="modal" 
                 aria-hidden="true">&times;
                 </button>
-                <h4 class="modal-title">Create new Class Schedule</h4>
+                <h4 class="modal-title"> Create new Class Schedule</h4>
             </div>
             <div class="modal-body" style="border-bottom: 1px solid #ccc;">
                 <div class="form-group">

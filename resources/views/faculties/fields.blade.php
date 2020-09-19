@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-notify modal-ms modal-right modal-success" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-id-badge" aria-hidden="true">Add New faculty</i></h5>
+                <h1 class="modal-title" id="exampleModalLabel"><i class="fa fa-leanpub" aria-hidden="true">Add New faculty</i></h1>
                 <button type="button" class="close" data-dismiss="modal" aria-label="close">
                     <span aria-hidden="true">&times;</span>
                 </button>
