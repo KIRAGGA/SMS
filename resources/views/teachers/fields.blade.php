@@ -112,7 +112,7 @@
 <!-- Image Field -->
 <div class="form-group col-sm-6">   
     {!! Form::label('image', 'Teacher Image:') !!}
-    {!!Html::image('teacher_images/profile.jpg', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!}
+    {!!Html::image('/storage/images/', null, ['class'=>'teacher-image', 'id'=>'showImage'])!!}
     <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
 </div>
 

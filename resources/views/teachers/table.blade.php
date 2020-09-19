@@ -35,19 +35,16 @@
             <td>{{ $teachers->address }}</td>
             <td>{{ $teachers->nationality }}</td>
             <td>{{ $teachers->passport }}</td>
-            {{-- <td>{{ $teachers->status }}</td> --}}
             <td>@if ($teachers->status == 0)
                     Single
-                {{-- @elseif ($teachers->status == 1)
-                    Married --}}
                 @else
                     Married
                 @endif
             </td>
             <td>{{ $teachers->dateregistered }}</td>
             <td>{{ $teachers->user_id }}</td>
-            <td><img src="{{URL::asset ($teachers->image) }}" alt=""
-                 class="rounded-circle" width="50" height="50" style="border-radius:50%"></td>
+            <td><img src="{{URL::asset ('/storage/images/'.$teachers->image) }}" alt=""
+                 class="rounded-circle" width="50" height="50" style="border-radius:50%; vertical-align: middle;"></td>
                 <td>
                     {!! Form::open(['route' => ['teachers.destroy', $teachers->teacher_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
