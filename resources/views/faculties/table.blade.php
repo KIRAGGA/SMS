@@ -22,7 +22,12 @@
                 <td>{{ $faculty->faculty_name }}</td>
             <td>{{ $faculty->faculty_code }}</td>
             <td>{{ $faculty->faculty_description }}</td>
-            <td>{{ $faculty->faculty_status }}</td>
+            <td>@if( $faculty->faculty_status == 1)
+                <div style="color: green">Active</div>
+            @else
+                <div style="color: red">In Active</div>
+            @endif
+        </td>
                 <td>
                     {!! Form::open(['route' => ['faculties.destroy', $faculty->faculty_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

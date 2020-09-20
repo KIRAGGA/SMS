@@ -1,3 +1,4 @@
+
 <!-- Faculty Id Field -->
 {{-- <div class="form-group col-sm-6">
     {!! Form::label('faculty_id', 'Faculty Id:') !!}
@@ -8,7 +9,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('faculty_id', 'Faculty Id:') !!}
     <select name="faculty_id" id="faculty_id" class="form-control">
-        <option value="" >Select Faculty</option>
+        <option value="0" selected="true" disabled="true">Select Faculty</option> 
         {{-- adding a foreach loop to select the data from the database --}}
       @foreach ($faculties as $faculty)
             <option value="{{$faculty->faculty_id}}">{{$faculty->faculty_name}}</option>
