@@ -22,7 +22,7 @@ class CreateAdmissionTable extends Migration
             $table->string('father_phone');
             $table->string('mother_name');
             $table->string('mother_phone');
-            $table->string('gender');
+            $table->boolean('gender');
             $table->string('email')->unique();
             $table->date('dob');
             $table->string('phone');
@@ -33,7 +33,7 @@ class CreateAdmissionTable extends Migration
             $table->tinyInteger('status');
             $table->date('dateregistered');
             $table->string('user_id');
-            $table->string('class_id');
+            $table->string('department_id');
             $table->string('image')->nullable();
             $table->softDeletes();
             $table->timestamps();

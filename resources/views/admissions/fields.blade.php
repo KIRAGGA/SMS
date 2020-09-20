@@ -31,7 +31,7 @@
 <!-- Mother Name Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('mother_name', 'Mother Name:') !!}
-    {!! Form::text('mother_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('mother_name', null, ['class' => 'form-control', 'placeholder' => 'Enter mothers name', 'maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Mother Phone Field -->
@@ -47,7 +47,7 @@
         {!! Form::hidden('gender', 0) !!}
         {!! Form::radio('gender', '0', null) !!}
     </label>
-    <!-- Status Field -->
+    <!-- gender Field -->
     {!! Form::label('gender', 'Female:') !!}
     <label class="checkbox-inline">
         {!! Form::hidden('gender', 0) !!}
@@ -58,13 +58,13 @@
 <!-- Email Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('email', 'Email:') !!}
-    {!! Form::email('email', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Email', 'maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Dob Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('dob', 'Dob:') !!}
-    {!! Form::text('dob', null, ['class' => 'form-control','id'=>'dob']) !!}
+    {!! Form::text('dob', null, ['class' => 'form-control', 'placeholder' => 'Enter Date of birth', 'id'=>'dob']) !!}
 </div>
 
 @push('scripts')
@@ -80,13 +80,19 @@
 <!-- Phone Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('phone', 'Phone:') !!}
-    {!! Form::text('phone', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => 'Enter Phone number', 'maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Passport Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('passport', 'Passport:') !!}
-    {!! Form::text('passport', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::text('passport', null, ['class' => 'form-control', 'placeholder' => 'Enter Passport number', 'maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+
+<!-- Nationality Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('nationality', 'Nationality:') !!}
+    {!! Form::text('nationality', null, ['class' => 'form-control', 'placeholder' => 'Enter Nationality','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Address Field -->
@@ -101,13 +107,6 @@
     {!! Form::textarea('current_address', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Nationality Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('nationality', 'Nationality:') !!}
-    {!! Form::text('nationality', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>
-
-
 <!-- Status Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('status', 'Status:') !!}
@@ -116,7 +115,6 @@
         {!! Form::checkbox('status', '1', null) !!}
     </label>
 </div>
-
 
 <!-- Dateregistered Field -->
 <div class="form-group col-sm-6">
@@ -142,8 +140,8 @@
 
 <!-- Class Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('class_id', 'Class Id:') !!}
-    {!! Form::text('class_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('department_id', 'Department Id:') !!}
+    {!! Form::text('department_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Image Field -->

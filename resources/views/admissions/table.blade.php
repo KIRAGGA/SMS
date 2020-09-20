@@ -51,7 +51,7 @@
             <td>{{ $admission->status }}</td>
             <td>{{ $admission->dateregistered }}</td>
             <td>{{ $admission->user_id }}</td>
-            <td>{{ $admission->class_id }}</td>
+            <td>{{ $admission->department_id }}</td>
             <td>{{ $admission->image }}</td>
                 <td>
                     {!! Form::open(['route' => ['admissions.destroy', $admission->student_id], 'method' => 'delete']) !!}

@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $father_phone
  * @property string $mother_name
  * @property string $mother_phone
- * @property string $gender
+ * @property boolean $gender
  * @property string $email
  * @property string $dob
  * @property string $phone
@@ -82,7 +82,7 @@ class Admission extends Model
         'father_phone' => 'string',
         'mother_name' => 'string',
         'mother_phone' => 'string',
-        'gender' => 'string',
+        'gender' => 'boolean',
         'email' => 'string',
         'dob' => 'date',
         'phone' => 'string',
@@ -110,7 +110,7 @@ class Admission extends Model
         'father_phone' => 'required|string|max:255',
         'mother_name' => 'required|string|max:255',
         'mother_phone' => 'required|string|max:255',
-        'gender' => 'required|string|max:255',
+        'gender' => 'required|boolean',
         'email' => 'required|string|max:255',
         'dob' => 'required',
         'phone' => 'required|string|max:255',
