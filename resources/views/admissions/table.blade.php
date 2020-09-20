@@ -20,6 +20,7 @@
         <th>Status</th>
         <th>Dateregistered</th>
         <th>User Id</th>
+        <th>Faculty ID</th>
         <th>Department Id</th>
         <th>Image</th>
                 <th colspan="3">Action</th>
@@ -51,6 +52,7 @@
             <td>{{ $admission->status }}</td>
             <td>{{ $admission->dateregistered }}</td>
             <td>{{ $admission->user_id }}</td>
+            <td>{{$admission->faculty_id}}</td>
             <td>{{ $admission->department_id }}</td>
             <td>{{ $admission->image }}</td>
                 <td>

@@ -9,6 +9,10 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Roll;
+use App\models\Department;
+use App\models\faculty;
+use Illuminate\Support\Facades\DB;
 
 class AdmissionController extends AppBaseController
 {
@@ -29,9 +33,17 @@ class AdmissionController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $departments = Department::all();
+        $faculties = Faculty::all();
         $admissions = $this->admissionRepository->all();
 
-        return view('admissions.index')
+        $admin = DB::table('admissions')->select(
+            'department.*',
+            'faculty.*'
+            )
+        ->join('departments', 'departments.department_id', '=', 'admissions.course_id')
+        ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
+        return view('admissions.index', compact('department', 'faculties'))
             ->with('admissions', $admissions);
     }
 
