@@ -108,8 +108,8 @@
 
 <!-- Class Id Field -->
 <div class="form-group">
-    {!! Form::label('class_id', 'Class Id:') !!}
-    <p>{{ $admission->class_id }}</p>
+    {!! Form::label('class_id', 'Department Id:') !!}
+    <p>{{ $admission->department_id }}</p>
 </div>
 
 <!-- Image Field -->

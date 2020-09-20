@@ -20,7 +20,7 @@
         <th>Status</th>
         <th>Dateregistered</th>
         <th>User Id</th>
-        <th>Class Id</th>
+        <th>Department Id</th>
         <th>Image</th>
                 <th colspan="3">Action</th>
             </tr>
