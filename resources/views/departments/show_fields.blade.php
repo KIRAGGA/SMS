@@ -25,6 +25,10 @@
 <!-- Department Status Field -->
 <div class="form-group">
     {!! Form::label('department_status', 'Department Status:') !!}
-    <p>{{ $department->department_status }}</p>
+    <p>@if( $department->department_status == 1)
+        <div style="color: green">Active</div>
+    @else
+        <div style="color: red">In Active</div>
+    @endif</p>
 </div>
 

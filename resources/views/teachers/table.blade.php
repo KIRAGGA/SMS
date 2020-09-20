@@ -36,9 +36,9 @@
             <td>{{ $teachers->nationality }}</td>
             <td>{{ $teachers->passport }}</td>
             <td>@if ($teachers->status == 0)
-                    Single
+                <div style="color: red">Single</div>
                 @else
-                    Married
+                <div style="color: green">Married</div>
                 @endif
             </td>
             <td>{{ $teachers->dateregistered }}</td>

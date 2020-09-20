@@ -35,7 +35,12 @@
             <td>{{ $admission->father_phone }}</td>
             <td>{{ $admission->mother_name }}</td>
             <td>{{ $admission->mother_phone }}</td>
-            <td>{{ $admission->gender }}</td>
+            <td>@if ($admission->gender == 0)
+                Male
+            @else
+                Female
+            @endif
+        </td>
             <td>{{ $admission->email }}</td>
             <td>{{ $admission->dob }}</td>
             <td>{{ $admission->phone }}</td>

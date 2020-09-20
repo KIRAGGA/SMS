@@ -1,8 +1,8 @@
 <!-- Roll No Field -->
-<div class="form-group col-sm-6">
+{{-- <div class="form-group col-sm-6">
     {!! Form::label('roll_no', 'Roll No:') !!}
     {!! Form::text('roll_no', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>
+</div> --}}
 
 <!-- First Name Field -->
 <div class="form-group col-sm-6">
@@ -42,8 +42,17 @@
 
 <!-- Gender Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('gender', 'Gender:') !!}
-    {!! Form::text('gender', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('gender', 'Male:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('gender', 0) !!}
+        {!! Form::radio('gender', '0', null) !!}
+    </label>
+    <!-- Status Field -->
+    {!! Form::label('gender', 'Female:') !!}
+    <label class="checkbox-inline">
+        {!! Form::hidden('gender', 0) !!}
+        {!! Form::radio('gender', '1', null) !!}
+    </label>
 </div>
 
 <!-- Email Field -->
@@ -74,14 +83,20 @@
     {!! Form::text('phone', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
+<!-- Passport Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('passport', 'Passport:') !!}
+    {!! Form::text('passport', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+
 <!-- Address Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-12 col-lg-6">
     {!! Form::label('address', 'Address:') !!}
     {!! Form::textarea('address', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Current Address Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-12 col-lg-6">
     {!! Form::label('current_address', 'Current Address:') !!}
     {!! Form::textarea('current_address', null, ['class' => 'form-control']) !!}
 </div>
@@ -92,11 +107,6 @@
     {!! Form::text('nationality', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
-<!-- Passport Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('passport', 'Passport:') !!}
-    {!! Form::text('passport', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div>
 
 <!-- Status Field -->
 <div class="form-group col-sm-6">
@@ -139,7 +149,8 @@
 <!-- Image Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('image', 'Image:') !!}
-    {!! Form::text('image', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {{-- {!! Form::text('image', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
+    <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
 </div>
 
 <!-- Submit Field -->
