@@ -11,9 +11,12 @@ use Flash;
 use Response;
 use App\Roll;
 use App\models\Department;
-use App\models\faculty;
+use App\models\Faculty;
 use Illuminate\Support\Facades\DB;
-use admission;
+use App\models\Admission;
+use Auth;
+
+
 class AdmissionController extends AppBaseController
 {
     /** @var  AdmissionRepository */
@@ -33,8 +36,10 @@ class AdmissionController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $departments = Department::all();
-        $faculties = Faculty::all();
+        // $admissions = Admission::all();
+        // $student_id = Roll::max('roll_id');
+        // $departments = Department::all();
+        // $faculties = Faculty::all();
         $admissions = $this->admissionRepository->all();
 
         $admin = DB::table('admissions')->select(
@@ -43,7 +48,7 @@ class AdmissionController extends AppBaseController
             )
         ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
         ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
-        return view('admissions.index', compact('department_id', 'faculty_id'))
+        return view('admissions.index', compact('departments', 'faculties','teacher_id','admission','student_id'))
             ->with('admissions', $admissions);
     }
 
