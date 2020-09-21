@@ -36,10 +36,10 @@ class AdmissionController extends AppBaseController
      */
     public function index(Request $request)
     {
-        // $admissions = Admission::all();
-        // $student_id = Roll::max('roll_id');
-        // $departments = Department::all();
-        // $faculties = Faculty::all();
+        $admissions = Admission::all();
+        $student_id = Roll::max('roll_id');
+        $departments = Department::all();
+        $faculties = Faculty::all();
         $admissions = $this->admissionRepository->all();
 
         $admin = DB::table('admissions')->select(
