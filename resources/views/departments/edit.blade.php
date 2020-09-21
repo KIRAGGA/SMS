@@ -20,17 +20,17 @@
                         {!! Form::text('level', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
                     </div>
 
-                    <!-- Course Id Field -->
+                    {{-- <!-- Course Id Field -->
                     <div class="form-group col-sm-6">
                         {!! Form::label('Course', 'Course:') !!}
                         <select name="course_id" id="course_id" class="form-control">
                             <option value="">Select Course</option>
-                            {{-- adding a foreach loop to select the data from the database --}}
+                            {{-- adding a foreach loop to select the data from the database
                             @foreach ($course as $key => $cou)
                                 <option value="{{$cou->course_id}}">{{$cou->course_name}}</option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> --}}
 
                     <!-- Level Description Field -->
                     <div class="form-group col-sm-12 col-lg-12">

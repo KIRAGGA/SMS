@@ -12,19 +12,19 @@
             </div>
                 <div class="modal-body"><!-- Faculty Id Field -->
                     <div class="form-group col-sm-6">
-                        {!! Form::label('faculty_id', 'Faculty Id:') !!}
-                        {!! Form::number('faculty_id', null, ['class' => 'form-control']) !!}
+                        {{-- {!! Form::label('faculty_id', 'Faculty Id:') !!}
+                        {!! Form::number('faculty_id', null, ['class' => 'form-control']) !!} --}}
                     </div>
 
                     <!-- Faculty Id Field -->
-                    {{-- <div class="form-group col-sm-6">
+                    <div class="form-group col-sm-6">
                         <select name="faculty_id" id="faculty_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select Faculty</option> 
                         @foreach ($faculties as $faculty)
                                 <option value="{{$faculty->faculty_id}}">{{$faculty->faculty_name}}</option>
                             @endforeach
                         </select>
-                    </div> --}}
+                    </div>
 
                     <!-- Department Name Field -->
                     <div class="form-group col-sm-6">
@@ -59,6 +59,6 @@
                     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
                     <a href="{{ route('departments.index') }}" class="btn btn-default">Cancel</a>
                 </div>
-</div>
-</div>
+        </div>
+    </div>
 </div>

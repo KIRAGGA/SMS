@@ -9,9 +9,9 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
-use App\Models\Faculty;
+use App\models\Faculty;
 use Illuminate\Support\Facades\DB;
-use App\Models\Department;
+use App\models\Department;
 class DepartmentController extends AppBaseController
 {
     /** @var  DepartmentRepository */
