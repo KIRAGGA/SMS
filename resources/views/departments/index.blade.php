@@ -4,7 +4,8 @@
     <section class="content-header">
         <h1 class="pull-left">Departments</h1>
         <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{{ route('departments.create') }}"><i class="fa fa-plus-circle"></i>&nbsp; Add New</a>
+            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" 
+            data-toggle="modal" data-target="#department-add-modal"><i class="fa fa-plus-circle">Add New department</i></a>
         </h1>
     </section>
     <div class="content">
@@ -16,6 +17,11 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('departments.table')
+                    {!! Form::open(['route' => 'departments.store']) !!}
+
+                        @include('departments.fields')
+
+                    {!! Form::close() !!}
             </div>
         </div>
         
