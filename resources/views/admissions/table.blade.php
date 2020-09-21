@@ -2,7 +2,7 @@
     <table class="table" id="admissions-table">
         <thead>
             <tr>
-                <th>Roll No</th>
+                <th>Batch No</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Father Name</th>
@@ -29,7 +29,7 @@
         <tbody>
         @foreach($admissions as $admission)
             <tr>
-                <td>{{ $admission->roll_id }}</td>
+                <td>{{ $admission->batch_id }}</td>
             <td>{{ $admission->first_name }}</td>
             <td>{{ $admission->last_name }}</td>
             <td>{{ $admission->father_name }}</td>

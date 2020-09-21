@@ -1,7 +1,7 @@
 <!-- Roll No Field -->
 <div class="form-group">
-    {!! Form::label('roll_id', 'Roll Id:') !!}
-    <p>{{ $admission->roll_id }}</p>
+    {!! Form::label('batch_id', 'batch Id:') !!}
+    <p>{{ $admission->year }}</p>
 </div>
 
 <!-- First Name Field -->

@@ -13,14 +13,14 @@
 
                     <!-- Roll No Field -->
                     <div class="form-group col-sm-6">
-                        {!! Form::label('roll_id', 'Roll Id:') !!}
-                        {!! Form::number('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-                        {{-- <select name="department_id" id="department_id" class="form-control">
+                        {{-- {!! Form::label('roll_id', 'Roll Id:') !!}
+                        {!! Form::number('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
+                        <select name="batch_id" id="batch_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select roll</option> 
-                            @foreach ($roll as $ro)
-                                <option value="{{$ro->roll_id}}">{{$ro->username}}</option>
+                            @foreach ($batch as $ro)
+                                <option value="{{$ro->batch_id}}">{{$ro->year}}</option>
                             @endforeach
-                        </select> --}}
+                        </select>
                     </div>
 
                     <!-- First Name Field -->
