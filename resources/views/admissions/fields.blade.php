@@ -17,7 +17,7 @@
                         {!! Form::number('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
                         <select name="batch_id" id="batch_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select roll</option> 
-                            @foreach ($batch as $ro)
+                            @foreach ($batchs as $ro)
                                 <option value="{{$ro->batch_id}}">{{$ro->year}}</option>
                             @endforeach
                         </select>
