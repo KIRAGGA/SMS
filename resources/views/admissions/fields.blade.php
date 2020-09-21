@@ -162,7 +162,7 @@
                         {!! Form::number('department_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
                         <select name="department_id" id="department_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select Faculty</option> 
-                        @foreach ($departments as $department)
+                            @foreach ($departments as $department)
                                 <option value="{{$department->department_id}}">{{$department->department_name}}</option>
                             @endforeach
                         </select>
