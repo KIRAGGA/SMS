@@ -46,8 +46,8 @@ class AdmissionController extends AppBaseController
         //     )
         // ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
         // ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
-        return view('admissions.index', compact('teacher_id', 'admission','department_id', 'faculty_id'))
-            ->with('admissions', $admissions);
+        return view('admissions.index', compact('teacher_id', 'admission','department_id', 'faculty_id'));
+            // ->with('admissions', $admissions);
     }
 
     /**

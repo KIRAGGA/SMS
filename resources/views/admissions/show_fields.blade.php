@@ -1,6 +1,6 @@
 <!-- Roll No Field -->
 <div class="form-group">
-    {!! Form::label('roll_no', 'Roll No:') !!}
+    {!! Form::label('roll_id', 'Roll Id:') !!}
     <p>{{ $admission->roll_id }}</p>
 </div>
 

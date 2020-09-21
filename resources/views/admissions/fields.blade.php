@@ -1,8 +1,8 @@
 <!-- Roll No Field -->
-{{-- <div class="form-group col-sm-6">
-    {!! Form::label('roll_no', 'Roll No:') !!}
-    {!! Form::text('roll_no', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-</div> --}}
+<div class="form-group col-sm-6">
+    {!! Form::label('roll_id', 'Roll Id:') !!}
+    {!! Form::text('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
 
 <!-- First Name Field -->
 <div class="form-group col-sm-6">
@@ -143,12 +143,13 @@
     {{-- {!! Form::label('department_id', 'Department Id:') !!}
     {!! Form::text('department_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
     <select name="department_id" id="department_id" class="form-control">
-        {{-- <option value="0" selected="true" disabled="true">Select Faculty</option> 
+        <option value="0" selected="true" disabled="true">Select Faculty</option> 
       @foreach ($departments as $department)
             <option value="{{$department->department_id}}">{{$department->department_name}}</option>
         @endforeach
-    </select> --}}
+    </select>
 </div>
+
 
 <!-- Faculty Field-->
 <select name="faculty_id" id="faculty_id" class="form-control">
