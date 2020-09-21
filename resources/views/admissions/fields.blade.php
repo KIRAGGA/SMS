@@ -161,7 +161,7 @@
                         {{-- {!! Form::label('department_id', 'Department Id:') !!}
                         {!! Form::number('department_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
                         <select name="department_id" id="department_id" class="form-control">
-                            <option value="0" selected="true" disabled="true">Select Faculty</option> 
+                            <option value="0" selected="true" disabled="true">Select Department</option> 
                             @foreach ($departments as $department)
                                 <option value="{{$department->department_id}}">{{$department->department_name}}</option>
                             @endforeach
@@ -171,14 +171,14 @@
 
                     <!-- Faculty Field-->
                     <div class="form-group col-sm-6">
-                        {!! Form::label('faculty_id', 'Faculty Id:') !!}
-                        {!! Form::number('faculty_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-                    {{-- <select name="faculty_id" id="faculty_id" class="form-control">
+                        {{-- {!! Form::label('faculty_id', 'Faculty Id:') !!}
+                        {!! Form::number('faculty_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
+                    <select name="faculty_id" id="faculty_id" class="form-control">
                         <option value="0" selected="true" disabled="true">Select Faculty</option> 
                     @foreach ($faculties as $faculty)
                             <option value="{{$faculty->faculty_id}}">{{$faculty->faculty_name}}</option>
                         @endforeach
-                    </select> --}}
+                    </select>
 
                     <!-- Image Field -->
                     <div class="form-group col-sm-6">
