@@ -140,8 +140,8 @@
                         {!! Form::label('dateregistered', 'Dateregistered:') !!}
                         {{-- {!! Form::text('dateregistered', null, ['class' => 'form-control','id'=>'dateregistered']) !!} --}}
 
-                        <input type="text" name="username" id="username" value="{{sprintf('%10b', $student_id)}}">
-                        <input type="text" name="password" id="password" value="{{sprintf('%10b', $student_id)}}">
+                        <input type="text" name="username" id="username" value="{{sprintf('%010b', $student_id)}}">
+                        <input type="text" name="password" id="password" value="{{sprintf('%010b', $student_id)}}">
                         <input type="hidden" value="{{Auth::id()}}" name="user_id" id="user_id" required>
                     <input type="hidden" name="dateregistered" id="dateregistered" value="{{date('Y-m-d')}}">
                     </div>
