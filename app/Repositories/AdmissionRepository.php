@@ -17,7 +17,7 @@ class AdmissionRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'roll_no',
+        'roll_id',
         'first_name',
         'last_name',
         'father_name',

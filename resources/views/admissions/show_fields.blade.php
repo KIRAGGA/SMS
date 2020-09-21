@@ -1,7 +1,7 @@
 <!-- Roll No Field -->
 <div class="form-group">
     {!! Form::label('roll_no', 'Roll No:') !!}
-    <p>{{ $admission->roll_no }}</p>
+    <p>{{ $admission->roll_id }}</p>
 </div>
 
 <!-- First Name Field -->
@@ -108,9 +108,16 @@
 
 <!-- Class Id Field -->
 <div class="form-group">
-    {!! Form::label('class_id', 'Department Id:') !!}
+    {!! Form::label('department_id', 'Department Id:') !!}
     <p>{{ $admission->department_id }}</p>
 </div>
+
+<!-- Class Id Field -->
+<div class="form-group">
+    {!! Form::label('faculty_id', 'Faculty Id:') !!}
+    <p>{{ $admission->faculty_id }}</p>
+</div>
+
 
 <!-- Image Field -->
 <div class="form-group">

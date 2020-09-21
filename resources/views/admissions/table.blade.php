@@ -29,7 +29,7 @@
         <tbody>
         @foreach($admissions as $admission)
             <tr>
-                <td>{{ $admission->roll_no }}</td>
+                <td>{{ $admission->roll_id }}</td>
             <td>{{ $admission->first_name }}</td>
             <td>{{ $admission->last_name }}</td>
             <td>{{ $admission->father_name }}</td>
