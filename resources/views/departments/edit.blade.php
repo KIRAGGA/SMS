@@ -14,28 +14,41 @@
                    {!! Form::model($department, ['route' => ['departments.update', $department->department_id], 'method' => 'patch']) !!}
 
                         {{-- @include('departments.fields') --}}
-                        <!-- Level Field -->
+                       <!-- Faculty Id Field -->
                     <div class="form-group col-sm-6">
-                        {!! Form::label('level', 'Level:') !!}
-                        {!! Form::text('level', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
-                    </div>
-
-                    {{-- <!-- Course Id Field -->
-                    <div class="form-group col-sm-6">
-                        {!! Form::label('Course', 'Course:') !!}
-                        <select name="course_id" id="course_id" class="form-control">
-                            <option value="">Select Course</option>
-                            {{-- adding a foreach loop to select the data from the database
-                            @foreach ($course as $key => $cou)
-                                <option value="{{$cou->course_id}}">{{$cou->course_name}}</option>
+                        <select name="faculty_id" id="faculty_id" class="form-control">
+                            <option value="0" selected="true" disabled="true">Select Faculty</option> 
+                        @foreach ($faculties as $faculty)
+                                <option value="{{$faculty->faculty_id}}">{{$faculty->faculty_name}}</option>
                             @endforeach
                         </select>
-                    </div> --}}
+                    </div>
 
-                    <!-- Level Description Field -->
+                    <!-- Department Name Field -->
+                    <div class="form-group col-sm-6">
+                        {!! Form::label('department_name', 'Department Name:') !!}
+                        {!! Form::text('department_name', null, ['class' => 'form-control', 'placeholder' => 'Enter Dept Name Here', 'maxlength' => 255,'maxlength' => 255]) !!}
+                    </div>
+
+                    <!-- Department Code Field -->
+                    <div class="form-group col-sm-6">
+                        {!! Form::label('department_code', 'Department Code:') !!}
+                        {!! Form::text('department_code', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                    </div>
+
+                    <!-- Department Description Field -->
                     <div class="form-group col-sm-12 col-lg-12">
-                        {!! Form::label('level_description', 'Level Description:') !!}
-                        {!! Form::textarea('level_description', null, ['class' => 'form-control']) !!}
+                        {!! Form::label('department_description', 'Department Description:') !!}
+                        {!! Form::textarea('department_description', null, ['class' => 'form-control']) !!}
+                    </div>
+
+                    <!-- Department Status Field -->
+                    <div class="form-group col-sm-6">
+                        {!! Form::label('department_status', 'Department Status:') !!}
+                        <label class="checkbox-inline">
+                            {!! Form::hidden('department_status', 0) !!}
+                            {!! Form::checkbox('department_status', '1', null) !!}
+                        </label>
                     </div>
                 </div>
         
