@@ -15,12 +15,12 @@
                     <div class="form-group col-sm-6">
                         {{-- {!! Form::label('roll_id', 'Roll Id:') !!}
                         {!! Form::number('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
-                        <select name="batch_id" id="batch_id" class="form-control">
+                        {{-- <select name="batch_id" id="batch_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select roll</option> 
                             @foreach ($batchs as $ro)
                                 <option value="{{$ro->batch_id}}">{{$ro->year}}</option>
                             @endforeach
-                        </select>
+                        </select> --}}
                     </div>
 
                     <!-- First Name Field -->
@@ -140,8 +140,8 @@
                         {!! Form::label('dateregistered', 'Dateregistered:') !!}
                         {{-- {!! Form::text('dateregistered', null, ['class' => 'form-control','id'=>'dateregistered']) !!} --}}
 
-                        <input type="text" name="username" id="username">
-                        <input type="text" name="password" id="password">
+                        <input type="text" name="username" id="username" value="{{sprintf('%10b', $student_id)}}">
+                        <input type="text" name="password" id="password" value="{{sprintf('%10b', $student_id)}}">
                         <input type="hidden" value="{{Auth::id()}}" name="user_id" id="user_id" required>
                     <input type="hidden" name="dateregistered" id="dateregistered" value="{{date('Y-m-d')}}">
                     </div>
