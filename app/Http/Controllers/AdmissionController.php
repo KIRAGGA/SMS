@@ -33,21 +33,18 @@ class AdmissionController extends AppBaseController
      */
     public function index(Request $request)
     {
-
-        $admissions = Admission::all();
-        $student_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
-        // $admissions = $this->admissionRepository->all();
+        $admissions = $this->admissionRepository->all();
 
-        // $admin = DB::table('admissions')->select(
-        //     'department.*',
-        //     'faculty.*'
-        //     )
-        // ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
-        // ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
-        return view('admissions.index', compact('teacher_id', 'admission','department_id', 'faculty_id'));
-            // ->with('admissions', $admissions);
+        $admin = DB::table('admissions')->select(
+            'departments.*',
+            'faculties.*'
+            )
+        ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
+        ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
+        return view('admissions.index', compact('department_id', 'faculty_id'))
+            ->with('admissions', $admissions);
     }
 
     /**

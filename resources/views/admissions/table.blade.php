@@ -49,12 +49,18 @@
             <td>{{ $admission->current_address }}</td>
             <td>{{ $admission->nationality }}</td>
             <td>{{ $admission->passport }}</td>
-            <td>{{ $admission->status }}</td>
+            <td>@if ($admission->status == 0)
+                <div style="color: red">In Active</div>
+                @else
+                <div style="color: green">Active</div>
+                @endif
+            </td>
             <td>{{ $admission->dateregistered }}</td>
             <td>{{ $admission->user_id }}</td>
             <td>{{$admission->faculty_id}}</td>
             <td>{{ $admission->department_id }}</td>
-            <td>{{ $admission->image }}</td>
+            <td><img src="{{URL::asset ('/storage/images/'.$admission->image) }}" alt=""
+                class="rounded-circle" width="50" height="50" style="border-radius:50%; vertical-align: middle;"></td>
                 <td>
                     {!! Form::open(['route' => ['admissions.destroy', $admission->student_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
