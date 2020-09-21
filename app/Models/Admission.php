@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package App\Models
  * @version August 25, 2020, 11:17 pm UTC
  *
- * @property string $roll_id
+ * @property integer batch_id
  * @property string $first_name
  * @property string $last_name
  * @property string $father_name
@@ -46,7 +46,7 @@ class Admission extends Model
 
 
     public $fillable = [
-        'roll_id',
+        'batch_id',
         'first_name',
         'last_name',
         'father_name',
@@ -76,7 +76,7 @@ class Admission extends Model
      */
     protected $casts = [
         'student_id' => 'integer',
-        'roll_id' => 'integer',
+        'batch_id' => 'integer',
         'first_name' => 'string',
         'last_name' => 'string',
         'father_name' => 'string',
@@ -105,7 +105,7 @@ class Admission extends Model
      * @var array
      */
     public static $rules = [
-        'roll_id' => 'required|integer|max:255',
+        'batch_id' => 'required|integer|max:255',
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
         'father_name' => 'required|string|max:255',
