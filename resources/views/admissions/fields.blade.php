@@ -15,6 +15,12 @@
                     <div class="form-group col-sm-6">
                         {!! Form::label('roll_id', 'Roll Id:') !!}
                         {!! Form::number('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+                        {{-- <select name="department_id" id="department_id" class="form-control">
+                            <option value="0" selected="true" disabled="true">Select roll</option> 
+                            @foreach ($roll as $ro)
+                                <option value="{{$ro->roll_id}}">{{$ro->username}}</option>
+                            @endforeach
+                        </select> --}}
                     </div>
 
                     <!-- First Name Field -->

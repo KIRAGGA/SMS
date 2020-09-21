@@ -37,6 +37,7 @@ class AdmissionController extends AppBaseController
     public function index(Request $request)
     {
         $admissions = Admission::all();
+        $batch = Batch::all();
         $student_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
