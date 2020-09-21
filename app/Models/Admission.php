@@ -93,7 +93,8 @@ class Admission extends Model
         'status' => 'boolean',
         'dateregistered' => 'date',
         'user_id' => 'string',
-        'class_id' => 'string',
+        'department_id' => 'integer',
+        'faculty_id' =>'integer',
         'image' => 'string'
     ];
 
@@ -121,8 +122,8 @@ class Admission extends Model
         'status' => 'required|boolean',
         'dateregistered' => 'required',
         'user_id' => 'required|string|max:255',
-        'department_id' => 'required|string|max:255',
-        'faculty_id' => 'required|string|max:255',
+        'department_id' => 'required|integer',
+        'faculty_id' => 'required|integer',
         'image' => 'nullable|string|max:255',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
