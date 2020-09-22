@@ -76,6 +76,37 @@ class AdmissionController extends AppBaseController
     {
         $input = $request->all();
 
+        
+        // $roll = new Roll;
+        // $roll->username = $request->username;
+        // $roll->password = $request->password;
+        // $roll->student_id = $request->student_id;
+        // $roll->save();
+        // $file = $request->file('image');
+        // $extension = $file->getClientOriginalExtension();
+        // $new_image_name = time(). '.' .$extension;
+        // $file->move(public_path('student_images'), $new_image_name);
+
+        // $student =new Admission;
+        // $student->first_name = $request->first_name;
+        // $student->last_name = $request->last_name;
+        // $student->father_name = $request->father_name;
+        // $student->mother_name = $request->mother_name;
+        // $student->gender = $request->gender;
+        // $student->dob = $request->dob;
+        // $student->email = $request->email;
+        // $student->status = $request->status;
+        // $student->nationality = $request->nationality;
+        // $student->passport = $request->passport;
+        // $student->address = $request->address;
+        // $student->current_address = $request->current_address;
+        // $student->department_id = $request->department_id;
+        // $student->faculty_id = $request->faculty_id;
+        // $student->dateregistered = date('Y-m-d');
+        // $student->batch_id = $request->batch_id;
+        // $student->first_name = Auth::id();
+        // $student->image = $new_image_name;
+        // $student->save();
         $admission = $this->admissionRepository->create($input);
 
         Flash::success('Admission saved successfully.');

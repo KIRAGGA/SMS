@@ -89,6 +89,8 @@ Route::get('/dynamicLevel', ['as' => 'dynamicLevel', 'uses' =>
 
 Route::get('/classSchedulings/edit', ['as' => 'edit', 'uses' => 'ClassSchedulingController@edit']);
 
+Route::get('/admission/edit', ['as' => 'edit', 'uses' => 'AdmissionController@edit']);
+
 // Route::post('/classSchedulings/update', ['as' => 'update', 'uses' => 'ClassSchedulingController@update']);
 
 Route::resource('departments', 'DepartmentController');

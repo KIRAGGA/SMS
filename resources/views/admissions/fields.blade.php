@@ -11,10 +11,8 @@
             </div>
                 <div class="modal-body">
 
-                    <!-- Roll No Field -->
+                    <!-- batch No Field -->
                     <div class="form-group col-sm-6">
-                        {{-- {!! Form::label('roll_id', 'Roll Id:') !!}
-                        {!! Form::number('roll_id', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
                         <select name="batch_id" id="batch_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select batch</option> 
                             @foreach ($batches as $ro)
