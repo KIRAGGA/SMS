@@ -21,7 +21,7 @@
                         <!-- Submit Field -->
                         <div class="modal-footer">
                             {!! Form::submit('Create Batch', ['class' => 'btn btn-success']) !!}
-                            {{-- <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a> --}}
+                            <a href="{{ route('batches.index') }}" class="btn btn-default">Cancel</a>
                         </div>
 
                    {!! Form::close() !!}

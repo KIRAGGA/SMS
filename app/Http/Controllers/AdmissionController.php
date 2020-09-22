@@ -39,14 +39,16 @@ class AdmissionController extends AppBaseController
     {
         $admissions = Admission::all();
         $batches = Batch::all();
-        $student_id = Roll::max('roll_id');
+        $student_id = Admission::max('student_id');
+        $roll_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
         $admissions = $this->admissionRepository->all();
 
         $admin = DB::table('admissions')->select(
             'departments.*',
-            'faculties.*'
+            'faculties.*',
+            'batches.*'
             )
         ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
         ->join('batches', 'batches.batch_id', '=', 'admissions.batch_id')
@@ -87,29 +89,40 @@ class AdmissionController extends AppBaseController
         // $new_image_name = time(). '.' .$extension;
         // $file->move(public_path('student_images'), $new_image_name);
 
-        // $student =new Admission;
-        // $student->first_name = $request->first_name;
-        // $student->last_name = $request->last_name;
-        // $student->father_name = $request->father_name;
-        // $student->mother_name = $request->mother_name;
-        // $student->gender = $request->gender;
-        // $student->dob = $request->dob;
-        // $student->email = $request->email;
-        // $student->status = $request->status;
-        // $student->nationality = $request->nationality;
-        // $student->passport = $request->passport;
-        // $student->address = $request->address;
-        // $student->current_address = $request->current_address;
-        // $student->department_id = $request->department_id;
-        // $student->faculty_id = $request->faculty_id;
-        // $student->dateregistered = date('Y-m-d');
-        // $student->batch_id = $request->batch_id;
-        // $student->first_name = Auth::id();
+        $student =new Admission;
+        $student->first_name = $request->first_name;
+        $student->last_name = $request->last_name;
+        $student->father_name = $request->father_name;
+        $student->mother_name = $request->mother_name;
+        $student->mother_phone = $request->mother_phone;
+        $student->father_phone = $request->father_phone;
+        $student->gender = $request->gender;
+        $student->phone = $request->phone;
+        $student->user_id = $request->user_id;
+        $student->dob = $request->dob;
+        $student->email = $request->email;
+        $student->status = $request->status;
+        $student->nationality = $request->nationality;
+        $student->passport = $request->passport;
+        $student->address = $request->address;
+        $student->current_address = $request->current_address;
+        $student->department_id = $request->department_id;
+        $student->faculty_id = $request->faculty_id;
+        $student->dateregistered = date('Y-m-d');
+        $student->batch_id = $request->batch_id;
+        $student->first_name = Auth::id();
         // $student->image = $new_image_name;
-        // $student->save();
+        if($student->save()){
+            $student_id = $student->student_id;
+            $username = $student->username;
+            $password =$student->password;
+
+            Roll::insert(['student_id' => $student_id, 'username' => $request->username, 'password' => $request->password]);
+            dump($request->all()); die;
+        }
         $admission = $this->admissionRepository->create($input);
 
-        Flash::success('Admission saved successfully.');
+        Flash::success('Admission '.$request->first_name. ''.$request->last_name. 'saved successfully.');
 
         return redirect(route('admissions.index'));
     }
