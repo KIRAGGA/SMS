@@ -74,9 +74,16 @@ class AdmissionController extends AppBaseController
      */
     public function store(CreateAdmissionRequest $request)
     {
+    
         $input = $request->all();
 
-        $admission = $this->admissionRepository->create($input);
+        $roll = new Roll;
+        $roll->username = $request->username;
+        $roll->password = $request->password;
+        $roll->student_id = $request->student_id;
+        $roll->save();
+
+        // $admission = $this->admissionRepository->create($input);
 
         Flash::success('Admission saved successfully.');
 
