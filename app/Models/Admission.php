@@ -105,7 +105,7 @@ class Admission extends Model
      * @var array
      */
     public static $rules = [
-        'batch_id' => 'required|integer|max:255',
+        'batch_id' => 'required|integer|max:20',
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
         'father_name' => 'required|string|max:255',

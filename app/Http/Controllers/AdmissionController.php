@@ -38,7 +38,7 @@ class AdmissionController extends AppBaseController
     public function index(Request $request)
     {
         $admissions = Admission::all();
-        $batchs = Batch::all();
+        $batches = Batch::all();
         $student_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
@@ -74,16 +74,9 @@ class AdmissionController extends AppBaseController
      */
     public function store(CreateAdmissionRequest $request)
     {
-    
         $input = $request->all();
 
-        $roll = new Roll;
-        $roll->username = $request->username;
-        $roll->password = $request->password;
-        $roll->student_id = $request->student_id;
-        $roll->save();
-
-        // $admission = $this->admissionRepository->create($input);
+        $admission = $this->admissionRepository->create($input);
 
         Flash::success('Admission saved successfully.');
 
