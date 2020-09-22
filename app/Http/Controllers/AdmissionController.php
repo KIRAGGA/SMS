@@ -43,6 +43,7 @@ class AdmissionController extends AppBaseController
         $roll_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
+        $rand_username_password = mt_rand(130165001 .$student_id, 130165001 .$student_id);
         $admissions = $this->admissionRepository->all();
 
         $admin = DB::table('admissions')->select(
