@@ -35,6 +35,10 @@ class CreateAdmissionTable extends Migration
             $table->string('user_id');
             $table->string('department_id');
             $table->integer('faculty_id');
+            $table->string('username');
+            $table->string('password');
+            $table->dateTime('login_time');
+            $table->dateTime('logout_time');
             $table->string('image')->nullable();
             $table->softDeletes();
             $table->timestamps();
