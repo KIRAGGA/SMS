@@ -37,6 +37,8 @@ class AdmissionRepository extends BaseRepository
         'user_id',
         'department_id',
         'faculty_id',
+        'username',
+        'password',
         'image'
     ];
     protected $primaryKey = 'student_id';

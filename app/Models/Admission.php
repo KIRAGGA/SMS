@@ -66,6 +66,8 @@ class Admission extends Model
         'user_id',
         'department_id',
         'faculty_id',
+        'username',
+        'password',
         'image'
     ];
 
@@ -96,6 +98,8 @@ class Admission extends Model
         'user_id' => 'string',
         'department_id' => 'integer',
         'faculty_id' =>'integer',
+        'username' =>'string',
+        'password' =>'string',
         'image' => 'string'
     ];
 
@@ -125,6 +129,8 @@ class Admission extends Model
         'user_id' => 'required|string|max:255',
         'department_id' => 'required|integer',
         'faculty_id' => 'required|integer',
+        'username' =>'required|string|max:255',
+        'password' =>'required|string|max:255',
         'image' => 'nullable|string|max:255',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
