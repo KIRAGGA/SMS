@@ -111,7 +111,7 @@ class AdmissionController extends AppBaseController
         $student->faculty_id = $request->faculty_id;
         $student->dateregistered = date('Y-m-d');
         $student->batch_id = $request->batch_id;
-        $student->first_name = Auth::id();
+        $student->user_id = Auth::id();
         // $student->image = $new_image_name;
         if($student->save()){
             $student_id = $student->student_id;
