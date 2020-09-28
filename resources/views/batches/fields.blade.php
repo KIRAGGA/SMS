@@ -10,7 +10,9 @@
             </div>
                 <div class="modal-body">     
                     <!-- Batch Field -->
+                  
                     <div class="input-group col-md-12">
+                        {{-- {!! Form::label('batch_id', 'Batch:') !!} --}}
                         <span class="input-group-addon">Batch Year</span>
                         {!! Form::text('year', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
                     </div>
