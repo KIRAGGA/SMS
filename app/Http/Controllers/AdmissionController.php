@@ -43,7 +43,7 @@ class AdmissionController extends AppBaseController
         $roll_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
-        $rand_username_password = mt_rand(130165001 .$student_id + 1, 130165001 .$student_id + 1);
+        $rand_username_password = mt_rand(130165001 .$student_id, 130165001 .$student_id);
         $admissions = $this->admissionRepository->all();
 
         $admin = DB::table('admissions')->select(
@@ -55,8 +55,7 @@ class AdmissionController extends AppBaseController
         ->join('batches', 'batches.batch_id', '=', 'admissions.batch_id')
         ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
         return view('admissions.index', compact('departments', 'faculties','teacher_id','admission',
-        'student_id','batches','roll_id','$rand_username_password'));
-            // ->with('admissions', $admissions);
+        'student_id','batches','roll_id','$rand_username_password'))->with('admissions', $admissions);
     }
 
     /**
@@ -86,10 +85,10 @@ class AdmissionController extends AppBaseController
         // $roll->password = $request->password;
         // $roll->student_id = $request->student_id;
         // $roll->save();
-        // $file = $request->file('image');
-        // $extension = $file->getClientOriginalExtension();
-        // $new_image_name = time().'.' .$extension;
-        // $file->move(public_path('student_images'), $new_image_name);
+        $file = $request->file('image');
+        $extension = $file->getClientOriginalExtension();
+        $new_image_name = time().'.' .$extension;
+        $file->move(public_path('student_images'), $new_image_name);
 
         $student =new Admission;
         $student->first_name = $request->first_name;
@@ -114,11 +113,11 @@ class AdmissionController extends AppBaseController
         $student->batch_id = $request->batch_id;
         $student->user_id = Auth::id();
         $student->image = $new_image_name;
-    $student->save();
-        //     $student_id = $student->student_id;
-        //     $username = $student->username;
-        //     $password =$student->password;
-        // }
+        if( $student->save()){
+            $student_id = $student->student_id;
+            $username = $student->username;
+            $password =$student->password;
+        }
             // $student_id = $student->student_id;
             // $username = $student->username;
             // $password =$student->password;
