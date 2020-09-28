@@ -54,7 +54,8 @@ class AdmissionController extends AppBaseController
         ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
         ->join('batches', 'batches.batch_id', '=', 'admissions.batch_id')
         ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
-        return view('admissions.index', compact('departments', 'faculties','teacher_id','admission','student_id','batches','roll_id','$rand_username_password'));
+        return view('admissions.index', compact('departments', 'faculties','teacher_id','admission',
+        'student_id','batches','roll_id','$rand_username_password'));
             // ->with('admissions', $admissions);
     }
 
