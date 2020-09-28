@@ -59,7 +59,7 @@
             <td>{{ $admission->user_id }}</td>
             <td>{{$admission->faculty_id}}</td>
             <td>{{ $admission->department_id }}</td>
-            <td><img src="{{URL::asset ('/storage/images/'.$admission->image) }}" alt=""
+            <td><img src="{{URL::asset ('student_images/'.$admission->image) }}" alt=""
                 class="rounded-circle" width="50" height="50" style="border-radius:50%; vertical-align: middle;"></td>
                 <td>
                     {!! Form::open(['route' => ['admissions.destroy', $admission->student_id], 'method' => 'delete']) !!}

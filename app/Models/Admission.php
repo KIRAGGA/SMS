@@ -46,6 +46,7 @@ class Admission extends Model
 
 
     public $fillable = [
+        'student_id',
         'batch_id',
         'first_name',
         'last_name',
@@ -109,6 +110,7 @@ class Admission extends Model
      * @var array
      */
     public static $rules = [
+        'student_id' => 'required|integer|max:20',
         'batch_id' => 'required|integer|max:20',
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
