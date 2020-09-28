@@ -54,8 +54,8 @@ class AdmissionController extends AppBaseController
         ->join('departments', 'departments.department_id', '=', 'admissions.department_id')
         ->join('batches', 'batches.batch_id', '=', 'admissions.batch_id')
         ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
-        return view('admissions.index', compact('departments', 'faculties','teacher_id','admission','student_id','batches'))
-            ->with('admissions', $admissions);
+        return view('admissions.index', compact('departments', 'faculties','teacher_id','admission','student_id','batches','roll_id','$rand_username_password'));
+            // ->with('admissions', $admissions);
     }
 
     /**
@@ -113,14 +113,19 @@ class AdmissionController extends AppBaseController
         $student->batch_id = $request->batch_id;
         $student->user_id = Auth::id();
         $student->image = $new_image_name;
-        
+        if( $student->save()){
             $student_id = $student->student_id;
             $username = $student->username;
             $password =$student->password;
-            $student->save();
+        }
+            // $student_id = $student->student_id;
+            // $username = $student->username;
+            // $password =$student->password;
+            // $student->save();
 
-            Roll::insert(['student_id' => $student_id, 'username' => $request->username, 'password' => $request->password]);
-            // dump($request->all()); die;
+            Roll::insert(['student_id' => $student_id, 'username' => $request->username,
+             'password' => $request->password]);
+            dump($request->all()); die;
         
         $admission = $this->admissionRepository->create($input);
 
