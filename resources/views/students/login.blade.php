@@ -35,6 +35,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
+        @include('flash::message')
+        @include('adminlte-templates::common.errors')
         <a href="{{ url('/home') }}"><b>STUDENT LOGIN</b> PAGE</a>
     </div>
 

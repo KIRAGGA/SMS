@@ -7,6 +7,7 @@
     <title>Account</title>
 </head>
 <body>
+    @include('flash::message')
 <h1>Your most welcome dear </h1>
 </body>
 </html>
