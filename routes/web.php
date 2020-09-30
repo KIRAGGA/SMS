@@ -47,6 +47,9 @@ Route::group(['mddleware' => ['studentSession']], function(){
 Route::get('/student', 'StudentController@studentLogin');
 Route::get('/logout', 'StudentController@studentLogout');
 
+// this is the login form route
+Route::post('student-login', 'StudentController@LoginStudent');
+
 Route::get('/course-detail', function () {
     return view('others.course-detail');
 });

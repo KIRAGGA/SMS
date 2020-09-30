@@ -20,6 +20,9 @@ class StudentController extends Controller
         return view('students.login');
     }
 
+    public function LoginStudent(Request $request){
+        return view('students.account');
+    }
     /**
      * Show the form for creating a new resource.
      *
