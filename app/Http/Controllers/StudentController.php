@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Laracasts\Flash\Flash;
 
 class StudentController extends Controller
 {
@@ -21,6 +22,21 @@ class StudentController extends Controller
     }
 
     public function LoginStudent(Request $request){
+
+        if($request->isMethod('post')){
+            $student = $request->all();
+            $studentCOunt = Roll::where('username'=> $student['username'],
+            'password' => $student['password'])->count();
+
+            if($studentCount > 0){
+                Session::put('studentSession', $student['username']);
+
+                Flash::success('welcome' .$student['username']);
+
+                return redirect('/account');
+            }
+        }
+
         return view('students.account');
     }
     /**

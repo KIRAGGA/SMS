@@ -37,7 +37,7 @@ Route::get('/course', function () {
     return view('others.course');
 });
 
-Route::group(['mddleware' => ['studentSession']], function(){
+Route::group(['middleware' => ['studentSession']], function(){
     // passing the student route so that if the student is logged in, they will be able to see there details
 
 });
