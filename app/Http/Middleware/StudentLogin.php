@@ -15,6 +15,9 @@ class StudentLogin
      */
     public function handle($request, Closure $next)
     {
+        if(empty(Session::has('studentSession'))){ //checking if the session is not empty
+            return redirect('/student');
+        } // is session name is studentSession is okay 
         return $next($request);
     }
 }
