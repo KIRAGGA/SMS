@@ -118,16 +118,12 @@ class AdmissionController extends AppBaseController
             $username = $student->username;
             $password =$student->password;
         }
-            // $student_id = $student->student_id;
-            // $username = $student->username;
-            // $password =$student->password;
-            // $student->save();
-
+           
             Roll::insert(['student_id' => $student_id, 'username' => $request->username,
              'password' => $request->password]);
-            dump($request->all()); die;
+            // dump($request->all()); die;
         
-        $admission = $this->admissionRepository->create($input);
+        // $admission = $this->admissionRepository->create($input);
 
         Flash::success('Admission' .$request->first_name. ''.$request->last_name. 'saved successfully.');
 
