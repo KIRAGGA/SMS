@@ -163,14 +163,22 @@ class AdmissionController extends AppBaseController
     public function edit($id)
     {
         $admission = $this->admissionRepository->find($id);
-
+        $admissions = Admission::all();
+        $batches = Batch::all();
+        $student_id = Admission::max('student_id');
+        $roll_id = Roll::max('roll_id');
+        $departments = Department::all();
+        $faculties = Faculty::all();
+        // $rand_username_password = mt_rand(130165001 .$student_id, 130165001 .$student_id);
+        $admissions = $this->admissionRepository->all();
         if (empty($admission)) {
             Flash::error('Admission not found');
 
             return redirect(route('admissions.index'));
         }
 
-        return view('admissions.edit')->with('admission', $admission);
+        return view('admissions.edit', compact('departments', 'faculties','teacher_id','admission',
+        'student_id','batches','roll_id','rand_username_password'))->with('admission', $admission);
     }
 
     /**
