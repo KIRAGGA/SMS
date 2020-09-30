@@ -2,7 +2,8 @@
     <table class="table" id="admissions-table">
         <thead>
             <tr>
-                <th>Batch No</th>
+        <th>Image</th>
+        <th>Batch No</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Father Name</th>
@@ -22,13 +23,15 @@
         <th>User Id</th>
         <th>Faculty ID</th>
         <th>Department Id</th>
-        <th>Image</th>
+        
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($admissions as $admission)
             <tr>
+                <td><img src="{{URL::asset ('student_images/'.$admission->image) }}" alt=""
+                class="rounded-circle" width="50" height="50" style="border-radius:50%; vertical-align: middle;"></td>
                 <td>{{ $admission->batch_id }}</td>
             <td>{{ $admission->first_name }}</td>
             <td>{{ $admission->last_name }}</td>
@@ -59,8 +62,7 @@
             <td>{{ $admission->user_id }}</td>
             <td>{{$admission->faculty_id}}</td>
             <td>{{ $admission->department_id }}</td>
-            <td><img src="{{URL::asset ('student_images/'.$admission->image) }}" alt=""
-                class="rounded-circle" width="50" height="50" style="border-radius:50%; vertical-align: middle;"></td>
+            {{--  --}}
                 <td>
                     {!! Form::open(['route' => ['admissions.destroy', $admission->student_id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
