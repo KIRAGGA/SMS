@@ -55,7 +55,7 @@ class AdmissionController extends AppBaseController
         ->join('batches', 'batches.batch_id', '=', 'admissions.batch_id')
         ->join('faculties', 'faculties.faculty_id', '=', 'admissions.faculty_id')->get();
         return view('admissions.index', compact('departments', 'faculties','teacher_id','admission',
-        'student_id','batches','roll_id','$rand_username_password'))->with('admissions', $admissions);
+        'student_id','batches','roll_id','rand_username_password'))->with('admissions', $admissions);
     }
 
     /**
@@ -85,10 +85,10 @@ class AdmissionController extends AppBaseController
         // $roll->password = $request->password;
         // $roll->student_id = $request->student_id;
         // $roll->save();
-        $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension();
-        $new_image_name = time().'.' .$extension;
-        $file->move(public_path('student_images'), $new_image_name);
+        // $file = $request->file('image');
+        // $extension = $file->getClientOriginalExtension();
+        // $new_image_name = time().'.' .$extension;
+        // $file->move(public_path('student_images'), $new_image_name);
 
         $student =new Admission;
         $student->first_name = $request->first_name;
@@ -109,20 +109,23 @@ class AdmissionController extends AppBaseController
         $student->current_address = $request->current_address;
         $student->department_id = $request->department_id;
         $student->faculty_id = $request->faculty_id;
+        $student->username = $request->username;
+        $student->password = $request->password;
+        $student->login_time = $request->login_time;
+        $student->logout_time = $request->logout_time;
         $student->dateregistered = date('Y-m-d');
         $student->batch_id = $request->batch_id;
         $student->user_id = Auth::id();
-        $student->image = $new_image_name;
+        // $student->image = $new_image_name;
         if( $student->save()){
             $student_id = $student->student_id;
             $username = $student->username;
             $password =$student->password;
-        }
-           
+
             Roll::insert(['student_id' => $student_id, 'username' => $request->username,
              'password' => $request->password]);
-            // dump($request->all()); die;
-        
+            dump($request->all()); die;
+        }
         // $admission = $this->admissionRepository->create($input);
 
         Flash::success('Admission' .$request->first_name. ''.$request->last_name. 'saved successfully.');
