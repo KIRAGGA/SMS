@@ -20,11 +20,12 @@
             </div>
         </div>
         <div class="text-center">
-            {!! Form::open(['route' => 'admissions.store']) !!}
-
-            @include('admissions.fields')
-
-        {!! Form::close() !!}
+            {{-- {!! Form::open(['route' => 'admissions.store']) !!} --}}
+            <form action="{{ route('admissions.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                    @include('admissions.fields')
+            </form>
+        {{-- {!! Form::close() !!} --}}
         </div>
     </div>
 @endsection

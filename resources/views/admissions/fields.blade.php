@@ -10,7 +10,7 @@
             </button>
             </div>
                 <div class="modal-body">
-                    <form action="" method="post" enctype="multipart/form-data">
+                    
                     <!-- batch No Field -->
                     <div class="form-group col-sm-6">
                         <select name="batch_id" id="batch_id" class="form-control">
@@ -193,7 +193,7 @@
                         {{-- {!! Form::text('image', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
                         <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
                     </div>
-                </form>
+                
                 </div>
                     <!-- Submit Field -->
                     <div class="modal-footer">
