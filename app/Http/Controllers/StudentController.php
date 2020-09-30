@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\Session\Session;
+// use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
+use App\Roll;
+// use Flash;
+use App\Models\Admission;
+use Session;
+use App\Student;
 
 class StudentController extends Controller
 {
@@ -26,7 +31,7 @@ class StudentController extends Controller
 
         if($request->isMethod('post')){
             $student = $request->all();
-            $studentCOunt = Roll::where(['username'=> $student['username'],
+            $studentCount = Roll::where(['username'=> $student['username'],
             'password' => $student['password']])->count(); //checking weather students details match
 
             if($studentCount > 0){

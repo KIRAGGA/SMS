@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Session;
 use Closure;
 
 class StudentLogin

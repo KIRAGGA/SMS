@@ -7,6 +7,6 @@
     <title>Account</title>
 </head>
 <body>
-<h1>Your most welcome dear {{$student->first_name}} {{$student->last_name}}</h1>
+<h1>Your most welcome dear </h1>
 </body>
 </html>
