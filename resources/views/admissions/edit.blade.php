@@ -21,7 +21,7 @@
                         <select name="batch_id" id="batch_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select batch</option> 
                             @foreach ($batches as $ro)
-                                <option value="{{$ro->batch_id == $admission->batch_id ? 'selected' : ''}}">{{$ro->year}}</option>
+                                <option value="{{$ro->batch_id}}">{{$ro->year}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -143,8 +143,8 @@
                         {!! Form::label('dateregistered', 'Dateregistered:') !!}
                         {!! Form::text('dateregistered', null, ['class' => 'form-control','id'=>'dateregistered']) !!}
 
-                        {{-- <input type="text" name="username" id="username" value="{{ $rand_username_password}}">
-                        <input type="text" name="password" id="password" value="{{ $rand_username_password}}"> --}}
+                        <input type="text" name="username" id="username" value="{{ $rand_username_password}}">
+                        <input type="text" name="password" id="password" value="{{ $rand_username_password}}">
                         {{-- <input type="text" name="password" id="password" value="{{sprintf('%010b', $student_id)}}"> --}}
                         <input type="hidden" value="{{Auth::id()}}" name="user_id" id="user_id" required>
                     <input type="hidden" name="dateregistered" id="dateregistered" value="{{date('Y-m-d')}}">
@@ -174,7 +174,7 @@
                         <select name="department_id" id="department_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select Department</option> 
                             @foreach ($departments as $department)
-                                <option value="{{$department->department_id == $admission->department_id ? 'selected' : ''}}">{{$department->department_name}}</option>
+                                <option value="{{$department->department_id}}">{{$department->department_name}}</option>
                             @endforeach
                         </select>
                     </div>

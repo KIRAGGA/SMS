@@ -169,7 +169,7 @@ class AdmissionController extends AppBaseController
         $roll_id = Roll::max('roll_id');
         $departments = Department::all();
         $faculties = Faculty::all();
-        // $rand_username_password = mt_rand(130165001 .$student_id, 130165001 .$student_id);
+        $rand_username_password = mt_rand(130165001 .$student_id, 130165001 .$student_id);
         $admissions = $this->admissionRepository->all();
         if (empty($admission)) {
             Flash::error('Admission not found');
@@ -201,7 +201,7 @@ class AdmissionController extends AppBaseController
 
         $admission = $this->admissionRepository->update($request->all(), $id);
 
-        Flash::success('Admission updated successfully.');
+        Flash::success('Admission for ' .$request->first_name. ''.$request->last_name. ' has been updated successfully.');
 
         return redirect(route('admissions.index'));
     }
