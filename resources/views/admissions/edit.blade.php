@@ -21,7 +21,7 @@
                         <select name="batch_id" id="batch_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select batch</option> 
                             @foreach ($batches as $ro)
-                                <option value="{{$ro->batch_id}}">{{$ro->year}}</option>
+                                <option value="{{$ro->batch_id}}" {{$ro->batch_id == $admission->batch_id ? 'selected' : ''}}>{{$ro->year}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -174,7 +174,7 @@
                         <select name="department_id" id="department_id" class="form-control">
                             <option value="0" selected="true" disabled="true">Select Department</option> 
                             @foreach ($departments as $department)
-                                <option value="{{$department->department_id}}">{{$department->department_name}}</option>
+                                <option value="{{$department->department_id}}" {{$department->department_id == $admission->department_id ? 'selected' : ''}}>{{$department->department_name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -187,7 +187,8 @@
                     <select name="faculty_id" id="faculty_id" class="form-control">
                         <option value="0" selected="true" disabled="true">Select Faculty</option> 
                     @foreach ($faculties as $faculty)
-                            <option value="{{$faculty->faculty_id}}">{{$faculty->faculty_name}}</option>
+                            <option value="{{$faculty->faculty_id}}"
+                                {{$faculty->faculty_id == $admission->faculty_id ? 'selected' : ''}}>{{$faculty->faculty_name}}</option>
                         @endforeach
                     </select>
 
