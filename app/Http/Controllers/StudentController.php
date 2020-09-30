@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
 
@@ -45,7 +46,13 @@ class StudentController extends Controller
     }
 
     public function account(){
-        return view('students.account');
+        if(Session::has('studentSession')){
+            $student = Admission::all();
+
+        }else{
+            return redirect('/student')->with('error', 'please login to access');
+        }
+        return view('students.account', compact('student'));
     }
     /**
      * Show the form for creating a new resource.
