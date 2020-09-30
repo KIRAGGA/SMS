@@ -25,8 +25,8 @@ class StudentController extends Controller
 
         if($request->isMethod('post')){
             $student = $request->all();
-            $studentCOunt = Roll::where('username'=> $student['username'],
-            'password' => $student['password'])->count();
+            $studentCOunt = Roll::where(['username'=> $student['username'],
+            'password' => $student['password']])->count(); //checking weather students details match
 
             if($studentCount > 0){
                 Session::put('studentSession', $student['username']);
@@ -34,9 +34,17 @@ class StudentController extends Controller
                 Flash::success('welcome' .$student['username']);
 
                 return redirect('/account');
+            }else{
+                Flash::error('Your Username or Password are incorrect');
+
+                return redirect('/student');
             }
         }
 
+        return view('students.account');
+    }
+
+    public function account(){
         return view('students.account');
     }
     /**

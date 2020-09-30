@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,7 +40,7 @@ Route::get('/course', function () {
 
 Route::group(['middleware' => ['studentSession']], function(){
     // passing the student route so that if the student is logged in, they will be able to see there details
-
+Route::match(['get', 'post'], 'account', 'StudentController@account');
 });
 
 // login form route
