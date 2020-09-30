@@ -220,7 +220,7 @@ class AdmissionController extends AppBaseController
         $admission = $this->admissionRepository->find($id);
 
         if (empty($admission)) {
-            Flash::error('Admission not found');
+            Flash::error($request->first_name. ' '.$request->last_name.'Admission not found');
 
             return redirect(route('admissions.index'));
         }
