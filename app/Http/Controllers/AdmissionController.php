@@ -85,10 +85,10 @@ class AdmissionController extends AppBaseController
         // $roll->password = $request->password;
         // $roll->student_id = $request->student_id;
         // $roll->save();
-        $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension();
-        $new_image_name = time().'.' .$extension;
-        $file->move(public_path('student_images'), $new_image_name);
+        // $file = $request->file('image');
+        // $extension = $file->getClientOriginalExtension();
+        // $new_image_name = time().'.' .$extension;
+        // $file->move(public_path('student_images'), $new_image_name);
 
         $student =new Admission;
         $student->first_name = $request->first_name;
@@ -116,7 +116,7 @@ class AdmissionController extends AppBaseController
         $student->dateregistered = date('Y-m-d');
         $student->batch_id = $request->batch_id;
         $student->user_id = Auth::id();
-        $student->image = $new_image_name;
+        // $student->image = $new_image_name;
         if( $student->save()){
             $student_id = $student->student_id;
             $username = $student->username;
@@ -128,7 +128,7 @@ class AdmissionController extends AppBaseController
         }
         // $admission = $this->admissionRepository->create($input);
 
-        Flash::success('Admission' .$request->first_name. ''.$request->last_name. 'saved successfully.');
+        Flash::success('Admission ' .$request->first_name. ''.$request->last_name. ' saved successfully.');
 
         return redirect(route('admissions.index'));
     }
