@@ -14,8 +14,9 @@
                    {!! Form::model($admission, ['route' => ['admissions.update', $admission->student_id], 'method' => 'patch']) !!}
 
                    {{-- <div class="modal-body">
-                    <form action="{{ route('admissions.store') }}" method="post" enctype="multipart/form-data">
-                        @csrf --}}
+                    <form action="{{ route('admissions.store') }}" method="post" enctype="multipart/form-data"> --}}
+                        @csrf
+                        @method('PATCH')
                     <!-- batch No Field -->
                     <div class="form-group col-sm-6">
                         <select name="batch_id" id="batch_id" class="form-control">

@@ -227,7 +227,7 @@ class AdmissionController extends AppBaseController
 
         $this->admissionRepository->delete($id);
 
-        Flash::success('Admission deleted successfully.');
+        Flash::success('Admission for ' .$request->first_name. ''.$request->last_name. ' has been Deleted successfully.');
 
         return redirect(route('admissions.index'));
     }
