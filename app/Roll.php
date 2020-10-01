@@ -16,7 +16,7 @@ class Roll extends Model
     protected $primaryKey = 'roll_id';
 
 
-    public function onlineStudent(){
+    public static function onlineStudent(){
         $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
         ->where(['username' => Session::get('studentSession')])->first(); //joining student with admission
         return $students;

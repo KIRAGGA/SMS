@@ -1280,7 +1280,7 @@
 
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
+        {{-- <form method="post">
           <h3 class="control-sidebar-heading">General Settings</h3>
 
           <div class="form-group">
@@ -1344,7 +1344,7 @@
             </label>
           </div>
           <!-- /.form-group -->
-        </form>
+        </form> --}}
       </div>
       <!-- /.tab-pane -->
     </div>

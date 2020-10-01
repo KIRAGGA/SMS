@@ -1,3 +1,9 @@
+  @php
+      use App\Http\Controllers\Controller;
+      use App\Roll;
+      $students = Roll::onlineStudent();
+  @endphp
+  
   <!-- Left side column. contains the logo and sidebar -->
   {{-- <aside class="main-sidebar"> --}}
     <!-- sidebar: style can be found in sidebar.less -->
@@ -233,11 +239,12 @@
                      alt="User Image"/>
             </div>
             <div class="pull-left info">
-                @if (Auth::guest())
+                {{-- @if (Auth::guest())
                 <p>KIFLAPS</p>
                 @else
                     <p>{{ Auth::user()->name}}</p>
-                @endif
+                @endif --}}
+                <p>{{$students->first_name}} {{$students->last_name}}</p>
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
