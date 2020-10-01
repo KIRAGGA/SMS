@@ -41,6 +41,11 @@ Route::get('/course', function () {
 Route::group(['middleware' => ['studentSession']], function(){
     // passing the student route so that if the student is logged in, they will be able to see there details
 Route::match(['get', 'post'], 'account', 'StudentController@account');
+Route::match(['get', 'post'], 'student-choose-course', 'StudentController@studentChooseCourse');
+Route::match(['get', 'post'], 'student-lecture-calendar', 'StudentController@studentLectureCalendar');
+Route::match(['get', 'post'], 'student-lecture-activity', 'StudentController@studentLectureActivity');
+Route::match(['get', 'post'], 'student-exam-marks', 'StudentController@studentExamsMarks');
+
 });
 
 // login form route
