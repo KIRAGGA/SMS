@@ -23,6 +23,11 @@ class StudentController extends Controller
         //
     }
 
+    public function studentBiodata(Request $request){
+
+    return view('student.lectures.biodata');
+    }
+
     public function studentChooseCourse(Request $request){
 
     return view('students.lectures.choose-course');
@@ -30,7 +35,7 @@ class StudentController extends Controller
 
     public function studentLectureCalendar(Request $request){
 
-    return view('student-lecture-calendar');
+    return view('student.lectures.calendar');
     }
 
     public function studentLectureActivity(Request $request){
