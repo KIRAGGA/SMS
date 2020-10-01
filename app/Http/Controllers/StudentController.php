@@ -23,6 +23,26 @@ class StudentController extends Controller
         //
     }
 
+    public function studentChooseCourse(Request $request){
+
+    return view('students.lectures.choose-course');
+    }
+
+    public function studentLectureCalendar(Request $request){
+
+    return view('student-lecture-calendar');
+    }
+
+    public function studentLectureActivity(Request $request){
+
+    return view('student-lecture-activity');
+    }
+
+    public function studentExamsMarks(Request $request){
+
+    return view('student-exam-marks');
+    }
+
     public function studentLogin(Request $request){
         return view('students.login');
     }
