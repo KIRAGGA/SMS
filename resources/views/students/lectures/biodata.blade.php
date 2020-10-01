@@ -1,3 +1,6 @@
+@section('layouts.frontLayout.app')
+    
+@endsection
 {{-- <style>
     input[:read-only], textarea{
         background:white !important;
