@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 // use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
-use Laracasts\Flash\Flash;
+// use Laracasts\Flash\Flash;
 use App\Roll;
-// use Flash;
+use Flash;
 use App\Models\Admission;
 use Session;
 use App\Student;
@@ -25,7 +25,9 @@ class StudentController extends Controller
 
     public function studentBiodata(Request $request){
 
-    return view('students.lectures.biodata');
+        $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
+        ->where(['username' => Session::get('studentSession')])->first(); 
+    return view('students.lectures.biodata', compact('students'));
     }
 
     public function studentChooseCourse(Request $request){

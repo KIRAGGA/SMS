@@ -1,3 +1,13 @@
+{{-- <style>
+    input[:read-only], textarea{
+        background:white !important;
+        border: none;
+    }
+    span{
+        padding-left: 20px;
+    }
+</style> --}}
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
