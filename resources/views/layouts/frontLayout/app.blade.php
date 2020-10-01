@@ -1171,8 +1171,9 @@
     <!-- Tab panes -->
     <div class="tab-content">
       <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        {{-- <h3 class="control-sidebar-heading">Recent Activity</h3>
+      <div class="tab-pane" id="control-sidebar-home-tab"> 
+{{-- added these --}}
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript:void(0)">
@@ -1218,10 +1219,10 @@
               </div>
             </a>
           </li>
-        </ul> --}}
+        </ul>
         <!-- /.control-sidebar-menu -->
 
-        {{-- <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript:void(0)">
@@ -1271,7 +1272,7 @@
               </div>
             </a>
           </li>
-        </ul> --}}
+        </ul>
         <!-- /.control-sidebar-menu -->
 
       </div>
@@ -1279,7 +1280,7 @@
 
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
-        {{-- <form method="post">
+        <form method="post">
           <h3 class="control-sidebar-heading">General Settings</h3>
 
           <div class="form-group">
@@ -1343,7 +1344,7 @@
             </label>
           </div>
           <!-- /.form-group -->
-        </form> --}}
+        </form>
       </div>
       <!-- /.tab-pane -->
     </div>
