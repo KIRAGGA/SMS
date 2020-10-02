@@ -18,7 +18,10 @@ class Roll extends Model
 
 
     public static function onlineStudent(){
-        $students = Admission::join('rolls','rolls.student_id', '=' , 'admissions.student_id')
+        $students = DB::table('admissions')->select(
+            'rolls.*'
+            )
+        ->join('rolls','rolls.student_id', '=' , 'admissions.student_id')
         // $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
         ->where(['first_name' => Session::get('studentSession')])->first(); //joining student with admission
         return $students;
