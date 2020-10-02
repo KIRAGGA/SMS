@@ -12,7 +12,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-            <img src="{{asset('student_images/' )}}" class="img-circle"
+            <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"
             alt="User Image"/>
         </div>
         <div class="pull-left info">
@@ -25,7 +25,9 @@
       {{-- This code is pasted --}}
       {{-- <div class="user-panel">
         <div class="pull-left image">
-            <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"
+            <img 
+            src="{{asset('student_images/' )}}"
+            src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"
                      alt="User Image"/>
         </div>
         <div class="pull-left info">

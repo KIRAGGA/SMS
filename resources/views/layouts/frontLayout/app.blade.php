@@ -327,6 +327,7 @@
     </section>
 
     <!-- Main content -->
+    {{-- this is the main content commented --}}
     {{-- <section class="content">
       <!-- Info boxes -->
       <div class="row">
