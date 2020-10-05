@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
     use App\Http\Controllers\Controller;
     use App\Roll;
-    use App\Model\Admisson;
+    use App\Model\Admission;
+    use Illuminate\Database\Query\Builder;
     $students = Roll::onlineStudent();
 @endphp
 
@@ -21,8 +22,8 @@ use Illuminate\Support\Facades\DB;
             alt="User Image"/>
         </div>
         <div class="pull-left info">
-        {{-- <p>{{$students->first_name}} {{$students->last_name}}</p> --}}
-          <p>Alexander Pierce</p>
+        <p>{{$students->first_name}} {{$students->last_name}}</p>
+          {{-- <p>Alexander Pierce</p> --}}
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

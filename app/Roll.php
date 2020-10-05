@@ -2,11 +2,13 @@
 
 namespace App;
 
-use Eloquent as Model;
+// use Eloquent as Model;
+namespace App\Http\Controllers;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use App\models\Admission;
-use App\Student;
 use Session;
 class Roll extends Model
 {

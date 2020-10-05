@@ -9,6 +9,7 @@ use App\Roll;
 use Flash;
 use App\Models\Admission;
 use Session;
+use Illuminate\Database\Eloquent\Model;
 use App\Student;
 
 class StudentController extends Controller
@@ -26,7 +27,7 @@ class StudentController extends Controller
     public function studentBiodata(Request $request){
 
         $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
-        ->where(['username' => Session::get('studentSession')])->first(); 
+        ->where(['username' => Session::get('studentSession')]); 
     return view('students.lectures.biodata', compact('students'));
     }
 
