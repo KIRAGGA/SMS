@@ -26,7 +26,7 @@ class StudentController extends Controller
     public function studentBiodata(Request $request){
 
         $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
-        ->where(['first_name' => Session::get('studentSession')])->first(); 
+        ->where(['username' => Session::get('studentSession')])->first(); 
     return view('students.lectures.biodata', compact('students'));
     }
 

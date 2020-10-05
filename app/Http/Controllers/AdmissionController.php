@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\DB;
 use App\models\Admission;
 use App\models\Batch;
 use Auth;
-
+use App\models\Student;
 
 class AdmissionController extends AppBaseController
 {
@@ -37,6 +37,7 @@ class AdmissionController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $student =new Admission;
         $admissions = Admission::all();
         $batches = Batch::all();
         $student_id = Admission::max('student_id');
