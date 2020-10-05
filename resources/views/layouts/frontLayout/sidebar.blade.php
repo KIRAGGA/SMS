@@ -1,4 +1,9 @@
 @php
+namespace App;
+
+use Eloquent as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
     use App\Http\Controllers\Controller;
     use App\Roll;
     use App\Model\Admisson;

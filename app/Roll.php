@@ -23,7 +23,7 @@ class Roll extends Model
             )
         ->join('rolls','rolls.student_id', '=' , 'admissions.student_id')
         // $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
-        ->where(['first_name' => Session::get('studentSession')])->first(); //joining student with admission
+        ->where(['username' => Session::get('studentSession')]); //joining student with admission
         return $students;
     }
 
