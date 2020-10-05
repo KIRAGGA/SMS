@@ -2,9 +2,7 @@
 
 namespace App;
 
-// use Eloquent as Model;
-namespace App\Http\Controllers;
-use Illuminate\Database\Eloquent\Model;
+use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;

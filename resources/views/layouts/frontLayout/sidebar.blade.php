@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
     use App\Http\Controllers\Controller;
     use App\Roll;
-    use App\Model\Admission;
-    use Illuminate\Database\Query\Builder;
+    use App\Models\Admission;
     $students = Roll::onlineStudent();
 @endphp
 
