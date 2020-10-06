@@ -107,7 +107,7 @@
           <ul class="nav nav-tabs">
             <li class="active"><a href="#activity" data-toggle="tab">Teacher Timetable</a></li>
             <li><a href="#timeline" data-toggle="tab">Full Details</a></li>
-            {{-- <li><a href="#settings" data-toggle="tab">Settings</a></li> --}}
+            <li><a href="#settings" data-toggle="tab">Settings</a></li>
           </ul>
           <div class="tab-content">
             <div class="active tab-pane" id="activity">
@@ -333,7 +333,7 @@
             </div>
             <!-- /.tab-pane -->
 
-            {{-- <div class="tab-pane" id="settings">
+            <div class="tab-pane" id="settings">
               <form class="form-horizontal">
                 <div class="form-group">
                   <label for="inputName" class="col-sm-2 control-label">Name</label>
@@ -385,7 +385,7 @@
                   </div>
                 </div>
               </form>
-            </div> --}}
+            </div>
             <!-- /.tab-pane -->
           </div>
           <!-- /.tab-content -->
