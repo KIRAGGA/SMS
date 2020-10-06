@@ -226,6 +226,15 @@
             </div>
             <!-- /.tab-pane -->
             <div class="tab-pane" id="timeline">
+              <section class="content-header">
+                <h1>
+                    Student Biodata / Profile
+                </h1>
+            </section>
+            <div class="content">
+                @include('adminlte-templates::common.errors')
+                <div class="box box-primary">
+                    <div class="box-body"><br><br>
               <form action="" class="form-horizontal">
                   <!-- Name Field -->
                   <div class="form-group">
@@ -314,78 +323,48 @@
                           <input type="email" class="form-control" id="inputSkills" value="{{date("Y-m-d", strtotime ($students->dateregistered)) }}" readonly>
                       </div>
                   </div>
-
-
-
-<!-- Created At Field -->
-{{-- <div class="form-group">
-  {!! Form::label('created_at', 'Created At:') !!}
-  <p>{{ $students->created_at }}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-  {!! Form::label('updated_at', 'Updated At:') !!}
-  <p>{{ $students->updated_at }}</p>
-</div> --}}
-
               </form>
+            </div>
+                </div>
+            </div>
             </div>
             <!-- /.tab-pane -->
 
             <div class="tab-pane" id="settings">
+              <section class="content-header">
+                <h1>
+                    Change Password
+                </h1>
+            </section>
+            <div class="content">
+                @include('adminlte-templates::common.errors')
+                <div class="box box-primary">
+                    <div class="box-body"><br><br>
               <form class="form-horizontal">
                 <div class="form-group">
-                  <label for="inputName" class="col-sm-2 control-label">Name</label>
+                  <label for="inputName" class="col-sm-2 control-label">Old password</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputName" placeholder="Name">
+                    <input type="text" class="form-control" id="old_password" placeholder="oldpassword">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                  <label for="inputEmail" class="col-sm-2 control-label">New password</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputName" class="col-sm-2 control-label">Name</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputName" placeholder="Name">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
-
-                  <div class="col-sm-10">
-                    <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                    <input type="text" class="form-control" id="new_password" placeholder="New Password">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-danger">Submit</button>
+                    <button type="submit" class="btn btn-danger">Update Password</button>
                   </div>
                 </div>
               </form>
             </div>
+                </div>
+            </div>
+          </div>
             <!-- /.tab-pane -->
           </div>
           <!-- /.tab-content -->
