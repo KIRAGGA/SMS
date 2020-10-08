@@ -288,6 +288,7 @@
     $("#oldpassword").keyup(function(){
       //using keyup function to check whether the data is valid or not
       var old_password = $("#oldpassword").val();
+      alert(old_password);
     })
   })
 </script>
