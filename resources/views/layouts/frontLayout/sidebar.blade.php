@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
     use App\Http\Controllers\Controller;
     use App\Roll;
     use App\Models\Admission;
-    $students = Roll::max('roll_id');
+    $students = Roll::onlineStudent();
 @endphp
 
 <!-- Left side column. contains the logo and sidebar -->

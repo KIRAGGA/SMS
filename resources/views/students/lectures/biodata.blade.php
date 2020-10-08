@@ -1,7 +1,7 @@
 @section('layouts.frontLayout.app')
     
 @endsection
-{{-- <style>
+<style>
     input[:read-only], textarea{
         background:white !important;
         border: none;
@@ -9,7 +9,7 @@
     span{
         padding-left: 20px;
     }
-</style> --}}
+</style>
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -120,11 +120,12 @@
                 <div class="box-body"><br><br>
           <div class="tab-content">
             <div class="active tab-pane" id="activity">
-              <h1>This is the timetable spot</h1>
+              
             </div>
           </div>
-                </div>
+        </div>
             </div>
+        </div>
             <!-- /.tab-pane -->
             <div class="tab-pane" id="timeline">
               <section class="content-header">
@@ -280,3 +281,15 @@
   <!-- /.content -->
 {{-- </div> --}}
 <!-- /.content-wrapper -->
+
+@section('script')
+<script>
+  $(document).reagy(function(){
+    $("#oldpassword").keyup(function(){
+      //using keyup function to check whether the data is valid or not
+      var old_password = $("#oldpassword").val();
+    })
+  })
+</script>
+    
+@endsection
