@@ -313,21 +313,6 @@
                             <input type="email" class="form-control" id="inputSkills" value="{{date("Y-m-d", strtotime ($teachers->dateregistered)) }}" readonly>
                         </div>
                     </div>
-
-
-
-<!-- Created At Field -->
-{{-- <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{{ $teachers->created_at }}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{{ $teachers->updated_at }}</p>
-</div> --}}
-
                 </form>
               </div>
               <!-- /.tab-pane -->
