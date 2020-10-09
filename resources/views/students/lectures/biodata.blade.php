@@ -354,22 +354,26 @@
               <div class="content">
                 @include('adminlte-templates::common.errors')
                 <div class="box box-primary">
-                    <div class="box-body"><br><br>
+                    <div class="box-body">
                       <div class="row">
                         <form action="{{url('/verify-password')}}" method="POST" class="form-horizontal">
-                        @csrf
+                          @csrf
                           <div class="form-group">
+                          {{-- <input type="hidden" name="email" id="" value="{{$students->email}}"> --}}
                             <label for="inputName" class="col-sm-2 control-label">Old password</label>
 
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" name="old_password" placeholder="oldpassword">
+                              <div class="input-wrapper">
+                                <input type="text" class="form-control" name="old_password" id="old_password" placeholder="oldpassword">
+                                <i class="input-icon" id="messageError"></i>
+                              </div>
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmail" class="col-sm-2 control-label">New password</label>
 
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" name="new_password" placeholder="New Password">
+                              <input type="text" class="form-control" name="new_password" id="new_password" placeholder="New Password">
                             </div>
                           </div>
                           <div class="form-group">
@@ -413,13 +417,13 @@
           data: {old_password:old_password},
           success: function(response){
             if(response == "false"){
-
+              $("messageError").html("<font color='red'> Password incorrect </font>");
             }else if(response == "true"){
-
+              $("messageError").html("<font color='green'> Correct Password </font>");
             }
           }
-        })
-      })
-    })
+        });
+      });
+    });
   </script> 
 @endsection
