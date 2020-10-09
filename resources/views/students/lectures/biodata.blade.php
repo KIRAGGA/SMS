@@ -355,27 +355,30 @@
                 @include('adminlte-templates::common.errors')
                 <div class="box box-primary">
                     <div class="box-body"><br><br>
-                      <form class="form-horizontal">
-                        <div class="form-group">
-                          <label for="inputName" class="col-sm-2 control-label">Old password</label>
+                      <div class="row">
+                        <form action="{{url('/verify-password')}}" method="POST" class="form-horizontal">
+                        @csrf
+                          <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Old password</label>
 
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" name="old_password" placeholder="oldpassword">
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" name="old_password" placeholder="oldpassword">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="inputEmail" class="col-sm-2 control-label">New password</label>
+                          <div class="form-group">
+                            <label for="inputEmail" class="col-sm-2 control-label">New password</label>
 
-                          <div class="col-sm-10">
-                            <input type="text" class="form-control" name="new_password" placeholder="New Password">
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" name="new_password" placeholder="New Password">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form-group">
-                          <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-danger">Update Password</button>
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-danger">Update Password</button>
+                            </div>
                           </div>
-                        </div>
-                      </form>
+                        </form>
+                      </div>
                     </div>
                 </div>
               </div>
