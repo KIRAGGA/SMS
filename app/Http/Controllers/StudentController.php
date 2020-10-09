@@ -61,11 +61,11 @@ class StudentController extends Controller
             $validStudent = Roll::where(['username'=> Session::get('studentSession'), 'password' => $students['old_password']])->count();
 
             if($validStudent == 1){
-                // Flash::success('Your Username is correct');
-                echo "true"; die;
+                Flash::success('Your Username is correct');
+                // echo "true"; die;
             }else{
-                // Flash::error('Your Username is incorrect');
-                echo "false"; die;
+                Flash::error('Your Username is incorrect');
+                // echo "false"; die;
             }
 
         return view('students.lectures.biodata', compact('students'));
