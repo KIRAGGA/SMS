@@ -48,6 +48,7 @@ Route::match(['get', 'post'], 'student-lecture-calendar', 'StudentController@stu
 Route::match(['get', 'post'], 'student-lecture-activity', 'StudentController@studentLectureActivity');
 Route::match(['get', 'post'], 'student-exam-marks', 'StudentController@studentExamsMarks');
 
+Route::match(['get', 'post'], '/verify-password', 'StudentController@changePassword');
 });
 
 // login form route

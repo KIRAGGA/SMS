@@ -360,14 +360,14 @@
                           <label for="inputName" class="col-sm-2 control-label">Old password</label>
 
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="old_password" placeholder="oldpassword">
+                            <input type="text" class="form-control" name="old_password" placeholder="oldpassword">
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="inputEmail" class="col-sm-2 control-label">New password</label>
 
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="new_password" placeholder="New Password">
+                            <input type="text" class="form-control" name="new_password" placeholder="New Password">
                           </div>
                         </div>
                         <div class="form-group">
@@ -403,7 +403,19 @@
       $("#oldpassword").keyup(function(){
         //using keyup function to check whether the data is valid or not
         var old_password = $("#oldpassword").val();
-        alert(old_password);
+        // alert(old_password);
+        $.ajax({
+          type: 'get',
+          url: '/verify-password',
+          data: {old_password:old_password},
+          success: function(response){
+            if(response == "false"){
+
+            }else if(response == "true"){
+
+            }
+          }
+        })
       })
     })
   </script> 

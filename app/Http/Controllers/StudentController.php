@@ -11,6 +11,7 @@ use App\Models\Admission;
 use Session;
 use Illuminate\Database\Eloquent\Model;
 use App\Student;
+use Illuminate\Contracts\Session\Session as SessionSession;
 
 class StudentController extends Controller
 {
@@ -53,6 +54,19 @@ class StudentController extends Controller
 
     public function studentLogin(Request $request){
         return view('students.login');
+    }
+
+    public function changePassword(Request $request){
+        $students = $request->all();
+            $validStudent = Roll::where(['username'=> Session::get('studentSession'), 'password' => $students['old_password']])->count();
+
+            if($validStudent == 1){
+                Flash::success('Your Username is correct');
+            }else{
+                Flash::error('Your Username is incorrect');
+            }
+
+        return view('students.lectures.biodata');
     }
 
     public function LoginStudent(Request $request){
