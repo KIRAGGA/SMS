@@ -76,7 +76,22 @@ class StudentController extends Controller
         $students = Admission::where('email', $student['email'])->first();
         // dd($students); die;
 
-        $studentCount = Roll::where(['username' => Session::get('studentSession'), 'password' => $student['old_password']])
+        $studentCount = Roll::where(['username' => Session::get('studentSession'), 'password' => $student['old_password']])->count();
+
+        if( $studentCount == 1){
+            $new_password = $student['new_password'];
+
+            Roll::where('username', Session::get('studentSession'))
+            ->update(['password' => $new_password]);
+
+            Flash::success('Your have successfully changed your password!');
+            return redirect()->back();
+            //if password is valid send an update message and update password
+        }else{
+            Flash::success('Password failed to Update!');
+            return redirect()->back();
+            // send invalid message or email not found
+        }
     }
 
     public function LoginStudent(Request $request){
