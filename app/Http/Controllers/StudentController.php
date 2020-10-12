@@ -56,7 +56,7 @@ class StudentController extends Controller
         return view('students.login');
     }
 
-    public function changePassword(Request $request){
+    public function verifyPassword(Request $request){
         $students = $request->all();
             $validStudent = Roll::where(['username'=> Session::get('studentSession'), 'password' => $students['old_password']])->count();
 
@@ -69,6 +69,14 @@ class StudentController extends Controller
             }
 
         return view('students.lectures.biodata', compact('students'));
+    }
+
+    public function changePassword(Request $request){
+        $student = $request->all();
+        $students = Admission::where('email', $student['email'])->first();
+        // dd($students); die;
+
+        $studentCount = Roll::where(['username' => Session::get('studentSession'), 'password' => $student['old_password']])
     }
 
     public function LoginStudent(Request $request){
@@ -96,7 +104,7 @@ class StudentController extends Controller
 
     public function account(){
         if(Session::has('studentSession')){
-            $student = Admission::all();
+            $students = Admission::all();
 
         }else{
             return redirect('/student')->with('error', 'please login to access');

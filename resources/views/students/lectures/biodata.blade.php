@@ -251,15 +251,15 @@
                 <div class="box box-primary">
                     <div class="box-body">
                       <div class="row">
-                        <form action="{{url('/verify-password')}}" method="POST" class="form-horizontal">
+                        <form action="{{url('student-update-password')}}" method="POST" class="form-horizontal">
                           @csrf
                           <div class="form-group">
-                          {{-- <input type="hidden" name="email" id="" value="{{$students->email}}"> --}}
+                          <input type="hidden" name="email" id="" value="{{$students->email}}">
                             <label for="inputName" class="col-sm-2 control-label">Old password</label>
 
                             <div class="col-sm-10">
                               <div class="input-wrapper">
-                                <input type="text" class="form-control" name="old_password" id="old_password" placeholder="oldpassword">
+                                <input type="text" class="form-control" name="old_password" id="old_password" placeholder="oldpassword" autocomplete="additional-name">
                                 <i class="input-icon" id="messageError"></i>
                               </div>
                             </div>
