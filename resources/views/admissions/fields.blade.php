@@ -192,7 +192,7 @@
                         {!! Form::label('image', 'Image:') !!}
                         {!!Html::image('teacher_images/profle.jpg',null,['class'=>'teacher-image', 'id'=>'showImage'])!!}
                         {{-- {!! Form::text('image', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!} --}}
-                        <input type="file" name="image" id="image" accept="image/x-png,image/png,image/jpg,image/jpeg">
+                        <input type="file" name="file" id="image" >
                     </div>
                 </form>
                 </div>

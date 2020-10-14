@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\DB;
             alt="User Image"/>
         </div>
         <div class="pull-left info">
-        {{-- <p>{{$students->first_name}} {{$students->last_name}}</p> --}}
-          <p>Alexander Pierce</p>
+        <p>{{$students->first_name}} {{$students->last_name}}</p>
+          {{-- <p>Alexander Pierce</p> --}}
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

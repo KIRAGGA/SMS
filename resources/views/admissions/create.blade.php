@@ -11,11 +11,14 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'admissions.store']) !!}
+                    {{-- {!! Form::open(['route' => 'admissions.store', 'enctype' => 'multipart/form-data']) !!} --}}
+
+                <form action="{{route('admissions.store')}}" method="post" enctype="multipart/form-data">
 
                         @include('admissions.fields')
+                </form>
 
-                    {!! Form::close() !!}
+                    {{-- {!! Form::close() !!} --}}
                 </div>
             </div>
         </div>

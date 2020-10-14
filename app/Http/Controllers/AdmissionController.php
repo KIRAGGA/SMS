@@ -76,20 +76,30 @@ class AdmissionController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateAdmissionRequest $request)
+    public function store(Request $request)
     {
         $input = $request->all();
 
-        
+        // dd($request->file);
         // $roll = new Roll;
         // $roll->username = $request->username;
         // $roll->password = $request->password;
         // $roll->student_id = $request->student_id;
         // $roll->save();
-        // $file = $request->file('image');
+        // $file = $request->hasFile('image');
         // $extension = $file->getClientOriginalExtension();
         // $new_image_name = time().'.' .$extension;
         // $file->move(public_path('student_images'), $new_image_name);
+        
+        $image = $request->file('file');
+
+        // dd($image);
+            if (!$image) {
+                    Flash::error('Image is required please checked your input!');
+                    return back();
+            }else {
+                $new_image_name = $image->getClientOriginalName();
+                $image->move(public_path('student_images'),$new_image_name);
 
         $student =new Admission;
         $student->first_name = $request->first_name;
@@ -117,7 +127,7 @@ class AdmissionController extends AppBaseController
         $student->dateregistered = date('Y-m-d');
         $student->batch_id = $request->batch_id;
         $student->user_id = Auth::id();
-        // $student->image = $new_image_name;
+        $student->image = $new_image_name;
         if( $student->save()){
             $student_id = $student->student_id;
             $username = $student->username;
@@ -133,6 +143,7 @@ class AdmissionController extends AppBaseController
 
         return redirect(route('admissions.index'));
     }
+}
 
     /**
      * Display the specified Admission.

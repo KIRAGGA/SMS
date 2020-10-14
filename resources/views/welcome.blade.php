@@ -54,11 +54,11 @@
                   <div class="mu-header-top-left">
                     <div class="mu-top-email">
                       <a><i class="fa fa-envelope"></i>
-                      <span target="_blank">kiflapstudies@gmail.com</span></a>
+                      <span target="_blank">email@gmail.com</span></a>
                     </div>
                     <div class="mu-top-phone">
                       <i class="fa fa-phone"></i>
-                      <span>(+254) 710 462 0352</span>
+                      <span></span>
                     </div>
                   </div>
                 </div>

@@ -1371,6 +1371,12 @@
 
     {{-- @stack('scripts') --}}
     @yield('scripts')
+
+    <script>
+      $(document).ready(function(){
+          alert(1);
+      })
+  </script>
     
 </body>
 </html>

@@ -42,11 +42,11 @@
           <div class="box-body box-profile">
               {{-- image code --}}
             <img class="profile-user-img img-responsive img-circle" 
-            src="{{URL::asset('/storage/images/kiflaps_logo.jpeg')}}" 
+            src="{{asset('/storage/images/kiflaps_logo.jpeg')}}" 
             width="60" height="50" style="border-radius: 50%; width:150px; height: 150px; vertical-align:middle;" alt="Teacher Profile picture">
             {{-- end of image code --}}
 
-            {{-- <h3 class="profile-username text-center">{{ $students->first_name }} {{ $students->last_name }}</h3> --}}
+            <h3 class="profile-username text-center">{{ $students->first_name }} {{ $students->last_name }}</h3>
 
             <p class="text-muted text-center">Teacher</p>
 
@@ -151,21 +151,21 @@
                                 <label for="inputName" class="col-sm-3 control-label">Full Name</label>
                             
                                 <div class="col-sm-9">
-                                {{-- <input type="email" class="form-control" id="inputName" value="{{ $students->first_name }} {{ $students->last_name }}" readonly> --}}
+                                <input type="email" class="form-control" id="inputName" value="{{ $students->first_name }} {{ $students->last_name }}" readonly>
                                 </div>
                             </div>
                             <!-- Email Field -->
                             <div class="form-group">
                                 <label for="inputEmail" class="col-sm-3 control-label">Email</label>
                                 <div class="col-sm-9">
-                                    {{-- <input type="email" class="form-control" id="inputEmail" value="{{ $students->email }}" readonly> --}}
+                                    <input type="email" class="form-control" id="inputEmail" value="{{ $students->email }}" readonly>
                                 </div>
                             </div>
                             <!-- UserId Field -->
                             <div class="form-group">
                                 <label for="inputName" class="col-sm-3 control-label">UserID</label>
                                 <div class="col-sm-9">
-                                    {{-- <input type="text" class="form-control" id="inputName" value="{{ $students->user_id }}" readonly> --}}
+                                    <input type="text" class="form-control" id="inputName" value="{{ $students->user_id }}" readonly>
                                 </div>
                             </div>
                             <!-- Gender Field -->
@@ -173,20 +173,20 @@
                                 <div>
                                     <label for="inputName" class="col-sm-3 control-label">Gender</label>
                                     <div class="col-sm-4">
-                                        {{-- @if ($students->gender == 0)
+                                        @if ($students->gender == 0)
                                             <span> Male </span>
                                         @else
                                             <span> Female </span>
-                                        @endif --}}
+                                        @endif
                                     </div>
                                     <!-- Martial Status Field -->
                                     <label for="inputName" class="col-sm-2 control-label">Status</label>
                                     <div class="col-sm-3">
-                                        {{-- <p>@if ($students->status == 0)
+                                        <p>@if ($students->status == 0)
                                             Single
                                         @else
                                             Married
-                                        @endif --}}
+                                        @endif
                                     </p>
                                     </div>
                                 </div>
@@ -195,42 +195,42 @@
                             <div class="form-group">
                                 <label for="inputName" class="col-sm-3 control-label">Date of Birth</label>
                                 <div class="col-sm-9">
-                                {{-- <input type="text" class="form-control" id="inputName" value="{{$students->dob}}" readonly> --}}
+                                <input type="text" class="form-control" id="inputName" value="{{$students->dob}}" readonly>
                                 </div>
                             </div>
                             <!-- Phone number Field -->
                             <div class="form-group">
                                 <label for="inputName" class="col-sm-3 control-label">Phone Number</label>
                                 <div class="col-sm-9">
-                                    {{-- <input type="text" class="form-control" id="inputName" value="+{{ $students->phone }}" readonly> --}}
+                                    <input type="text" class="form-control" id="inputName" value="+{{ $students->phone }}" readonly>
                                 </div>
                             </div>
                             <!-- Passport Number/ID Field -->
                             <div class="form-group">
                                 <label for="inputName" class="col-sm-3 control-label">Passport/ID number</label>
                                 <div class="col-sm-9">
-                                    {{-- <input type="text" class="form-control" id="inputName" value="{{ $students->passport }}" readonly> --}}
+                                    <input type="text" class="form-control" id="inputName" value="{{ $students->passport }}" readonly>
                                 </div>
                             </div>
                             <!-- Address Field -->
                             <div class="form-group">
                                 <label for="inputExperience" class="col-sm-3 control-label">Address</label>
                                 <div class="col-sm-9">
-                                    {{-- <textarea class="form-control" id="inputExperience" readonly>{{ $students->address }}</textarea> --}}
+                                    <textarea class="form-control" id="inputExperience" readonly>{{ $students->address }}</textarea>
                                 </div>
                             </div>
                             <!-- Nationality Field -->
                             <div class="form-group">
                                 <label for="inputSkills" class="col-sm-3 control-label">Nationality</label>
                                 <div class="col-sm-9">
-                                    {{-- <input type="text" class="form-control" id="inputSkills" value="{{ $students->nationality }}" readonly> --}}
+                                    <input type="text" class="form-control" id="inputSkills" value="{{ $students->nationality }}" readonly>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputSkills" class="col-sm-3 control-label">Date Registered</label>
                                 <div class="col-sm-9">
-                                    {{-- <input type="email" class="form-control" id="inputSkills" value="{{date("Y-m-d", strtotime ($students->dateregistered)) }}" readonly> --}}
+                                    <input type="email" class="form-control" id="inputSkills" value="{{date("Y-m-d", strtotime ($students->dateregistered)) }}" readonly>
                                 </div>
                             </div>
                         </form>
@@ -302,10 +302,11 @@
 @section('script')
   <script>
     $(document).ready(function(){
+      // alert(1)
       $("#oldpassword").keyup(function(){
         //using keyup function to check whether the data is valid or not
         var old_password = $("#oldpassword").val();
-        // alert(old_password);
+        alert(old_password);
         $.ajax({
           type: 'get',
           url: '/verify-password',

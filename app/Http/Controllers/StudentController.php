@@ -27,9 +27,10 @@ class StudentController extends Controller
 
     public function studentBiodata(Request $request){
 
-        $students = Roll::join('admissions','admissions.student_id', '=' , 'rolls.student_id')
-        ->where(['username' => Session::get('studentSession')]); 
-    return view('students.lectures.biodata', compact('students'));
+        $students = Roll::join('admissions', 'admissions.student_id', '=', 'rolls.student_id')
+       -> where('rolls.username', Session::get('studentSession'))->first();
+        
+    return  view('students.lectures.biodata', compact('students'));
     }
 
     public function studentChooseCourse(Request $request){
@@ -120,11 +121,11 @@ class StudentController extends Controller
     public function account(){
         if(Session::has('studentSession')){
             $students = Admission::all();
-
+            // dd($students);
         }else{
             return redirect('/student')->with('error', 'please login to access');
         }
-        return view('students.account', compact('student'));
+        return view('students.account', compact('students'));
     }
     /**
      * Show the form for creating a new resource.
